@@ -20,6 +20,7 @@
 		690A96FB177E9CAF0025A94E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690A96FA177E9CAF0025A94E /* ViewController.m */; };
 		690A9703177E9FC80025A94E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690A9702177E9FC80025A94E /* MenuViewController.m */; };
 		690A9706177EA02D0025A94E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690A9705177EA02D0025A94E /* DetailViewController.m */; };
+		690A970E178000070025A94E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690A970D178000070025A94E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		690A9702177E9FC80025A94E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		690A9704177EA02D0025A94E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		690A9705177EA02D0025A94E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		690A970D178000070025A94E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690A970E178000070025A94E /* QuartzCore.framework in Frameworks */,
 				690A96DF177E9CAF0025A94E /* UIKit.framework in Frameworks */,
 				690A96E1177E9CAF0025A94E /* Foundation.framework in Frameworks */,
 				690A96E3177E9CAF0025A94E /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +82,7 @@
 		690A96DD177E9CAF0025A94E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				690A970D178000070025A94E /* QuartzCore.framework */,
 				690A96DE177E9CAF0025A94E /* UIKit.framework */,
 				690A96E0177E9CAF0025A94E /* Foundation.framework */,
 				690A96E2177E9CAF0025A94E /* CoreGraphics.framework */,
@@ -92,13 +96,8 @@
 				690A96ED177E9CAF0025A94E /* AppDelegate.h */,
 				690A96EE177E9CAF0025A94E /* AppDelegate.m */,
 				690A96F6177E9CAF0025A94E /* MainStoryboard.storyboard */,
-				690A96F9177E9CAF0025A94E /* ViewController.h */,
-				690A96FA177E9CAF0025A94E /* ViewController.m */,
 				690A96E5177E9CAF0025A94E /* Supporting Files */,
-				690A9701177E9FC80025A94E /* MenuViewController.h */,
-				690A9702177E9FC80025A94E /* MenuViewController.m */,
-				690A9704177EA02D0025A94E /* DetailViewController.h */,
-				690A9705177EA02D0025A94E /* DetailViewController.m */,
+				69C499981780A25700A13787 /* View Controllers */,
 			);
 			path = "Quick Emergency";
 			sourceTree = "<group>";
@@ -115,6 +114,19 @@
 				690A96F4177E9CAF0025A94E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69C499981780A25700A13787 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				690A96F9177E9CAF0025A94E /* ViewController.h */,
+				690A96FA177E9CAF0025A94E /* ViewController.m */,
+				690A9701177E9FC80025A94E /* MenuViewController.h */,
+				690A9702177E9FC80025A94E /* MenuViewController.m */,
+				690A9704177EA02D0025A94E /* DetailViewController.h */,
+				690A9705177EA02D0025A94E /* DetailViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +322,7 @@
 				690A9700177E9CAF0025A94E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
