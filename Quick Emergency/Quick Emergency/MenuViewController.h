@@ -12,6 +12,8 @@
 
 
 - (void) emergencySelected:(id)sender;
+-(void)makeButton:(NSString *)title withImage:(NSString *)image withFrame:(CGRect)frame;
+-(void)makeLabel:(NSString *)title withFrame:(CGRect)frame;
 
 
 - (IBAction)quickButtonPressed:(id)sender;

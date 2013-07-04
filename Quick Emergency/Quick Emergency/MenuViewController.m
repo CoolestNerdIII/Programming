@@ -27,11 +27,11 @@
     myImages = [[NSArray alloc] initWithObjects:@"Fire", @"Theft", @"Break In", nil];
     
     //Declare Buttons and Labels
-    CGRect allButtonRect;
-    CGRect allLabelRect;
+    CGRect button1Rect;
+    CGRect button1Label;
     
-    CGRect favoritesButtonRect;
-    CGRect favoritesLabelRect;
+    CGRect button2Rect;
+    CGRect button2Label;
     
     CGRect button3Rect;
     CGRect button3LabelRect;
@@ -45,11 +45,11 @@
         //User is using iPhone 5
         
         //Set the sizes and locations of the buttons and labels
-        allButtonRect = CGRectMake(24, 78, 60, 60);
-        allLabelRect = CGRectMake(26, 139, 58, 25);
+        button1Rect = CGRectMake(24, 78, 60, 60);
+        button1Label = CGRectMake(26, 139, 58, 25);
         
-        favoritesButtonRect = CGRectMake(130, 78, 60, 60);
-        favoritesLabelRect = CGRectMake(131, 139, 58, 25);
+        button2Rect = CGRectMake(130, 78, 60, 60);
+        button2Label = CGRectMake(131, 139, 58, 25);
         
         button3Rect = CGRectMake(238, 78, 60, 60);
         button3LabelRect = CGRectMake(238, 139, 58, 25);
@@ -61,85 +61,27 @@
         
         //User is not using iPhone 5
         
-        allButtonRect = CGRectMake(51, 34, 70, 66);
-        allLabelRect = CGRectMake(67, 108, 42, 21);
+        button1Rect = CGRectMake(51, 34, 70, 66);
+        button1Label = CGRectMake(67, 108, 42, 21);
         
-        favoritesButtonRect = CGRectMake(182, 34, 70, 66);
-        favoritesLabelRect = CGRectMake(196, 108, 42, 21);
+        button2Rect = CGRectMake(182, 34, 70, 66);
+        button2Label = CGRectMake(196, 108, 42, 21);
         
         
     }
     
-    //Create All Button and Label
-    UIButton *allButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    allButton.frame = allButtonRect;
-    allButton.showsTouchWhenHighlighted = YES;
-    [allButton setTitle:@"1" forState:UIControlStateNormal];
-    [allButton setImage:[UIImage imageNamed:@"Default.png"] forState:UIControlStateNormal];
-    [allButton addTarget:self action:@selector(emergencySelected:) forControlEvents:UIControlEventTouchUpInside];
+    //Add buttons and corresponding labels
+    [self makeButton:@"1" withImage:@"Default.png" withFrame:button1Rect];
+    [self makeLabel:@"1" withFrame:button1Label];
     
-    UILabel *allButtonLabel = [[UILabel alloc] initWithFrame:allLabelRect];
-    allButtonLabel.text = @"All";
-    allButtonLabel.backgroundColor = [UIColor clearColor];
-    allButtonLabel.textColor = [UIColor whiteColor];
-    allButtonLabel.textAlignment = NSTextAlignmentCenter;
+    [self makeButton:@"2" withImage:@"Default.png" withFrame:button2Rect];
+    [self makeLabel:@"2" withFrame:button2Label];
     
-    [self.view addSubview:allButton];
-    [self.view addSubview:allButtonLabel];
+    [self makeButton:@"3" withImage:@"Default.png" withFrame:button3Rect];
+    [self makeLabel:@"3" withFrame:button3LabelRect];
     
-    //Create Favorites Button and Label
-    UIButton *favoritesButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    favoritesButton.frame = favoritesButtonRect;
-    favoritesButton.showsTouchWhenHighlighted = YES;
-    [favoritesButton setTitle:@"2" forState:UIControlStateNormal];
-    [favoritesButton setImage:[UIImage imageNamed:@"Default.png"] forState:UIControlStateNormal];
-    [favoritesButton addTarget:self action:@selector(emergencySelected:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UILabel *favoritesButtonLabel = [[UILabel alloc] initWithFrame:favoritesLabelRect];
-    favoritesButtonLabel.text = @"Favorites";
-    favoritesButtonLabel.backgroundColor = [UIColor clearColor];
-    favoritesButtonLabel.textColor = [UIColor whiteColor];
-    favoritesButtonLabel.textAlignment = NSTextAlignmentCenter;
-    
-    //Add buttons to the subview
-    [self.view addSubview:favoritesButton];
-    [self.view addSubview:favoritesButtonLabel];
-    
-    //Create Button 3 Button and Label
-    UIButton *button3Button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button3Button.frame = button3Rect;
-    button3Button.showsTouchWhenHighlighted = YES;
-    [button3Button setTitle:@"3" forState:UIControlStateNormal];
-    [button3Button setImage:[UIImage imageNamed:@"Default.png"] forState:UIControlStateNormal];
-    [button3Button addTarget:self action:@selector(emergencySelected:) forControlEvents:UIControlEventTouchUpInside];
-    
-
-    UILabel *button3Label = [[UILabel alloc] initWithFrame:button3LabelRect];
-    button3Label.text = @"3";
-    button3Label.backgroundColor = [UIColor clearColor];
-    button3Label.textColor = [UIColor whiteColor];
-    button3Label.textAlignment = NSTextAlignmentCenter;
-    
-    [self.view addSubview:button3Button];
-    [self.view addSubview:button3Label];
-    
-    //Create Button 4 Button and Label
-    UIButton *button4Button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button4Button.frame = button4Rect;
-    button4Button.showsTouchWhenHighlighted = YES;
-    [button4Button setTitle:@"4" forState:UIControlStateNormal];
-    [button4Button setImage:[UIImage imageNamed:@"Default.png"] forState:UIControlStateNormal];
-    [button4Button addTarget:self action:@selector(emergencySelected:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UILabel *button4Label = [[UILabel alloc] initWithFrame:button4LabelRect];
-    button4Label.text = @"4";
-    button4Label.backgroundColor = [UIColor clearColor];
-    button4Label.textColor = [UIColor whiteColor];
-    button4Label.textAlignment = NSTextAlignmentCenter;
-    
-    [self.view addSubview:button4Button];
-    [self.view addSubview:button4Label];
-    
+    [self makeButton:@"4" withImage:@"Default.png" withFrame:button4Rect];
+    [self makeLabel:@"4" withFrame:button4LabelRect];
     
 
 }
@@ -151,7 +93,7 @@
 }
 
 - (void) emergencySelected:(id)sender{
-    
+    /*
     //Push to Main View Controller
     DetailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail"];
     
@@ -160,7 +102,8 @@
     dvc.emergencySelected = selection;
     
     [self.navigationController pushViewController:dvc animated:YES];
-
+     */
+    NSLog(@"Title: %@", [[sender titleLabel] text]);
 }
 
 
@@ -169,4 +112,29 @@
 
 - (IBAction)settingsButtonPressed:(id)sender {
 }
+
+
+-(void)makeButton:(NSString *)title withImage:(NSString *)image withFrame:(CGRect)frame
+{
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = frame;
+    button.showsTouchWhenHighlighted = YES;
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(emergencySelected:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
+}
+
+-(void)makeLabel:(NSString *)title withFrame:(CGRect)frame
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.text = title;
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label];
+}
+
 @end
