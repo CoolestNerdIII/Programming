@@ -27,5 +27,7 @@
 
 @property (strong,nonatomic) NSArray *emergencyList;
 @property (strong,nonatomic) NSArray *myImages;
+@property (strong,nonatomic) NSMutableArray *buttonProperties;
+@property (strong,nonatomic) NSMutableArray *textProperties;
 
 @end
