@@ -8,54 +8,70 @@
         <scene sceneID="5">
             <objects>
                 <viewController storyboardIdentifier="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="MenuViewController" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="asq-Sp-4ks">
+                    <view key="view" contentMode="scaleToFill" id="0se-VY-zTP">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="va4-ob-aGx">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzN-gs-uPZ"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83Y-1F-1NE">
+                                <items>
+                                    <barButtonItem title="Quick" id="7bz-c0-z60">
+                                        <connections>
+                                            <action selector="quickButtonPressed:" destination="2" id="riW-le-hlD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="58" style="plain" systemItem="fixedSpace" id="6m1-ED-xwf"/>
+                                    <barButtonItem title="Settings" id="RzE-re-9N1">
+                                        <connections>
+                                            <action selector="settingsButtonPressed:" destination="2" id="1IQ-xC-35q"/>
+                                            <segue destination="WQO-Z2-HtE" kind="push" id="LGJ-vs-bkt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="62" style="plain" systemItem="fixedSpace" id="mHt-cp-VPy"/>
+                                    <barButtonItem title="Help" id="EKo-6g-2cW">
+                                        <connections>
+                                            <action selector="helpButtonPressed:" destination="2" id="NoV-ut-vrs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-6Q-5Mx">
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="2" id="fk9-qg-OcR"/>
+                                    <outlet property="delegate" destination="2" id="Yp7-tv-ThD"/>
                                 </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="va4-ob-aGx" firstAttribute="trailing" secondItem="asq-Sp-4ks" secondAttribute="trailing" type="default" id="G4U-N5-XuX"/>
-                            <constraint firstAttribute="bottom" secondItem="va4-ob-aGx" secondAttribute="bottom" constant="856" id="UHQ-hf-ux6"/>
-                            <constraint firstItem="va4-ob-aGx" firstAttribute="centerX" secondItem="asq-Sp-4ks" secondAttribute="centerX" type="default" id="j6F-kp-gU3"/>
-                            <constraint firstItem="va4-ob-aGx" firstAttribute="leading" secondItem="asq-Sp-4ks" secondAttribute="leading" type="default" id="lP6-2x-Yd4"/>
-                            <constraint firstItem="va4-ob-aGx" firstAttribute="top" secondItem="asq-Sp-4ks" secondAttribute="top" type="default" id="nXQ-rY-UFa"/>
+                            <constraint firstItem="ndC-6Q-5Mx" firstAttribute="trailing" secondItem="0se-VY-zTP" secondAttribute="trailing" type="default" id="AZA-sJ-Ntm"/>
+                            <constraint firstItem="ndC-6Q-5Mx" firstAttribute="bottom" secondItem="WzN-gs-uPZ" secondAttribute="top" type="default" id="LUg-8U-ctv"/>
+                            <constraint firstItem="ndC-6Q-5Mx" firstAttribute="top" secondItem="0se-VY-zTP" secondAttribute="top" type="default" id="Nb0-we-Gb0"/>
+                            <constraint firstItem="83Y-1F-1NE" firstAttribute="leading" secondItem="0se-VY-zTP" secondAttribute="leading" type="default" id="TMx-5C-hWB"/>
+                            <constraint firstItem="ndC-6Q-5Mx" firstAttribute="leading" secondItem="0se-VY-zTP" secondAttribute="leading" type="default" id="Uoa-9x-ePU"/>
+                            <constraint firstItem="83Y-1F-1NE" firstAttribute="trailing" secondItem="0se-VY-zTP" secondAttribute="trailing" type="default" id="aDe-IJ-M1N"/>
+                            <constraint firstItem="WzN-gs-uPZ" firstAttribute="bottom" secondItem="83Y-1F-1NE" secondAttribute="top" type="default" id="jfB-0f-PW2"/>
+                            <constraint firstItem="WzN-gs-uPZ" firstAttribute="leading" secondItem="0se-VY-zTP" secondAttribute="leading" type="default" id="rHk-SY-Vhx"/>
+                            <constraint firstItem="WzN-gs-uPZ" firstAttribute="trailing" secondItem="0se-VY-zTP" secondAttribute="trailing" type="default" id="tp0-Pb-ua6"/>
+                            <constraint firstItem="83Y-1F-1NE" firstAttribute="bottom" secondItem="0se-VY-zTP" secondAttribute="bottom" type="default" id="vor-1l-g09"/>
                         </constraints>
-                        <connections>
-                            <outlet property="delegate" destination="2" id="JuR-XL-qWZ"/>
-                        </connections>
-                    </scrollView>
-                    <navigationItem key="navigationItem" id="X7P-p4-IfH">
-                        <barButtonItem key="leftBarButtonItem" title="Quick" id="mVd-Az-Tlm">
-                            <connections>
-                                <action selector="quickButtonPressed:" destination="2" id="lEm-eh-Ltf"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="fDL-rz-3r4">
-                            <connections>
-                                <action selector="settingsButtonPressed:" destination="2" id="THo-Pm-n38"/>
-                                <segue destination="WQO-Z2-HtE" kind="push" id="SCc-ud-DBR"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    </view>
+                    <navigationItem key="navigationItem" id="X7P-p4-IfH"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="IPT-zr-MHQ" id="Dfa-WQ-Rga"/>
+                        <outlet property="scroller" destination="WzN-gs-uPZ" id="uda-i7-sxO"/>
+                        <outlet property="searchBar" destination="ndC-6Q-5Mx" id="VXN-Np-vlk"/>
+                        <outlet property="searchDisplayController" destination="Iwg-Q4-NW5" id="taX-ci-t3l"/>
+                        <outlet property="toolbar" destination="83Y-1F-1NE" id="xHq-E4-QM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="IPT-zr-MHQ">
+                <searchDisplayController id="Iwg-Q4-NW5">
                     <connections>
-                        <outlet property="delegate" destination="2" id="gJg-db-dPX"/>
-                        <outlet property="searchBar" destination="va4-ob-aGx" id="mfz-Cc-3NQ"/>
-                        <outlet property="searchContentsController" destination="2" id="dIV-x3-tQr"/>
-                        <outlet property="searchResultsDataSource" destination="2" id="JaP-1M-Mky"/>
-                        <outlet property="searchResultsDelegate" destination="2" id="p3i-bQ-PCq"/>
+                        <outlet property="delegate" destination="2" id="9PV-cT-4rs"/>
+                        <outlet property="searchBar" destination="ndC-6Q-5Mx" id="WEi-zG-ZkW"/>
+                        <outlet property="searchContentsController" destination="2" id="axf-Ju-pLp"/>
+                        <outlet property="searchResultsDataSource" destination="2" id="Lii-vq-lnz"/>
+                        <outlet property="searchResultsDelegate" destination="2" id="cAM-Qr-VPY"/>
                     </connections>
                 </searchDisplayController>
             </objects>
@@ -291,21 +307,6 @@
             <point key="canvasLocation" x="481" y="61"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="quickButtonPressed:"/>
-                <relationship kind="action" name="settingsButtonPressed:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
