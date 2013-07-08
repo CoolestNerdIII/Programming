@@ -10,4 +10,7 @@
 
 @interface SettingsViewController : UITableViewController
 
+@property (strong,nonatomic) NSArray *settingsOptions;
+@property (strong,nonatomic) NSArray *settingsDetailText;
+
 @end

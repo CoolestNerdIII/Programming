@@ -1,27 +1,22 @@
 //
-//  SettingsViewController.m
+//  MedicalInfoViewController.m
 //  Quick Emergency
 //
 //  Created by Paul Wilson on 7/7/13.
 //  Copyright (c) 2013 TnT Development. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "MedicalInfoViewController.h"
 #import "CustomCellBackground.h"
 #import "CustomHeader.h"
-#import "CustomFooter.h"
-#import "PersonalInfoViewController.h"
-#import "MedicalInfoViewController.h"
-#import "ICEViewController.h"
 
-
-@interface SettingsViewController ()
+@interface MedicalInfoViewController ()
 
 @end
 
-@implementation SettingsViewController
-@synthesize settingsOptions, settingsDetailText;
+@implementation MedicalInfoViewController
 
+@synthesize medicalInformation;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,20 +29,21 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
-    
-    settingsOptions = [[NSArray alloc] initWithObjects:@"Personal Information", @"Medical Information", @"In Case of Emergency", nil];
-    settingsDetailText = [[NSArray alloc] initWithObjects:@"Name, Gender, Address, etc.",@"Medical History, Allegies, etc.", @"Points of Contact", nil];
-
+    //Setup Navigation Bar and BG
+    self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
+    self.title = @"Medical";
     UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableBackground.jpg"]];
     self.tableView.backgroundView = background;
-    
+
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
+    medicalInformation = [[NSArray alloc] initWithObjects:@"Name",@"Birth Date", @"Medication Allergies",@"Food Allergies", @"Chronic Conditions",@"Hospitalizations", @"Doctor Information",@"Hospital Preference", @"Medical Insurance Information",@"Past Surgical Information", nil];
+    
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,12 +63,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [settingsOptions count];
+    return medicalInformation.count;
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"Please Complete";
+    return @"Medical Information";
     
 }
 
@@ -84,7 +80,7 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-    
+
     //Set Background
     if (![cell.backgroundView isKindOfClass:[CustomCellBackground class]]) {
         CustomCellBackground * backgroundCell = [[CustomCellBackground alloc] init];
@@ -97,20 +93,14 @@
         selectedBackgroundCell.selected = YES;
         cell.selectedBackgroundView = selectedBackgroundCell;
     }
-    
 
-    cell.textLabel.text = [settingsOptions objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [settingsDetailText objectAtIndex:indexPath.row];
     
-    ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == settingsOptions.count - 1;
-    ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == settingsOptions.count - 1;
-    
+    cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
+    ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == medicalInformation.count - 1;
+    ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == medicalInformation.count - 1;
     
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.textLabel.highlightedTextColor = [UIColor blackColor];
-    
-    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-    cell.detailTextLabel.highlightedTextColor = [UIColor blueColor];
     
     return cell;
 }
@@ -132,17 +122,6 @@
     return 50;
 }
 
--(CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 15;
-}
-
-- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return [[CustomFooter alloc] init];
-}
-
- 
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -182,49 +161,11 @@
 }
 */
 
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    if ([[settingsOptions objectAtIndex:indexPath.row]  isEqual: @"Personal Information"]) {
-        
-        PersonalInfoViewController *personalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Personal"];
-        [self.navigationController pushViewController:personalView animated:YES];
-    }
-    
-    else if ([[settingsOptions objectAtIndex:indexPath.row]  isEqual: @"Medical Information"]) {
-    
-        MedicalInfoViewController *medicalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Medical"];
-        [self.navigationController pushViewController:medicalView animated:YES];
-    }
-    
-    else if ([[settingsOptions objectAtIndex:indexPath.row]  isEqual: @"In Case of Emergency"]) {
-        
-        ICEViewController *iceView = [self.storyboard instantiateViewControllerWithIdentifier:@"ICE"];
-        [self.navigationController pushViewController:iceView animated:YES];
-    }
-
-    
-    /*
-    switch (indexPath.row) {
-        case 0:
-            PersonalInfoViewController *personalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Personal"];
-            [self.navigationController pushViewController:personalView animated:YES];
-            break;
-        case 1:
-            MedicalInfoViewController *medicalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Medical"];
-            [self.navigationController pushViewController:medicalView animated:YES];
-            break;
-        case 2:
-            ICEViewController *iceView = [self.storyboard instantiateViewControllerWithIdentifier:@"ICE"];
-            [self.navigationController pushViewController:iceView animated:YES];
-            break;
-        default:
-            break;
-    }
-     */
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...

@@ -1,45 +1,38 @@
 //
-//  SettingsViewController.m
+//  PersonalInfoViewController.m
 //  Quick Emergency
 //
 //  Created by Paul Wilson on 7/7/13.
 //  Copyright (c) 2013 TnT Development. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "PersonalInfoViewController.h"
 #import "CustomCellBackground.h"
 #import "CustomHeader.h"
 #import "CustomFooter.h"
-#import "PersonalInfoViewController.h"
-#import "MedicalInfoViewController.h"
-#import "ICEViewController.h"
 
-
-@interface SettingsViewController ()
+@interface PersonalInfoViewController ()
 
 @end
 
-@implementation SettingsViewController
-@synthesize settingsOptions, settingsDetailText;
-
-
-- (id)initWithStyle:(UITableViewStyle)style
+@implementation PersonalInfoViewController
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    NSArray *secondInfo;
 }
+@synthesize primaryInformation, addressInformation;
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
-    
-    settingsOptions = [[NSArray alloc] initWithObjects:@"Personal Information", @"Medical Information", @"In Case of Emergency", nil];
-    settingsDetailText = [[NSArray alloc] initWithObjects:@"Name, Gender, Address, etc.",@"Medical History, Allegies, etc.", @"Points of Contact", nil];
 
+    primaryInformation = [[NSArray alloc] initWithObjects:@"First Name", @"Last Name", @"Age", @"Gender", @"Home Phone", @"Cell Phone", nil];
+    
+    addressInformation = [[NSArray alloc] initWithObjects:@"Street Line 1", @"Street Line 2", @"City", @"State", @"Zipcode", @"Country",  nil];
+    
+    secondInfo = [[NSArray alloc] initWithObjects:@"Paul", @"Wilson",@"19",@"Male",@"3013527665",@"3013527665", nil];
+    
+    //Setup Navigation Bar and BG
+    self.title = @"Personal";
     UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableBackground.jpg"]];
     self.tableView.backgroundView = background;
     
@@ -61,19 +54,29 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [settingsOptions count];
+    
+    if (section == 0) {
+        return [primaryInformation count];;
+    } else {
+        return [addressInformation count];
+    }
+     
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"Please Complete";
-    
+    if (section == 0) {
+        return @"Personal Information";
+    } else {
+        return @"Address";
+    }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,7 +92,7 @@
     if (![cell.backgroundView isKindOfClass:[CustomCellBackground class]]) {
         CustomCellBackground * backgroundCell = [[CustomCellBackground alloc] init];
         cell.backgroundView = backgroundCell;
-        
+
     }
     
     if (![cell.selectedBackgroundView isKindOfClass:[CustomCellBackground class]]) {
@@ -98,14 +101,23 @@
         cell.selectedBackgroundView = selectedBackgroundCell;
     }
     
+    if (indexPath.section == 0) {
+        cell.textLabel.text = [primaryInformation objectAtIndex:indexPath.row];
+        cell.detailTextLabel.text = [secondInfo objectAtIndex:indexPath.row];
+        
+        ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == primaryInformation.count - 1;
+        ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == primaryInformation.count - 1;
+        
+    } else {
+        cell.textLabel.text = [addressInformation objectAtIndex:indexPath.row];
+        cell.detailTextLabel.text = @"";
+        
+        ((CustomCellBackground *)cell.backgroundView).lastCell = indexPath.row == addressInformation.count - 1;
+        ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == addressInformation.count - 1;
 
-    cell.textLabel.text = [settingsOptions objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [settingsDetailText objectAtIndex:indexPath.row];
+    }
     
-    ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == settingsOptions.count - 1;
-    ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == settingsOptions.count - 1;
-    
-    
+
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.textLabel.highlightedTextColor = [UIColor blackColor];
     
@@ -114,7 +126,6 @@
     
     return cell;
 }
-
 
 -(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -142,7 +153,6 @@
     return [[CustomFooter alloc] init];
 }
 
- 
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -182,49 +192,11 @@
 }
 */
 
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    if ([[settingsOptions objectAtIndex:indexPath.row]  isEqual: @"Personal Information"]) {
-        
-        PersonalInfoViewController *personalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Personal"];
-        [self.navigationController pushViewController:personalView animated:YES];
-    }
-    
-    else if ([[settingsOptions objectAtIndex:indexPath.row]  isEqual: @"Medical Information"]) {
-    
-        MedicalInfoViewController *medicalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Medical"];
-        [self.navigationController pushViewController:medicalView animated:YES];
-    }
-    
-    else if ([[settingsOptions objectAtIndex:indexPath.row]  isEqual: @"In Case of Emergency"]) {
-        
-        ICEViewController *iceView = [self.storyboard instantiateViewControllerWithIdentifier:@"ICE"];
-        [self.navigationController pushViewController:iceView animated:YES];
-    }
-
-    
-    /*
-    switch (indexPath.row) {
-        case 0:
-            PersonalInfoViewController *personalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Personal"];
-            [self.navigationController pushViewController:personalView animated:YES];
-            break;
-        case 1:
-            MedicalInfoViewController *medicalView = [self.storyboard instantiateViewControllerWithIdentifier:@"Medical"];
-            [self.navigationController pushViewController:medicalView animated:YES];
-            break;
-        case 2:
-            ICEViewController *iceView = [self.storyboard instantiateViewControllerWithIdentifier:@"ICE"];
-            [self.navigationController pushViewController:iceView animated:YES];
-            break;
-        default:
-            break;
-    }
-     */
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
