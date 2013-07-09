@@ -17,7 +17,6 @@
 
 @implementation PersonalInfoViewController
 {
-    NSArray *secondInfo;
 }
 @synthesize primaryInformation, addressInformation;
 
@@ -29,7 +28,6 @@
     
     addressInformation = [[NSArray alloc] initWithObjects:@"Street Line 1", @"Street Line 2", @"City", @"State", @"Zipcode", @"Country",  nil];
     
-    secondInfo = [[NSArray alloc] initWithObjects:@"Paul", @"Wilson",@"19",@"Male",@"3013527665",@"3013527665", nil];
     
     //Setup Navigation Bar and BG
     self.title = @"Personal";
@@ -83,6 +81,7 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
@@ -103,7 +102,10 @@
     
     if (indexPath.section == 0) {
         cell.textLabel.text = [primaryInformation objectAtIndex:indexPath.row];
-        cell.detailTextLabel.text = [secondInfo objectAtIndex:indexPath.row];
+        //Get Values from settings and display them in the secondary information
+        NSString *myValue = [defaults stringForKey:[primaryInformation objectAtIndex:indexPath.row]];
+        cell.detailTextLabel.text = myValue;
+        
         
         ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == primaryInformation.count - 1;
         ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == primaryInformation.count - 1;

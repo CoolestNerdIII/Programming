@@ -27,13 +27,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
     //Setup Navigation Controller
     self.navigationItem.title = @"Select Your Emergency";
     UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Home" style: UIBarButtonItemStyleBordered target: nil action: nil];
     self.navigationItem.backBarButtonItem = newBackButton;
     self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
-
+    self.toolbar.backgroundColor  = [UIColor darkGrayColor];
+    //[self.toolbar setBackgroundImage:[UIImage imageNamed:@"Default.png"] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+    //self.toolbar.tintColor = [UIColor darkTextColor];
     
     //Set up scroll view
     [scroller setScrollEnabled:YES];

@@ -32,6 +32,9 @@
 		69628AB3178A42F9004518A8 /* tableBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69628AB2178A42F9004518A8 /* tableBackground.jpg */; };
 		69628AB6178A468A004518A8 /* CustomFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69628AB5178A468A004518A8 /* CustomFooter.m */; };
 		69628AB9178A528A004518A8 /* ICEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69628AB8178A528A004518A8 /* ICEViewController.m */; };
+		69628ABD178A76F4004518A8 /* MedicalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69628ABC178A76F4004518A8 /* MedicalDetailViewController.m */; };
+		69B37057178BA1C00079099C /* tab_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B37055178BA1C00079099C /* tab_bg.png */; };
+		69B37068178BCEF50079099C /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69B37067178BCEF50079099C /* Defaults.plist */; };
 		69C855821788B9B800518F4B /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C855801788B9B800518F4B /* Fire.png */; };
 		69C855831788B9B800518F4B /* Fire@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C855811788B9B800518F4B /* Fire@2x.png */; };
 /* End PBXBuildFile section */
@@ -76,6 +79,13 @@
 		69628AB5178A468A004518A8 /* CustomFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFooter.m; sourceTree = "<group>"; };
 		69628AB7178A528A004518A8 /* ICEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICEViewController.h; sourceTree = "<group>"; };
 		69628AB8178A528A004518A8 /* ICEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICEViewController.m; sourceTree = "<group>"; };
+		69628ABB178A76F4004518A8 /* MedicalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalDetailViewController.h; sourceTree = "<group>"; };
+		69628ABC178A76F4004518A8 /* MedicalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalDetailViewController.m; sourceTree = "<group>"; };
+		69B37055178BA1C00079099C /* tab_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_bg.png; path = Images/tab_bg.png; sourceTree = "<group>"; };
+		69B3705F178BBFF10079099C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		69B37061178BBFFB0079099C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		69B37063178BC0020079099C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		69B37067178BCEF50079099C /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		69C855801788B9B800518F4B /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fire.png; path = Images/Fire.png; sourceTree = "<group>"; };
 		69C855811788B9B800518F4B /* Fire@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fire@2x.png"; path = "Images/Fire@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				69C855841788B9C100518F4B /* Images */,
-				690A96ED177E9CAF0025A94E /* AppDelegate.h */,
-				690A96EE177E9CAF0025A94E /* AppDelegate.m */,
+				69628ABA178A5687004518A8 /* Delegates */,
 				690A96F6177E9CAF0025A94E /* MainStoryboard.storyboard */,
+				69B37067178BCEF50079099C /* Defaults.plist */,
 				69628AAE178A3EED004518A8 /* Custom Background */,
 				69C499981780A25700A13787 /* View Controllers */,
 				690A96E5177E9CAF0025A94E /* Supporting Files */,
@@ -140,6 +150,9 @@
 		690A96E5177E9CAF0025A94E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				69B37063178BC0020079099C /* Default@2x.png */,
+				69B37061178BBFFB0079099C /* Default.png */,
+				69B3705F178BBFF10079099C /* Default-568h@2x.png */,
 				690A96E6177E9CAF0025A94E /* Quick Emergency-Info.plist */,
 				690A96E7177E9CAF0025A94E /* InfoPlist.strings */,
 				690A96EA177E9CAF0025A94E /* main.m */,
@@ -166,6 +179,24 @@
 			name = "Custom Background";
 			sourceTree = "<group>";
 		};
+		69628ABA178A5687004518A8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				690A96ED177E9CAF0025A94E /* AppDelegate.h */,
+				690A96EE177E9CAF0025A94E /* AppDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		69628ABE178A7704004518A8 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				69628ABB178A76F4004518A8 /* MedicalDetailViewController.h */,
+				69628ABC178A76F4004518A8 /* MedicalDetailViewController.m */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
 		69C499981780A25700A13787 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +212,7 @@
 				6961DC13178A07A50019A24B /* MedicalInfoViewController.m */,
 				69628AB7178A528A004518A8 /* ICEViewController.h */,
 				69628AB8178A528A004518A8 /* ICEViewController.m */,
+				69628ABE178A7704004518A8 /* Details */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -188,6 +220,7 @@
 		69C855841788B9C100518F4B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				69B37055178BA1C00079099C /* tab_bg.png */,
 				69628AB2178A42F9004518A8 /* tableBackground.jpg */,
 				6961DC091789D9080019A24B /* CalmBackground.png */,
 				6961DC0A1789D9080019A24B /* CalmBackground@2x.png */,
@@ -260,6 +293,8 @@
 				6961DC0D1789D9080019A24B /* CalmBackground@2x.png in Resources */,
 				6961DC0E1789D9080019A24B /* CalmBackground-568@2x.png in Resources */,
 				69628AB3178A42F9004518A8 /* tableBackground.jpg in Resources */,
+				69B37057178BA1C00079099C /* tab_bg.png in Resources */,
+				69B37068178BCEF50079099C /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +317,7 @@
 				69628AB1178A3F0B004518A8 /* CustomHeader.m in Sources */,
 				69628AB6178A468A004518A8 /* CustomFooter.m in Sources */,
 				69628AB9178A528A004518A8 /* ICEViewController.m in Sources */,
+				69628ABD178A76F4004518A8 /* MedicalDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

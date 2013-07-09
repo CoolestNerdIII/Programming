@@ -9,6 +9,7 @@
 #import "MedicalInfoViewController.h"
 #import "CustomCellBackground.h"
 #import "CustomHeader.h"
+#import "MedicalDetailViewController.h"
 
 @interface MedicalInfoViewController ()
 
@@ -39,12 +40,14 @@
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    medicalInformation = [[NSArray alloc] initWithObjects:@"Name",@"Birth Date", @"Medication Allergies",@"Food Allergies", @"Chronic Conditions",@"Hospitalizations", @"Doctor Information",@"Hospital Preference", @"Medical Insurance Information",@"Past Surgical Information", nil];
+    medicalInformation = [[NSMutableArray alloc] initWithObjects:@"First Name", @"Last Name", @"Birthdate", @"Medication Allergies",@"Food Allergies", @"Chronic Conditions",@"Hospitalizations", @"Doctor Information",@"Hospital Preference", @"Medical Insurance", @"Past Surgical Information", nil];
     
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -63,7 +66,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return medicalInformation.count;
+    return medicalInformation.count + 1;
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -94,13 +97,21 @@
         cell.selectedBackgroundView = selectedBackgroundCell;
     }
 
+    if (indexPath.row ==[medicalInformation count]){
+        cell.textLabel.text = @"Add new row";
+        cell.textLabel.textColor = [UIColor darkGrayColor];
+        cell.textLabel.highlightedTextColor = [UIColor darkGrayColor];
+        
+    }else{
     
-    cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
+        cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
+        cell.textLabel.highlightedTextColor = [UIColor blackColor];
+    }
     ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == medicalInformation.count - 1;
     ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == medicalInformation.count - 1;
     
     cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.textLabel.highlightedTextColor = [UIColor blackColor];
+    
     
     return cell;
 }
@@ -122,28 +133,20 @@
     return 50;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
+/*
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row >=[medicalInformation count]){
+        return YES;
+    
+    }
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 */
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
 /*
 // Override to support rearranging the table view.
@@ -162,16 +165,93 @@
 */
 
 #pragma mark - Table view delegate
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *indexPathArray = [NSArray arrayWithObject:indexPath];
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [prefs removeObjectForKey:[medicalInformation objectAtIndex:indexPath.row]];
+        
+        [medicalInformation removeObjectAtIndex:indexPath.row];
+        
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        
+        NSString *theObjectToInsert = @"Other";
+        [medicalInformation addObject:theObjectToInsert];
+        
+        [prefs setObject:@"" forKey:theObjectToInsert];
+        [tableView insertRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationAutomatic];
+        /*
+         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+         [medicalInformation addObject:messageField.text];
+         [tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+         */
+    }
+    [tableView reloadData];
+    [prefs synchronize];
+    NSLog(@"All contents of NSUserDefaults: %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+
+}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if (indexPath.row == [self.medicalInformation count]){
+    
+        //put table in edit mode
+        [self setEditing:YES animated:YES];
+        
+    }else{
+    
+        //Handle normal selections
+        MedicalDetailViewController *mdvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MedicalDetail"];
+        mdvc.medicalOption = [medicalInformation objectAtIndex:indexPath.row];
+        mdvc.isTextView = NO;
+        mdvc.isTextBox = NO;
+        mdvc.isPicker = NO;
+        
+        if([[medicalInformation objectAtIndex:indexPath.row] isEqual:@"Name"]){
+            
+            mdvc.isTextBox = YES;
+            
+        } else if([[medicalInformation objectAtIndex:indexPath.row] isEqual:@"Birth Date"]){
+            mdvc.isPicker = YES;
+            
+        } else{
+            mdvc.isTextView = YES;
+        }
+        
+        
+        [self.navigationController pushViewController:mdvc animated:YES];
+    
+}
+}
+
+#pragma mark - Table View Editting
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated{
+
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+}
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.editing) {
+        if (indexPath.row == [self.medicalInformation count]) {
+            return UITableViewCellEditingStyleInsert;
+        }else {
+            return UITableViewCellEditingStyleDelete;
+        }
+    }
+    return UITableViewCellEditingStyleNone;
 }
 
 @end

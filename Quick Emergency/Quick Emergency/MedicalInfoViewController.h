@@ -10,7 +10,7 @@
 
 @interface MedicalInfoViewController : UITableViewController
 
-@property (strong,nonatomic) NSArray *medicalInformation;
+@property (strong,nonatomic) NSMutableArray *medicalInformation;
 
 
 @end
