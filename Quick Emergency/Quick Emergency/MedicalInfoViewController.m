@@ -18,33 +18,47 @@
 @implementation MedicalInfoViewController
 
 @synthesize medicalInformation;
+@synthesize keyPairs, defaultKeys, options;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    
     //Setup Navigation Bar and BG
     self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
     self.title = @"Medical";
     UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableBackground.jpg"]];
     self.tableView.backgroundView = background;
+    
+    //Implement NSUserDefaults
+    //Get the default information
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    //Get the keys and objects from the default settings
+    options = [[NSDictionary alloc] init];
+    options = [defaults dictionaryRepresentation];
+    
+    keyPairs = [[NSDictionary alloc]init];
+    keyPairs = [options objectForKey:@"medicalInformation"];
+    
+    
+    //Make an array of all of the keys
+    medicalInformation = [[NSMutableArray alloc]init];
+    for (NSString *key in keyPairs){
+        [medicalInformation addObject:key];
+    }
+    medicalInformation = [self reoganizeMedicalArray:medicalInformation];
+
 
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    medicalInformation = [[NSMutableArray alloc] initWithObjects:@"First Name", @"Last Name", @"Birthdate", @"Medication Allergies",@"Food Allergies", @"Chronic Conditions",@"Hospitalizations", @"Doctor Information",@"Hospital Preference", @"Medical Insurance", @"Past Surgical Information", nil];
+    //medicalInformation = [[NSMutableArray alloc] initWithObjects:@"First Name", @"Last Name", @"Birthdate", @"Medication Allergies",@"Food Allergies", @"Chronic Conditions",@"Hospitalizations", @"Doctor Information",@"Hospital Preference", @"Medical Insurance", @"Past Surgical Information", nil];
     
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [super viewDidLoad];
 }
 
 
@@ -104,6 +118,7 @@
         
     }else{
     
+
         cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
         cell.textLabel.highlightedTextColor = [UIColor blackColor];
     }
@@ -252,6 +267,51 @@
         }
     }
     return UITableViewCellEditingStyleNone;
+}
+
+
+-(NSMutableArray *)reoganizeMedicalArray:(NSMutableArray *)array{
+    
+    NSUInteger pos;
+    id object;
+    for(NSUInteger x = 0; x < [array count]; x++){
+        
+        switch (x) {
+            case 0:
+                
+                
+                
+                pos = [array indexOfObject:@"First Name"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:0];
+                break;
+            case 1:
+                pos = [array indexOfObject:@"Last Name"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:1];
+                
+                break;
+            case 2:
+                pos = [array indexOfObject:@"Birthdate"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:2];
+                break;
+                
+            default:
+                break;
+        }
+        
+        
+    }
+    
+    
+    return  array;
 }
 
 @end

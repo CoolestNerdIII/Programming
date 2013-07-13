@@ -10,4 +10,10 @@
 
 @interface ICEViewController : UITableViewController
 
+@property(strong, nonatomic) NSMutableDictionary *contacts;
+
+@property(strong, nonatomic) NSMutableArray *doctors;
+@property(strong, nonatomic) NSMutableArray *familyMembers;
+@property(strong, nonatomic) NSMutableArray *otherContacts;
+
 @end

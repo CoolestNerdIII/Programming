@@ -149,7 +149,7 @@
 {
     // Override point for customization after application launch.
     // Load default defaults
-    [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults copy" ofType:@"plist"]]];
     
     //Customize Appearance
     [self customizeAppearance];

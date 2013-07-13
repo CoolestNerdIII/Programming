@@ -12,5 +12,9 @@
 
 @property (strong,nonatomic) NSMutableArray *medicalInformation;
 
+@property (strong,nonatomic) NSMutableArray *defaultKeys;
+@property (strong,nonatomic) NSDictionary *keyPairs;
+@property (strong,nonatomic) NSDictionary *options;
 
+-(NSMutableArray *)reoganizeMedicalArray:(NSMutableArray *)array;
 @end

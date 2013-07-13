@@ -21,15 +21,6 @@
 {
     [super viewDidLoad];
     
-    //Create Save Button
-    /*
-    UIBarButtonItem *save = [[UIBarButtonItem alloc]
-                             initWithTitle:@"Save"
-                             style:UIBarButtonItemStyleBordered
-                             target:self
-                             action:@selector(saveInformation:)];
-    self.navigationItem.rightBarButtonItem = save;*/
-    
     
     self.title = medicalOption;
     

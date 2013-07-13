@@ -13,4 +13,17 @@
 @property (strong,nonatomic) NSArray *primaryInformation;
 @property (strong,nonatomic) NSArray *addressInformation;
 
+@property (strong,nonatomic) NSMutableArray *personalInformation;
+@property (strong,nonatomic) NSMutableArray *titles;
+@property (strong,nonatomic) NSMutableArray *defaultKeys;
+
+@property (strong,nonatomic) NSDictionary *keyPairs;
+@property (strong,nonatomic) NSDictionary *options;
+
+
+
+-(NSMutableArray *)getDefaults:(NSMutableArray *)array withDefaults:(NSUserDefaults*) defaults;
+//- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex withArray:(NSMutableArray *)array;
+-(NSMutableArray *)reoganizePersonalArray:(NSMutableArray *)array;
+
 @end

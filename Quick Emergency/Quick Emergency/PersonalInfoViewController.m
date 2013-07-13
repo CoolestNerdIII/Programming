@@ -16,18 +16,39 @@
 @end
 
 @implementation PersonalInfoViewController
-{
-}
+
 @synthesize primaryInformation, addressInformation;
+@synthesize personalInformation, titles, defaultKeys;
+@synthesize keyPairs, options;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    //[super viewDidLoad];
 
-    primaryInformation = [[NSArray alloc] initWithObjects:@"First Name", @"Last Name", @"Age", @"Gender", @"Home Phone", @"Cell Phone", nil];
+    //primaryInformation = [[NSArray alloc] initWithObjects:@"First Name", @"Last Name", @"Age", @"Gender", @"Home Phone", @"Cell Phone", nil];
     
-    addressInformation = [[NSArray alloc] initWithObjects:@"Street Line 1", @"Street Line 2", @"City", @"State", @"Zipcode", @"Country",  nil];
+    //addressInformation = [[NSArray alloc] initWithObjects:@"Street Line 1", @"Street Line 2", @"City", @"State", @"Zipcode", @"Country",  nil];
     
+    //Implement NSUserDefaults
+    //Get the default information
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    //Get the keys and objects from the default settings
+    options = [[NSDictionary alloc] init];
+    options = [defaults dictionaryRepresentation];
+    
+    keyPairs = [[NSDictionary alloc]init];
+    keyPairs = [options objectForKey:@"personalInformation"];
+
+    
+    //Make an array of all of the keys
+    defaultKeys = [[NSMutableArray alloc]init];
+    for (NSString *key in keyPairs){
+        [defaultKeys addObject:key];
+    }
+    
+    defaultKeys = [self reoganizePersonalArray:defaultKeys];
+
     
     //Setup Navigation Bar and BG
     self.title = @"Personal";
@@ -39,6 +60,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [super viewDidLoad];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,36 +76,25 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    
-    if (section == 0) {
-        return [primaryInformation count];;
-    } else {
-        return [addressInformation count];
-    }
+    return [keyPairs count];
      
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return @"Personal Information";
-    } else {
-        return @"Address";
-    }
-
+    return @"User Information";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
@@ -99,27 +112,22 @@
         selectedBackgroundCell.selected = YES;
         cell.selectedBackgroundView = selectedBackgroundCell;
     }
+  
+    NSString *key = [defaultKeys objectAtIndex:indexPath.row];
     
-    if (indexPath.section == 0) {
-        cell.textLabel.text = [primaryInformation objectAtIndex:indexPath.row];
-        //Get Values from settings and display them in the secondary information
-        NSString *myValue = [defaults stringForKey:[primaryInformation objectAtIndex:indexPath.row]];
-        cell.detailTextLabel.text = myValue;
-        
-        
-        ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == primaryInformation.count - 1;
-        ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == primaryInformation.count - 1;
-        
-    } else {
-        cell.textLabel.text = [addressInformation objectAtIndex:indexPath.row];
-        cell.detailTextLabel.text = @"";
-        
-        ((CustomCellBackground *)cell.backgroundView).lastCell = indexPath.row == addressInformation.count - 1;
-        ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == addressInformation.count - 1;
+    cell.textLabel.text = key;
+    
+    if([[keyPairs objectForKey:key] isKindOfClass:[NSString class]]){
+        cell.detailTextLabel.text = [keyPairs objectForKey:key];
 
+    }else{
+        cell.detailTextLabel.text = @"";
     }
     
-
+    
+    ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == keyPairs.count - 1;
+    ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == keyPairs.count - 1;
+    
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.textLabel.highlightedTextColor = [UIColor blackColor];
     
@@ -206,5 +214,106 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+
+
+#pragma mark - Get User Defaults
+
+-(NSMutableArray *)getDefaults:(NSMutableArray *)array withDefaults:(NSUserDefaults*) defaults{
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [array addObject:[defaults stringForKey:@"First Name"]];
+    [array addObject:[defaults stringForKey:@"Last Name"]];
+    [array addObject:[defaults stringForKey:@"Age"]];
+    [array addObject:[defaults stringForKey:@"Gender"]];
+    [array addObject:[defaults stringForKey:@"Home Phone"]];
+    [array addObject:[defaults stringForKey:@"Cell Phone"]];
+    [array addObject:[defaults stringForKey:@"Birthdate"]];
+    [array addObject:[defaults arrayForKey:@"address"]];
+    
+    return array;
+
+}
+
+-(NSMutableArray *)reoganizePersonalArray:(NSMutableArray *)array{
+    
+    NSUInteger pos;
+    id object;
+    for(NSUInteger x = 0; x < [array count]; x++){
+        
+        switch (x) {
+            case 0:
+                
+                
+                
+                pos = [array indexOfObject:@"First Name"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:0];
+                break;
+            case 1:
+                pos = [array indexOfObject:@"Last Name"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:1];
+                
+                break;
+            case 2:
+                pos = [array indexOfObject:@"Age"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:2];
+                break;
+            case 3:
+                pos = [array indexOfObject:@"Gender"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:3];
+                break;
+            case 4:
+                pos = [array indexOfObject:@"Home Phone"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:4];
+                break;
+            case 5:
+                pos = [array indexOfObject:@"Cell Phone"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:5];
+                break;
+            case 6:
+                pos = [array indexOfObject:@"Birthdate"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:6];
+                break;
+            case 7:
+                pos = [array indexOfObject:@"Address"];
+                
+                object = [array objectAtIndex:pos];
+                [array removeObjectAtIndex:pos];
+                [array insertObject:object atIndex:7];
+                break;
+                
+            default:
+                break;
+        }
+        
+        
+    }
+    
+    
+    return  array;
+}
+
+
+
 
 @end
