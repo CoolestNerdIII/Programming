@@ -49,13 +49,6 @@
     }
     medicalInformation = [self reoganizeMedicalArray:medicalInformation];
 
-
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    //medicalInformation = [[NSMutableArray alloc] initWithObjects:@"First Name", @"Last Name", @"Birthdate", @"Medication Allergies",@"Food Allergies", @"Chronic Conditions",@"Hospitalizations", @"Doctor Information",@"Hospital Preference", @"Medical Insurance", @"Past Surgical Information", nil];
-    
- 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
             
@@ -111,18 +104,6 @@
         selectedBackgroundCell.selected = YES;
         cell.selectedBackgroundView = selectedBackgroundCell;
     }
-    /*
-    if (indexPath.row ==[medicalInformation count]){
-        cell.textLabel.text = @"Add new row";
-        cell.textLabel.textColor = [UIColor darkGrayColor];
-        cell.textLabel.highlightedTextColor = [UIColor darkGrayColor];
-        
-    }else{
-    
-
-        cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
-        cell.textLabel.highlightedTextColor = [UIColor blackColor];
-    }*/
     
     cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
     cell.textLabel.highlightedTextColor = [UIColor blackColor];
@@ -168,21 +149,30 @@
 */
 
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-}
-*/
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 
-/*
+    NSString * item = [medicalInformation objectAtIndex:fromIndexPath.row];
+    [medicalInformation removeObject:item];
+    [medicalInformation insertObject:item atIndex:toIndexPath.row];
+    
+    //Add new editted array to NSUserDefaults and Sync
+    [prefs setObject:medicalInformation forKey:@"medicalInformation"];
+    [prefs synchronize];
+}
+
+
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
+
 
 #pragma mark - Table view delegate
 // Override to support editing the table view.
@@ -190,19 +180,21 @@
 {    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
         // Delete the row from the data source
         [prefs removeObjectForKey:[medicalInformation objectAtIndex:indexPath.row]];
         
+        //Remove object from array
         [medicalInformation removeObjectAtIndex:indexPath.row];
         
-        
+        //Remove object from table
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [tableView reloadData];
+        [prefs synchronize];
     }
 
-    [tableView reloadData];
-    [prefs synchronize];
     NSLog(@"All contents of NSUserDefaults: %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 
 }
@@ -343,29 +335,31 @@
     //Only do the following actions if the user hit the OK button
     if (buttonIndex == 1)
     {
+        //Get the current user preferences
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
+        //Store the user text in a temporary string
         NSString * tempTextField = [alertView textFieldAtIndex:0].text;
         
+        //Create array if array is not already created (precaution)
         if (!medicalInformation) {
             medicalInformation = [[NSMutableArray alloc]init];
         }
         
+        //Add string to the array
         [medicalInformation insertObject:tempTextField atIndex:0];
         
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         
+        //Update array in the NSUserDefaults
         [prefs setObject:medicalInformation forKey:@"medicalInformation"];
-        //[prefs setObject:@"" forKey:tempTextField];
 
+        //Update the table with the new data
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
-        
+        //Reload table and sync NSUserDefaults
         [self.tableView reloadData];
         [prefs synchronize];
-        NSLog(@"All contents of medicalInformation: %@", medicalInformation);
-
-        //NSLog(@"All contents of NSUserDefaults: %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
-
     }
 }
 @end
