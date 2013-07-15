@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ICEDetailViewController : UITableViewController
+@interface ICEDetailViewController : UITableViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSMutableDictionary *userInfo;
 

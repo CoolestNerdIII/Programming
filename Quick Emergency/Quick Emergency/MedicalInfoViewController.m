@@ -58,6 +58,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+            
     [super viewDidLoad];
 }
 
@@ -80,7 +81,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return medicalInformation.count + 1;
+    return medicalInformation.count ;
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -110,7 +111,7 @@
         selectedBackgroundCell.selected = YES;
         cell.selectedBackgroundView = selectedBackgroundCell;
     }
-
+    /*
     if (indexPath.row ==[medicalInformation count]){
         cell.textLabel.text = @"Add new row";
         cell.textLabel.textColor = [UIColor darkGrayColor];
@@ -121,7 +122,11 @@
 
         cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
         cell.textLabel.highlightedTextColor = [UIColor blackColor];
-    }
+    }*/
+    
+    cell.textLabel.text = [medicalInformation objectAtIndex:indexPath.row];
+    cell.textLabel.highlightedTextColor = [UIColor blackColor];
+    
     ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == medicalInformation.count - 1;
     ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == medicalInformation.count - 1;
     
@@ -182,10 +187,9 @@
 #pragma mark - Table view delegate
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSArray *indexPathArray = [NSArray arrayWithObject:indexPath];
-    
+{    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
@@ -196,19 +200,7 @@
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        
-        NSString *theObjectToInsert = @"Other";
-        [medicalInformation addObject:theObjectToInsert];
-        
-        [prefs setObject:@"" forKey:theObjectToInsert];
-        [tableView insertRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationAutomatic];
-        /*
-         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-         [medicalInformation addObject:messageField.text];
-         [tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-         */
-    }
+
     [tableView reloadData];
     [prefs synchronize];
     NSLog(@"All contents of NSUserDefaults: %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
@@ -255,6 +247,30 @@
 
     [super setEditing:editing animated:animated];
     [self.tableView setEditing:editing animated:animated];
+    if (editing == YES) {
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+        
+        //Show add button if in edit mode
+        self.navigationItem.leftBarButtonItem = addButton;
+
+    }
+    else
+    {
+        //Show normal navigation button if not in edit mode
+        self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem;
+    }
+
+}
+
+-(void) insertNewObject
+{
+    //Display UIAlertView
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Enter Title" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+
 }
 
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -314,4 +330,42 @@
     return  array;
 }
 
+#pragma mark - Return keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)tf
+{
+    [tf endEditing:YES];
+    return NO;
+}
+
+#pragma mark - UIAlertViewDelegate
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    //Only do the following actions if the user hit the OK button
+    if (buttonIndex == 1)
+    {
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        NSString * tempTextField = [alertView textFieldAtIndex:0].text;
+        
+        if (!medicalInformation) {
+            medicalInformation = [[NSMutableArray alloc]init];
+        }
+        
+        [medicalInformation insertObject:tempTextField atIndex:0];
+        
+        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        
+        [prefs setObject:medicalInformation forKey:@"medicalInformation"];
+        //[prefs setObject:@"" forKey:tempTextField];
+
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        
+        [self.tableView reloadData];
+        [prefs synchronize];
+        NSLog(@"All contents of medicalInformation: %@", medicalInformation);
+
+        //NSLog(@"All contents of NSUserDefaults: %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+
+    }
+}
 @end

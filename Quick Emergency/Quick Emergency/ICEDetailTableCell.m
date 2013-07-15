@@ -30,4 +30,14 @@
     // Configure the view for the selected state
 }
 
+-(void) didTransitionToState:(UITableViewCellStateMask)state {
+    [super didTransitionToState:state];
+    if (state == UITableViewCellStateEditingMask) {
+        self.cellTextField.enabled = YES;
+    }
+    if (state == UITableViewCellStateDefaultMask) {
+        self.cellTextField.enabled = NO;
+    }
+}
+
 @end

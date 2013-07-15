@@ -44,7 +44,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,6 +94,7 @@
     } else if(indexPath.section == 2){
         cell.cellLabel.text = @"Phone Number";
         cell.cellTextField.text = [userInfo objectForKey:@"number"];
+        cell.cellTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     } else{
         NSString *key = [keys objectAtIndex:indexPath.row];
         cell.cellLabel.text = key;
@@ -101,10 +102,44 @@
     }
     
     
+    //cell.cellTextField.delegate = self;
+    /*
+
+     if (indexPath.section == 0)
+     cell.textField.text = self.name;
+     if (indexPath.section == 1) {
+     cell.textField.text = self.numbers[indexPath.row];
+     cell.textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+     }
+     cell.textField.delegate = self;
+     return cell;
+     */
+    
+    
     return cell;
 }
 
 
+#pragma mark - textfield editing
+/*
+- (void)textFieldDidEndEditing:(UITextField *)tf {
+    // some cell's text field has finished editing; which cell?
+    UIView* v = tf;
+    do {
+        v = v.superview;
+    } while (![v isKindOfClass: [UITableViewCell class]]);
+    
+    ICEDetailTableCell* cell = (ICEDetailTableCell*)v;
+    // update data model to match
+    NSIndexPath* ip = [self.tableView indexPathForCell:cell];
+    
+    if (ip.section  == 0){
+        [self.userInfo objectForKey:@"firstName"] = cell.cellTextField.text;
+    }
+    else if (ip.section == 1)
+        self.name = cell.textField.text;
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.

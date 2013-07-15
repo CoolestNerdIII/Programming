@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MedicalInfoViewController : UITableViewController
+@interface MedicalInfoViewController : UITableViewController <UIAlertViewDelegate>
 
 @property (strong,nonatomic) NSMutableArray *medicalInformation;
 
