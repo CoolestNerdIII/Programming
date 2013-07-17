@@ -20,11 +20,6 @@
 -(void)makeLabel:(NSString *)title withFrame:(CGRect)frame;
 
 
-- (IBAction)quickButtonPressed:(id)sender;
-- (IBAction)settingsButtonPressed:(id)sender;
-- (IBAction)helpButtonPressed:(id)sender;
-
-
 @property (strong,nonatomic) NSArray *emergencyList;
 @property (strong,nonatomic) NSArray *myImages;
 

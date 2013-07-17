@@ -24,11 +24,9 @@
 - (void)viewDidLoad
 {
     
-    //Setup Navigation Bar and BG
+    //Setup Navigation Bar
     self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
     self.title = @"Medical";
-    UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableBackground.jpg"]];
-    self.tableView.backgroundView = background;
     
     //Implement NSUserDefaults
     //Get the default information
@@ -51,7 +49,19 @@
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-            
+    
+    //Set Background
+    if ([[UIScreen mainScreen] bounds].size.height == 568)
+    {
+        UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DarkBackground-568@2x.png"]];
+        self.tableView.backgroundView = background;
+    }else
+    {
+        UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DarkBackground.png"]];
+        self.tableView.backgroundView = background;
+    }
+    
+    
     [super viewDidLoad];
 }
 
@@ -216,11 +226,12 @@
         mdvc.isTextBox = NO;
         mdvc.isPicker = NO;
         
-        if([[medicalInformation objectAtIndex:indexPath.row] isEqual:@"Name"]){
+        if([[medicalInformation objectAtIndex:indexPath.row] isEqual:@"First Name"] ||
+           [[medicalInformation objectAtIndex:indexPath.row] isEqual:@"Last Name"]){
             
             mdvc.isTextBox = YES;
             
-        } else if([[medicalInformation objectAtIndex:indexPath.row] isEqual:@"Birth Date"]){
+        } else if([[medicalInformation objectAtIndex:indexPath.row] isEqual:@"Birthdate"]){
             mdvc.isPicker = YES;
             
         } else{
@@ -330,8 +341,8 @@
 }
 
 #pragma mark - UIAlertViewDelegate
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{    
     //Only do the following actions if the user hit the OK button
     if (buttonIndex == 1)
     {

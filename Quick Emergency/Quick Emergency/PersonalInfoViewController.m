@@ -52,8 +52,18 @@
     
     //Setup Navigation Bar and BG
     self.title = @"Personal";
-    UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableBackground.jpg"]];
-    self.tableView.backgroundView = background;
+    
+    //Set Background
+    if ([[UIScreen mainScreen] bounds].size.height == 568)
+    {
+        UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DarkBackground-568@2x.png"]];
+        self.tableView.backgroundView = background;
+    }else
+    {
+        UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DarkBackground.png"]];
+        self.tableView.backgroundView = background;
+    }
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

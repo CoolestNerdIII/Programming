@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MedicalDetailViewController : UIViewController
+@interface MedicalDetailViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property(nonatomic,strong) NSString *medicalOption;
 @property(nonatomic, assign) BOOL isTextBox;
@@ -17,7 +17,7 @@
 
 -(void)saveInformation:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) IBOutlet UITextField *textbox;
+//@property (strong, nonatomic) IBOutlet UILabel *label;
+//@property (strong, nonatomic) IBOutlet UITextField *textbox;
 
 @end

@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = emergencySelected;
 	// Do any additional setup after loading the view.
 }
 

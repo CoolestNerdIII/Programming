@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "DetailViewController.h"
+#import "SearchViewController.h"
 
 @interface MenuViewController ()
 
@@ -127,18 +128,41 @@
     NSLog(@"Title: %@", [[sender titleLabel] text]);
 }
 
-- (IBAction)quickButtonPressed:(id)sender {
-    NSLog(@"Quick Button Pressed");
-}
 
-- (IBAction)settingsButtonPressed:(id)sender {
-    NSLog(@"Settings Button Pressed");
-}
-
-- (IBAction)helpButtonPressed:(id)sender{
-    NSLog(@"Help Button Pressed");
+-(void)viewDidAppear:(BOOL)animated{
+    
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchTable:)];
+    
+    //Show add button if in edit mode
+    self.navigationItem.rightBarButtonItem = searchButton;
+    
+    /*
+    UIBarButtonItem *save = [[UIBarButtonItem alloc]
+                             initWithTitle:@"Save"
+                             style:UIBarButtonItemStyleBordered
+                             target:self
+                             action:@selector(saveInformation:)];
+    self.navigationItem.rightBarButtonItem = save;
+     */
     
 }
+
+-(void)searchTable:(id)sender
+{
+    
+    SearchViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"Search"];
+    
+    //Return the title of the button pressed
+    //NSString *selection = [[sender titleLabel] text];
+    svc.emergencyList = emergencyList;
+    
+    [self.navigationController pushViewController:svc animated:YES];
+    
+    
+    
+    
+}
+
 
 #pragma Button Create Methods
 #pragma mark -

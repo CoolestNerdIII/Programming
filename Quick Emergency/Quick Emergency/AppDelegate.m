@@ -153,8 +153,16 @@
     
     //Customize Appearance
     [self customizeAppearance];
-    
-    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"CalmBackground.png"]];
+    if ([[UIScreen mainScreen] bounds].size.height == 568)
+    {
+        self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DarkBackground-568@2x.png"]];
+    }
+    else
+    {
+        self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DarkBackground.png"]];
+
+    }
+    //self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableBackground.jpg"]];
     return YES;
 }
 							

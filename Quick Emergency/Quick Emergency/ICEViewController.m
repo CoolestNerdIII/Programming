@@ -46,6 +46,17 @@
     [familyMembers addObject:person1]; [familyMembers addObject:person2]; [familyMembers addObject:person3];
     [otherContacts addObject:person1]; [otherContacts addObject:person2]; [otherContacts addObject:person3];
     
+    //Set Background
+    if ([[UIScreen mainScreen] bounds].size.height == 568)
+    {
+        UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DarkBackground-568@2x.png"]];
+        self.tableView.backgroundView = background;
+    }else
+    {
+        UIImageView * background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DarkBackground.png"]];
+        self.tableView.backgroundView = background;
+    }
+    
     
     
     // Uncomment the following line to preserve selection between presentations.
