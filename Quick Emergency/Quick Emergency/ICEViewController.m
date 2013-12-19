@@ -8,6 +8,10 @@
 
 #import "ICEViewController.h"
 #import "ICEDetailViewController.h"
+#import "CustomCellBackground.h"
+#import "CustomHeader.h"
+#import "CustomFooter.h"
+
 
 @interface ICEViewController ()
 
@@ -27,7 +31,7 @@
     //otherContacts = [[NSMutableArray alloc] initWithObjects:@"Other 1", @"Other2", nil];
 
     
-    doctors = [[NSMutableArray alloc] init];
+    //doctors = [[NSMutableArray alloc] init];
     familyMembers = [[NSMutableArray alloc] init];
     otherContacts = [[NSMutableArray alloc] init];
     
@@ -42,7 +46,7 @@
     //contacts = [person2 mutableCopy];
     //contacts = [person3 mutableCopy];
     
-    [doctors addObject:person1]; [doctors addObject:person2]; [doctors addObject:person3];
+    //[doctors addObject:person1]; [doctors addObject:person2]; [doctors addObject:person3];
     [familyMembers addObject:person1]; [familyMembers addObject:person2]; [familyMembers addObject:person3];
     [otherContacts addObject:person1]; [otherContacts addObject:person2]; [otherContacts addObject:person3];
     
@@ -63,7 +67,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,26 +81,26 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if(section ==0){
-        return [doctors count];
-    } else if (section == 1){
-        return  [familyMembers count];
-    }else {
-        return [otherContacts count];
+    if(section ==0)
+    {
+        return  [familyMembers count]+1;
+    }
+    else
+    {
+        return [otherContacts count]+1;
     }
     
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return @"Doctor(s)";
-    } else if (section == 1) {
+    if (section == 0)
+    {
         return @"Family Member(s)";
     }else{
         return @"Other Contacts";
@@ -113,27 +117,97 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
 
     }
+    
+    //Set Background
+    if (![cell.backgroundView isKindOfClass:[CustomCellBackground class]]) {
+        CustomCellBackground * backgroundCell = [[CustomCellBackground alloc] init];
+        cell.backgroundView = backgroundCell;
+        
+    }
+    
+    if (![cell.selectedBackgroundView isKindOfClass:[CustomCellBackground class]]) {
+        CustomCellBackground * selectedBackgroundCell = [[CustomCellBackground alloc] init];
+        selectedBackgroundCell.selected = YES;
+        cell.selectedBackgroundView = selectedBackgroundCell;
+    }
+
 
     
     if (indexPath.section == 0) {
-        NSMutableDictionary *retval = [doctors objectAtIndex:indexPath.row];
-        cell.textLabel.text = [retval objectForKey:@"firstName"];
-        
-    } else if (indexPath.section == 1) {
-        
+        if (indexPath.row == [self.familyMembers count]) {
+            cell.textLabel.text = @"Add new row";
+            cell.textLabel.textColor = [UIColor darkGrayColor];
+        }else{
         NSMutableDictionary *retval = [familyMembers objectAtIndex:indexPath.row];
         cell.textLabel.text = [retval objectForKey:@"firstName"];
         //cell.textLabel.text = [familyMembers objectAtIndex:indexPath.row];
         
-    }else{
+        cell.textLabel.highlightedTextColor = [UIColor blackColor];
+        
+        ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == familyMembers.count - 1;
+        ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == familyMembers.count - 1;
+        
+            //cell.textLabel.backgroundColor = [UIColor clearColor];
+        }
+
+        
+    }
+    else
+    {
+        if (indexPath.row == [self.otherContacts count]) {
+            cell.textLabel.text = @"Add new row";
+            cell.textLabel.textColor = [UIColor darkGrayColor];
+        }else
+        {
         NSMutableDictionary *retval = [otherContacts objectAtIndex:indexPath.row];
         cell.textLabel.text = [retval objectForKey:@"firstName"];
         //cell.textLabel.text = [otherContacts objectAtIndex:indexPath.row];
-    }
+        
+        
+        ((CustomCellBackground *) cell.backgroundView).lastCell = indexPath.row == otherContacts.count - 1;
+        ((CustomCellBackground *)cell.selectedBackgroundView).lastCell = indexPath.row == otherContacts.count - 1;
+        }
 
+    }
+    
+    cell.textLabel.highlightedTextColor = [UIColor blackColor];
+
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+
+    
     
     return cell;
 }
+
+
+
+-(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 50;
+}
+
+-(CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 15;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [[CustomFooter alloc] init];
+}
+
+-(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    CustomHeader * header = [[CustomHeader alloc] init];
+    header.titleLabel.text = [self tableView: tableView titleForHeaderInSection:section];
+    if (section == 1) {
+        header.lightColor = [UIColor colorWithRed:147.0/255.0 green:105.0/255.0 blue:216.0/255.0 alpha:1.0];
+        header.darkColor = [UIColor colorWithRed:72.0/255.0 green:22.0/255.0 blue:137.0/255.0 alpha:1.0];
+    }
+    return header;
+}
+
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -174,8 +248,9 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
+/*
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -186,7 +261,187 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+ */
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        if (indexPath.section == 0)
+        {
+            
+            // Delete the row from the data source
+            [prefs removeObjectForKey:[familyMembers objectAtIndex:indexPath.row]];
+            
+            //Remove object from array
+            [familyMembers removeObjectAtIndex:indexPath.row];
+            
+            //Remove object from table
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            [tableView reloadData];
+        }
+        else if (indexPath.section == 1)
+        {
+            // Delete the row from the data source
+            [prefs removeObjectForKey:[otherContacts objectAtIndex:indexPath.row]];
+            
+            //Remove object from array
+            [otherContacts removeObjectAtIndex:indexPath.row];
+            
+            //Remove object from table
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            [tableView reloadData];
+        }
+        
+        [prefs synchronize];
+    }
+}
+    
+
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated{
+    
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+    if (editing == YES) {
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+        
+        //Show add button if in edit mode
+        self.navigationItem.leftBarButtonItem = addButton;
+        
+    }
+    else
+    {
+        //Show normal navigation button if not in edit mode
+        self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem;
+    }
+    
+}
+
+-(void) insertNewObject
+{
+    //Display UIAlertView
+    
+    //UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add Contact" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to Family", @"Add to Other",nil];
+    //alert.message = @"\n";
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add Contact" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to Family",nil];
+
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+    
+}
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.editing) {
+        if (indexPath.section == 0)
+        {
+            if (indexPath.row == [self.familyMembers count])
+            {
+                //return UITableViewCellEditingStyleInsert;
+                [self insertNewObject];
+                return UITableViewCellEditingStyleInsert;
+                
+            }
+            
+            else
+            {
+                return UITableViewCellEditingStyleDelete;
+            }
+        }
+        else if (indexPath.section == 1)
+        {
+            if (indexPath.row == [self.otherContacts count]) {
+                return UITableViewCellEditingStyleInsert;
+            }
+            else
+            {
+                return UITableViewCellEditingStyleDelete;
+            }
+        }
+        
+    }
+    return UITableViewCellEditingStyleNone;
+}
+
+
+#pragma mark - Return keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)tf
+{
+    [tf endEditing:YES];
+    return NO;
+}
+
+#pragma mark - UIAlertViewDelegate
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //Only do the following actions if the user hit the OK button
+    if (buttonIndex == 1)
+    {
+        //Get the current user preferences
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
+        //Store the user text in a temporary string
+        NSString * tempTextField = [alertView textFieldAtIndex:0].text;
+        
+        //Create array if array is not already created (precaution)
+        if (!familyMembers) {
+            familyMembers = [[NSMutableArray alloc]init];
+        }
+        
+        //Add string to the array
+        [familyMembers insertObject:tempTextField atIndex:0];
+        
+        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        
+        //Update array in the NSUserDefaults
+        [prefs setObject:familyMembers forKey:@"iceInformation"];
+        
+        //Update the table with the new data
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        //Reload table and sync NSUserDefaults
+        [self.tableView reloadData];
+        [prefs synchronize];
+    }/*
+    else if (buttonIndex == 2)
+    {
+        
+        //Get the current user preferences
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
+        //Store the user text in a temporary string
+        NSString * tempTextField = [alertView textFieldAtIndex:0].text;
+        
+        //Create array if array is not already created (precaution)
+        if (!otherContacts) {
+            otherContacts = [[NSMutableArray alloc]init];
+        }
+        
+        //Add string to the array
+        [otherContacts insertObject:tempTextField atIndex:0];
+        
+        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+        
+        //Update array in the NSUserDefaults
+        [prefs setObject:otherContacts forKey:@"medicalInformation"];
+        
+        //Update the table with the new data
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        //Reload table and sync NSUserDefaults
+        [self.tableView reloadData];
+        [prefs synchronize];
+    
+    }
+    */
+}
+
 
 /*
 // Override to support rearranging the table view.
@@ -209,19 +464,36 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    
     ICEDetailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ICEDetailViewController"];
+    
     if (indexPath.section == 0) {
-        dvc.userInfo = [doctors objectAtIndex:indexPath.row];
+        if (indexPath.row == [self.familyMembers count]){
+            
+            //put table in edit mode
+            [self setEditing:YES animated:YES];
+            
+        }
+        else{
+            dvc.userInfo = [familyMembers objectAtIndex:indexPath.row];
+            [self.navigationController pushViewController:dvc animated:YES];
+
+        }
+
     } else if (indexPath.section == 1){
-        dvc.userInfo = [familyMembers objectAtIndex:indexPath.row];
+        if (indexPath.row == [self.otherContacts count]){
+            
+            //put table in edit mode
+            [self setEditing:YES animated:YES];
+            
+        }
+        else{
+        
+            dvc.userInfo = [otherContacts objectAtIndex:indexPath.row];
+            [self.navigationController pushViewController:dvc animated:YES];
 
-    } else if (indexPath.section == 2){
-        dvc.userInfo = [otherContacts objectAtIndex:indexPath.row];
-
+        }
     }
     //dvc.userInfo = @"None";
-    [self.navigationController pushViewController:dvc animated:YES];
 
 }
 

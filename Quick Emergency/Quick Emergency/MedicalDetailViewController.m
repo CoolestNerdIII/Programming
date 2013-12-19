@@ -7,6 +7,8 @@
 //
 
 #import "MedicalDetailViewController.h"
+#import "YRDropdownView.h"
+
 
 @interface MedicalDetailViewController ()
 
@@ -129,17 +131,30 @@
 
 -(void)saveInformation:(id)sender{
     
-    //NSString *info = [textbox text];
-    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //[defaults setObject:info forKey:medicalOption];
+    NSString *info = [textbox text];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:info forKey:medicalOption];
     
-    //[defaults synchronize];
+    [defaults synchronize];
     
-    //Alert View
+    [YRDropdownView showDropdownInView:self.view.window
+                                 title:@"Saved"
+                                detail:[NSString stringWithFormat:@"%@ is now set for %@", info, medicalOption]
+                                 image:[UIImage imageNamed:@"settings.png"]
+                       backgroundImage:[UIImage imageNamed:@"bg-yellow.png"]
+                       titleLabelColor:[UIColor whiteColor]
+                      detailLabelColor:[UIColor whiteColor]
+                              animated:YES
+                             hideAfter:2.0 ];
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    /*
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Item Saved" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
     
     alert.alertViewStyle = UIAlertViewStyleDefault;
     [alert show];
+     */
 
     
 }

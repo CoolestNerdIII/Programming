@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ICEViewController : UITableViewController
+@interface ICEViewController : UITableViewController <UIAlertViewDelegate>
 
 @property(strong, nonatomic) NSMutableDictionary *contacts;
 

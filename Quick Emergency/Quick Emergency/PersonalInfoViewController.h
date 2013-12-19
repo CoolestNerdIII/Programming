@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PersonalInfoViewController : UITableViewController
+@interface PersonalInfoViewController : UITableViewController <UIAlertViewDelegate>
 
 @property (strong,nonatomic) NSArray *primaryInformation;
 @property (strong,nonatomic) NSArray *addressInformation;
@@ -23,7 +23,6 @@
 
 
 -(NSMutableArray *)getDefaults:(NSMutableArray *)array withDefaults:(NSUserDefaults*) defaults;
-//- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex withArray:(NSMutableArray *)array;
 -(NSMutableArray *)reoganizePersonalArray:(NSMutableArray *)array;
 
 @end

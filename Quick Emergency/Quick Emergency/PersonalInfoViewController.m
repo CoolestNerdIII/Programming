@@ -72,8 +72,42 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [super viewDidLoad];
+    
+    BOOL valueSet = NO;
+    
+    
+    for( id key in keyPairs)
+    {
+        //If object is a string
+        if ([[keyPairs objectForKey:key] isKindOfClass:[NSString class]]) {
+            //If object in dictionary is not empty
+            if (![[keyPairs objectForKey:key] isEqualToString:@""]) {
+                NSLog(@"%@", key);
+                valueSet = YES;
+
+            }
+            
+        }
+        else if ([[keyPairs objectForKey:key] isKindOfClass:[NSArray class]]) {
+        
+            
+        }
+   
+    }
+    
+    
+    //Display UIAlertView if there are no values set
+    if (!valueSet) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Enter Title" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Address Book",@"Address Book", nil];
+        
+        alert.alertViewStyle = UIAlertViewStyleDefault;
+        [alert show];
+    }
+    
+    
 
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -86,19 +120,22 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    //return 1;
+    return [keyPairs count];
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [keyPairs count];
-     
+    //return [keyPairs count];
+    return 1;
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return @"User Information";
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

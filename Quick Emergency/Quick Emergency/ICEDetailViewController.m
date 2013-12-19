@@ -7,25 +7,73 @@
 //
 
 #import "ICEDetailViewController.h"
-#import "ICEDetailTableCell.h"
+#import "TFCell.h"
+#import "PickerCell.h"
 
 @interface ICEDetailViewController ()
+
+@property(strong,nonatomic) NSArray *order;
+@property(strong,nonatomic) NSDictionary *data;
+@property(strong,nonatomic)  NSArray *sections;
+- (void) save;
+@property (strong, nonatomic) UIBarButtonItem *saveButton;
+@property (weak, nonatomic) NSString *value;
 
 @end
 
 @implementation ICEDetailViewController
-
-
-@synthesize userInfo, keys;
-
-//Get number of keys
-//NSUInteger keyCount = [dictionary count];
- //[[dictionary allKeys] count];
-
+@synthesize order, data, value,sections;
+//@synthesize userInfo, keys;
 
 - (void)viewDidLoad
 {
-        
+    
+    // Data.plist code
+    // get paths from root direcory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    // get documents path
+    NSString *documentsPath = [paths objectAtIndex:0];
+    
+    // get the path to our Data/plist file
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"ICEDetail.plist"];
+    
+    // check to see if Data.plist exists in documents
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    {
+        // if not in documents, get property list from main bundle
+        plistPath = [[NSBundle mainBundle] pathForResource:@"ICEDetail" ofType:@"plist"];
+    }
+    
+    // read property list into memory as an NSData object
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    
+    // convert static property list into dictionary object
+    data = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
+    
+    if (!data)
+    {
+        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+    }
+    
+    sections = [[NSArray alloc] initWithArray:[data objectForKey:@"sections"]];
+    
+    //Organize Dictionary
+    order = [[NSArray alloc] initWithObjects:@"firstName", @"lastName", @"homePhone", @"cellPhone",@"workPhone" @"street", @"city", @"state", @"country", @"relationship", nil];
+    
+    [super viewDidLoad];
+    
+    self.saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                    target:self
+                                                                    action:@selector(save)];
+    self.navigationItem.rightBarButtonItem = self.saveButton;
+
+    
+    
+    /*
+    
     keys = [[NSMutableArray alloc]init];
     
     for (id key in userInfo){
@@ -45,6 +93,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+     */
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +107,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return userInfo.count;
+    return sections.count;
 ;
 }
 
@@ -69,37 +118,52 @@
     return 1;
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSDictionary *info = [[NSDictionary alloc]initWithDictionary:[sections objectAtIndex:section]];
 
-- (ICEDetailTableCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+    return [info objectForKey:@"header"];
+}
+
+- (TFCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    NSDictionary *info = [[NSDictionary alloc]initWithDictionary:[sections objectAtIndex:indexPath.section]];
 
-    ICEDetailTableCell *cell = (ICEDetailTableCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    //UITextField *inputField = [UITextField alloc];
+    //NSString *CellIdentifier = [info objectForKey:@"type"];
+    NSString *CellIdentifier = @"TFCell";
+
+    TFCell *cell = (TFCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
+    
+    
+
     
     if(cell == nil){
-        cell = [[ICEDetailTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell = [[TFCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    //inputField.keyboardType = UIKeyboardTypeDefault;
+
+    value = [info objectForKey:@"value"];
+    
+    cell.textfield.placeholder = [info objectForKey:@"label"];
+    if (![value isEqualToString:@""]) {
+        //cell.textfield.text = value;
+    }
+    
+    /*
     
     if(indexPath.section == 0){
-        cell.cellLabel.text = @"First Name";
-        cell.cellTextField.text = [userInfo objectForKey:@"firstName"];
+        cell.textfield.text = [userInfo objectForKey:@"firstName"];
         
     } else if(indexPath.section == 1){
-        cell.cellLabel.text = @"Last Name";
-        cell.cellTextField.text = [userInfo objectForKey:@"lastName"];
+        cell.textfield.text = [userInfo objectForKey:@"lastName"];
     
     } else if(indexPath.section == 2){
-        cell.cellLabel.text = @"Phone Number";
-        cell.cellTextField.text = [userInfo objectForKey:@"number"];
-        cell.cellTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+        cell.textfield.text = [userInfo objectForKey:@"number"];
+        cell.textfield.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     } else{
         NSString *key = [keys objectAtIndex:indexPath.row];
-        cell.cellLabel.text = key;
-        cell.cellTextField.text = [userInfo objectForKey:key];
+        cell.textfield.text = [userInfo objectForKey:key];
     }
+     */
     
     
     //cell.cellTextField.delegate = self;
@@ -193,4 +257,50 @@
      */
 }
 
+- (void)save
+{
+    // get paths from root direcory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    // get documents path
+    NSString *documentsPath = [paths objectAtIndex:0];
+    // get the path to our Data/plist file
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"ICEDetail.plist"];
+    
+    NSMutableArray *objects = [[NSMutableArray alloc]initWithCapacity:[order count]];
+    
+    
+    for (int i = 0; i <= [order count]-1; i++)
+    {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow: 0 inSection: i];
+        TFCell *cell = (TFCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+        
+        value = cell.textfield.text;
+        if (value == nil) {
+            value = @"";
+        }
+        
+        [objects insertObject:value atIndex:i];
+    }
+    
+    
+    // create dictionary with values in UITextFields
+    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects: objects forKeys:order];
+    
+    NSString *error = nil;
+    // create NSData from dictionary
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    
+    // check is plistData exists
+    if(plistData)
+    {
+        // write plistData to our Data.plist file
+        [plistData writeToFile:plistPath atomically:YES];
+    }
+    else
+    {
+        NSLog(@"Error in saveData: %@", error);
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

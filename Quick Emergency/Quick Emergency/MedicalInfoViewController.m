@@ -31,7 +31,7 @@
     //Implement NSUserDefaults
     //Get the default information
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+    
     //Get the keys and objects from the default settings
     options = [[NSDictionary alloc] init];
     options = [defaults dictionaryRepresentation];
@@ -46,7 +46,7 @@
         [medicalInformation addObject:key];
     }
     medicalInformation = [self reoganizeMedicalArray:medicalInformation];
-
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -101,7 +101,7 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-
+    
     //Set Background
     if (![cell.backgroundView isKindOfClass:[CustomCellBackground class]]) {
         CustomCellBackground * backgroundCell = [[CustomCellBackground alloc] init];
@@ -147,16 +147,16 @@
 
 // Override to support conditional editing of the table view.
 /*
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row >=[medicalInformation count]){
-        return YES;
-    
-    }
-    // Return NO if you do not want the specified item to be editable.
-    return NO;
-}
-*/
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (indexPath.row >=[medicalInformation count]){
+ return YES;
+ 
+ }
+ // Return NO if you do not want the specified item to be editable.
+ return NO;
+ }
+ */
 
 
 
@@ -164,7 +164,7 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-
+    
     NSString * item = [medicalInformation objectAtIndex:fromIndexPath.row];
     [medicalInformation removeObject:item];
     [medicalInformation insertObject:item atIndex:toIndexPath.row];
@@ -187,7 +187,7 @@
 #pragma mark - Table view delegate
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{    
+{
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
     if (editingStyle == UITableViewCellEditingStyleDelete)
@@ -202,23 +202,23 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
         [tableView reloadData];
-        [prefs synchronize];
+        
     }
-
+    [prefs synchronize];
     NSLog(@"All contents of NSUserDefaults: %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
-
+    
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == [self.medicalInformation count]){
-    
+        
         //put table in edit mode
         [self setEditing:YES animated:YES];
         
     }else{
-    
+        
         //Handle normal selections
         MedicalDetailViewController *mdvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MedicalDetail"];
         mdvc.medicalOption = [medicalInformation objectAtIndex:indexPath.row];
@@ -240,14 +240,14 @@
         
         
         [self.navigationController pushViewController:mdvc animated:YES];
-    
-}
+        
+    }
 }
 
 #pragma mark - Table View Editting
 
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated{
-
+    
     [super setEditing:editing animated:animated];
     [self.tableView setEditing:editing animated:animated];
     if (editing == YES) {
@@ -255,14 +255,14 @@
         
         //Show add button if in edit mode
         self.navigationItem.leftBarButtonItem = addButton;
-
+        
     }
     else
     {
         //Show normal navigation button if not in edit mode
         self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem;
     }
-
+    
 }
 
 -(void) insertNewObject
@@ -273,7 +273,7 @@
     
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alert show];
-
+    
 }
 
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -342,7 +342,7 @@
 
 #pragma mark - UIAlertViewDelegate
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{    
+{
     //Only do the following actions if the user hit the OK button
     if (buttonIndex == 1)
     {
@@ -364,7 +364,7 @@
         
         //Update array in the NSUserDefaults
         [prefs setObject:medicalInformation forKey:@"medicalInformation"];
-
+        
         //Update the table with the new data
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         

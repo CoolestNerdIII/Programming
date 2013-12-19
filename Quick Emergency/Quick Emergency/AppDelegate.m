@@ -7,8 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import <AddressBook/AddressBook.h>
+
+
+NSString *const kDenied = @"Access to address book is denied";
+NSString *const kRestricted = @"Access to address book is restricted";
+ABAddressBookRef addressBook;
 
 @implementation AppDelegate
+
+- (void) displayMessage:(NSString *)paramMessage{
+    [[[UIAlertView alloc] initWithTitle:nil
+                                message:paramMessage
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil] show];
+}
+
 
 - (void)customizeAppearance
 {
@@ -151,6 +166,45 @@
     // Load default defaults
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults copy" ofType:@"plist"]]];
     
+    //Address Book Request
+    CFErrorRef error = NULL;
+    switch (ABAddressBookGetAuthorizationStatus()){
+        case kABAuthorizationStatusAuthorized:{
+            addressBook = ABAddressBookCreateWithOptions(NULL, &error);
+            /* Do your work and once you are finished ... */
+            //[self useAddressBook:addressBook];
+            if (addressBook != NULL){
+                CFRelease(addressBook);
+            }
+            break;
+        }
+        case kABAuthorizationStatusDenied:{
+            [self displayMessage:kDenied];
+            break;
+        }
+        case kABAuthorizationStatusNotDetermined:{
+            addressBook = ABAddressBookCreateWithOptions(NULL, &error);
+            ABAddressBookRequestAccessWithCompletion
+            (addressBook, ^(bool granted, CFErrorRef error) {
+                if (granted){
+                    NSLog(@"Access was granted");
+                    //[self useAddressBook:addressBook];
+                } else {
+                    NSLog(@"Access was not granted");
+                }
+                if (addressBook != NULL){
+                    CFRelease(addressBook);
+                }
+            });
+            break;
+        }
+        case kABAuthorizationStatusRestricted:{
+            [self displayMessage:kRestricted];
+            break;
+        }
+    }
+    
+    
     //Customize Appearance
     [self customizeAppearance];
     if ([[UIScreen mainScreen] bounds].size.height == 568)
@@ -160,9 +214,10 @@
     else
     {
         self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DarkBackground.png"]];
-
+        
     }
-    //self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableBackground.jpg"]];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							

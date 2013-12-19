@@ -177,18 +177,24 @@
 
 #pragma mark - TableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Perform segue to candy detail
+    /*// Perform segue to candy detail
         //Handle normal selections
-        DetailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail"];
+    DetailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Detail"];
             
-        [self.navigationController pushViewController:dvc animated:YES];
-    //[self performSegueWithIdentifier:@"Detail" sender:tableView];
+    //    [self.navigationController pushViewController:dvc animated:YES];
+    //[self performSegueWithIdentifier:@"Search" sender:tableView];
+    NSIndexPath *index = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+    NSString *selection = [searchedData objectAtIndex:index.row];
+    dvc.emergencySelected = selection;
+    [self.navigationController pushViewController:dvc animated:YES];
 
+     */
     
     
 }
 
 #pragma mark - Segue
+/*
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         DetailViewController *dvc = [segue destinationViewController];
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
@@ -196,15 +202,19 @@
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
             NSString *selection = [searchedData objectAtIndex:[indexPath row]];
             dvc.emergencySelected = selection;
+            [dvc setTitle:selection];
+
+            
         }
         else {
             NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
             NSString *selection = [emergencyList objectAtIndex:[indexPath row]];
             dvc.emergencySelected = selection;
+            [dvc setTitle:selection];
+
         }
         
-    
 }
-
+*/
 
 @end

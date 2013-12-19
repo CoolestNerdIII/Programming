@@ -6,22 +6,18 @@
 //  Copyright (c) 2013 TnT Development. All rights reserved.
 //
 
-#import "ICEDetailTableCell.h"
+#import "TFCell.h"
 
-@implementation ICEDetailTableCell
-
-@synthesize cellTextField, cellLabel;
+@implementation TFCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-
+        
     }
     return self;
 }
-
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -30,14 +26,16 @@
     // Configure the view for the selected state
 }
 
--(void) didTransitionToState:(UITableViewCellStateMask)state {
-    [super didTransitionToState:state];
-    if (state == UITableViewCellStateEditingMask) {
-        self.cellTextField.enabled = YES;
-    }
-    if (state == UITableViewCellStateDefaultMask) {
-        self.cellTextField.enabled = NO;
-    }
+
+
+- (id)value
+{
+    return self.textfield.text;
+}
+
+- (void)setValue:(id)newValue
+{
+    self.textfield.text = newValue;
 }
 
 @end
