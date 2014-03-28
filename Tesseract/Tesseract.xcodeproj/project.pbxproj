@@ -22,6 +22,14 @@
 		69F1025E18D6BCA800704B16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1023D18D6BCA800704B16 /* UIKit.framework */; };
 		69F1026618D6BCA800704B16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69F1026418D6BCA800704B16 /* InfoPlist.strings */; };
 		69F1026818D6BCA800704B16 /* TesseractTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F1026718D6BCA800704B16 /* TesseractTests.m */; };
+		69F1027218D6BD7900704B16 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1027118D6BD7900704B16 /* TesseractOCR.framework */; };
+		69F1027418D6BDBF00704B16 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1027318D6BDBF00704B16 /* libstdc++.6.0.9.dylib */; };
+		69F1027618D6BF3100704B16 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 69F1027518D6BF3100704B16 /* tessdata */; };
+		69F1027818D6BFB600704B16 /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69F1027718D6BFB600704B16 /* image_sample.jpg */; };
+		69F1027C18D6C9C500704B16 /* ConversionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F1027B18D6C9C500704B16 /* ConversionViewController.m */; };
+		69F1028018D6D6E300704B16 /* image_sample3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 69F1027D18D6D6E300704B16 /* image_sample3.jpeg */; };
+		69F1028118D6D6E300704B16 /* image_sample2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69F1027E18D6D6E300704B16 /* image_sample2.jpg */; };
+		69F1028218D6D6E300704B16 /* image_sample4.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F1027F18D6D6E300704B16 /* image_sample4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,15 @@
 		69F1026318D6BCA800704B16 /* TesseractTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TesseractTests-Info.plist"; sourceTree = "<group>"; };
 		69F1026518D6BCA800704B16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		69F1026718D6BCA800704B16 /* TesseractTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TesseractTests.m; sourceTree = "<group>"; };
+		69F1027118D6BD7900704B16 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+		69F1027318D6BDBF00704B16 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		69F1027518D6BF3100704B16 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = Tesseract/tessdata; sourceTree = "<group>"; };
+		69F1027718D6BFB600704B16 /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
+		69F1027A18D6C9C500704B16 /* ConversionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionViewController.h; sourceTree = "<group>"; };
+		69F1027B18D6C9C500704B16 /* ConversionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionViewController.m; sourceTree = "<group>"; };
+		69F1027D18D6D6E300704B16 /* image_sample3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample3.jpeg; sourceTree = "<group>"; };
+		69F1027E18D6D6E300704B16 /* image_sample2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample2.jpg; sourceTree = "<group>"; };
+		69F1027F18D6D6E300704B16 /* image_sample4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_sample4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F1027418D6BDBF00704B16 /* libstdc++.6.0.9.dylib in Frameworks */,
+				69F1027218D6BD7900704B16 /* TesseractOCR.framework in Frameworks */,
 				69F1023C18D6BCA800704B16 /* CoreGraphics.framework in Frameworks */,
 				69F1023E18D6BCA800704B16 /* UIKit.framework in Frameworks */,
 				69F1023A18D6BCA800704B16 /* Foundation.framework in Frameworks */,
@@ -84,6 +103,7 @@
 		69F1022D18D6BCA800704B16 = {
 			isa = PBXGroup;
 			children = (
+				69F1027518D6BF3100704B16 /* tessdata */,
 				69F1023F18D6BCA800704B16 /* Tesseract */,
 				69F1026118D6BCA800704B16 /* TesseractTests */,
 				69F1023818D6BCA800704B16 /* Frameworks */,
@@ -103,6 +123,8 @@
 		69F1023818D6BCA800704B16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69F1027318D6BDBF00704B16 /* libstdc++.6.0.9.dylib */,
+				69F1027118D6BD7900704B16 /* TesseractOCR.framework */,
 				69F1023918D6BCA800704B16 /* Foundation.framework */,
 				69F1023B18D6BCA800704B16 /* CoreGraphics.framework */,
 				69F1023D18D6BCA800704B16 /* UIKit.framework */,
@@ -120,7 +142,10 @@
 				69F1024E18D6BCA800704B16 /* Main_iPad.storyboard */,
 				69F1025118D6BCA800704B16 /* ViewController.h */,
 				69F1025218D6BCA800704B16 /* ViewController.m */,
+				69F1027A18D6C9C500704B16 /* ConversionViewController.h */,
+				69F1027B18D6C9C500704B16 /* ConversionViewController.m */,
 				69F1025418D6BCA800704B16 /* Images.xcassets */,
+				69F1028318D6D6ED00704B16 /* Images */,
 				69F1024018D6BCA800704B16 /* Supporting Files */,
 			);
 			path = Tesseract;
@@ -153,6 +178,17 @@
 				69F1026418D6BCA800704B16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69F1028318D6D6ED00704B16 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				69F1027D18D6D6E300704B16 /* image_sample3.jpeg */,
+				69F1027E18D6D6E300704B16 /* image_sample2.jpg */,
+				69F1027F18D6D6E300704B16 /* image_sample4.png */,
+				69F1027718D6BFB600704B16 /* image_sample.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +268,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				69F1025018D6BCA800704B16 /* Main_iPad.storyboard in Resources */,
+				69F1028218D6D6E300704B16 /* image_sample4.png in Resources */,
+				69F1028018D6D6E300704B16 /* image_sample3.jpeg in Resources */,
+				69F1027818D6BFB600704B16 /* image_sample.jpg in Resources */,
 				69F1025518D6BCA800704B16 /* Images.xcassets in Resources */,
+				69F1027618D6BF3100704B16 /* tessdata in Resources */,
 				69F1024D18D6BCA800704B16 /* Main_iPhone.storyboard in Resources */,
+				69F1028118D6D6E300704B16 /* image_sample2.jpg in Resources */,
 				69F1024418D6BCA800704B16 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +296,7 @@
 			files = (
 				69F1025318D6BCA800704B16 /* ViewController.m in Sources */,
 				69F1024A18D6BCA800704B16 /* AppDelegate.m in Sources */,
+				69F1027C18D6C9C500704B16 /* ConversionViewController.m in Sources */,
 				69F1024618D6BCA800704B16 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,9 +432,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tesseract/Tesseract-Prefix.pch";
 				INFOPLIST_FILE = "Tesseract/Tesseract-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,9 +452,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tesseract/Tesseract-Prefix.pch";
 				INFOPLIST_FILE = "Tesseract/Tesseract-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

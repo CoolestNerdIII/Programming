@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property BOOL newMedia;
+
+
+- (IBAction)runDemo:(id)sender;
+- (IBAction)openCamera:(id)sender;
+- (IBAction)openLibrary:(id)sender;
 
 @end

@@ -7,7 +7,16 @@
 //
 
 #import "ViewController.h"
+#import <TesseractOCR/TesseractOCR.h>
 
-@interface ConversionViewController : ViewController
+
+
+@interface ConversionViewController : ViewController  <TesseractDelegate>
+
+@property (strong, nonatomic) UIImage *inputImage;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UITextView *outputText;
+
 
 @end

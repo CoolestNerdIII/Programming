@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69C8E26B18E5F8C9003EB176 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8E26A18E5F8C9003EB176 /* liblept.a */; };
+		69C8E26D18E5F946003EB176 /* libtesseract.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8E26C18E5F946003EB176 /* libtesseract.a */; };
 		69EA10C618E5B3B700464962 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69EA10C518E5B3B700464962 /* main.cpp */; };
 		69EA10C818E5B3B700464962 /* ImageConversion.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69EA10C718E5B3B700464962 /* ImageConversion.1 */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		69C8E26A18E5F8C9003EB176 /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblept.a; path = ../../../../../opt/local/lib/liblept.a; sourceTree = "<group>"; };
+		69C8E26C18E5F946003EB176 /* libtesseract.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtesseract.a; path = ../../../../../opt/local/lib/libtesseract.a; sourceTree = "<group>"; };
+		69C8E26E18E5FA5F003EB176 /* image_sample2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample2.jpg; sourceTree = "<group>"; };
 		69EA10C218E5B3B700464962 /* ImageConversion */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImageConversion; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EA10C518E5B3B700464962 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		69EA10C718E5B3B700464962 /* ImageConversion.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ImageConversion.1; sourceTree = "<group>"; };
@@ -35,15 +40,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C8E26D18E5F946003EB176 /* libtesseract.a in Frameworks */,
+				69C8E26B18E5F8C9003EB176 /* liblept.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69C8E26F18E5FA64003EB176 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				69C8E26E18E5FA5F003EB176 /* image_sample2.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		69EA10B918E5B3B700464962 = {
 			isa = PBXGroup;
 			children = (
+				69C8E26C18E5F946003EB176 /* libtesseract.a */,
+				69C8E26A18E5F8C9003EB176 /* liblept.a */,
 				69EA10C418E5B3B700464962 /* ImageConversion */,
 				69EA10C318E5B3B700464962 /* Products */,
 			);
@@ -62,6 +79,7 @@
 			children = (
 				69EA10C518E5B3B700464962 /* main.cpp */,
 				69EA10C718E5B3B700464962 /* ImageConversion.1 */,
+				69C8E26F18E5FA64003EB176 /* Images */,
 			);
 			path = ImageConversion;
 			sourceTree = "<group>";
@@ -197,6 +215,13 @@
 		69EA10CC18E5B3B700464962 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImageConversion/lib",
+					/usr/local/lib,
+					/opt/local/lib,
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +229,13 @@
 		69EA10CD18E5B3B700464962 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImageConversion/lib",
+					/usr/local/lib,
+					/opt/local/lib,
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -227,6 +259,7 @@
 				69EA10CD18E5B3B700464962 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
