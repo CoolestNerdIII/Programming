@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69F100AF18D6B39900704B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F100AE18D6B39900704B16 /* Foundation.framework */; };
+		69F100B118D6B39900704B16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F100B018D6B39900704B16 /* CoreGraphics.framework */; };
+		69F100B318D6B39900704B16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F100B218D6B39900704B16 /* UIKit.framework */; };
+		69F100B918D6B39900704B16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69F100B718D6B39900704B16 /* InfoPlist.strings */; };
+		69F100BB18D6B39900704B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F100BA18D6B39900704B16 /* main.m */; };
+		69F100BF18D6B39900704B16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F100BE18D6B39900704B16 /* AppDelegate.m */; };
+		69F100C218D6B39900704B16 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F100C018D6B39900704B16 /* Main_iPhone.storyboard */; };
+		69F100C518D6B39900704B16 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F100C318D6B39900704B16 /* Main_iPad.storyboard */; };
+		69F100C818D6B39900704B16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F100C718D6B39900704B16 /* ViewController.m */; };
+		69F100CA18D6B39900704B16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F100C918D6B39900704B16 /* Images.xcassets */; };
+		69F100D118D6B39900704B16 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F100D018D6B39900704B16 /* XCTest.framework */; };
+		69F100D218D6B39900704B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F100AE18D6B39900704B16 /* Foundation.framework */; };
+		69F100D318D6B39900704B16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F100B218D6B39900704B16 /* UIKit.framework */; };
+		69F100DB18D6B39900704B16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69F100D918D6B39900704B16 /* InfoPlist.strings */; };
+		69F100DD18D6B39900704B16 /* Text_RecognitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F100DC18D6B39900704B16 /* Text_RecognitionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69F100D418D6B39900704B16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69F100A318D6B39900704B16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69F100AA18D6B39900704B16;
+			remoteInfo = "Text Recognition";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69F100AB18D6B39900704B16 /* Text Recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Recognition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69F100AE18D6B39900704B16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69F100B018D6B39900704B16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		69F100B218D6B39900704B16 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		69F100B618D6B39900704B16 /* Text Recognition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Text Recognition-Info.plist"; sourceTree = "<group>"; };
+		69F100B818D6B39900704B16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		69F100BA18D6B39900704B16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		69F100BC18D6B39900704B16 /* Text Recognition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Text Recognition-Prefix.pch"; sourceTree = "<group>"; };
+		69F100BD18D6B39900704B16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		69F100BE18D6B39900704B16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		69F100C118D6B39900704B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		69F100C418D6B39900704B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		69F100C618D6B39900704B16 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		69F100C718D6B39900704B16 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		69F100C918D6B39900704B16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		69F100CF18D6B39900704B16 /* Text RecognitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text RecognitionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69F100D018D6B39900704B16 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		69F100D818D6B39900704B16 /* Text RecognitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Text RecognitionTests-Info.plist"; sourceTree = "<group>"; };
+		69F100DA18D6B39900704B16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		69F100DC18D6B39900704B16 /* Text_RecognitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Text_RecognitionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69F100A818D6B39900704B16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F100B118D6B39900704B16 /* CoreGraphics.framework in Frameworks */,
+				69F100B318D6B39900704B16 /* UIKit.framework in Frameworks */,
+				69F100AF18D6B39900704B16 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F100CC18D6B39900704B16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F100D118D6B39900704B16 /* XCTest.framework in Frameworks */,
+				69F100D318D6B39900704B16 /* UIKit.framework in Frameworks */,
+				69F100D218D6B39900704B16 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69F100A218D6B39900704B16 = {
+			isa = PBXGroup;
+			children = (
+				69F100B418D6B39900704B16 /* Text Recognition */,
+				69F100D618D6B39900704B16 /* Text RecognitionTests */,
+				69F100AD18D6B39900704B16 /* Frameworks */,
+				69F100AC18D6B39900704B16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69F100AC18D6B39900704B16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69F100AB18D6B39900704B16 /* Text Recognition.app */,
+				69F100CF18D6B39900704B16 /* Text RecognitionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69F100AD18D6B39900704B16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69F100AE18D6B39900704B16 /* Foundation.framework */,
+				69F100B018D6B39900704B16 /* CoreGraphics.framework */,
+				69F100B218D6B39900704B16 /* UIKit.framework */,
+				69F100D018D6B39900704B16 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69F100B418D6B39900704B16 /* Text Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				69F100BD18D6B39900704B16 /* AppDelegate.h */,
+				69F100BE18D6B39900704B16 /* AppDelegate.m */,
+				69F100C018D6B39900704B16 /* Main_iPhone.storyboard */,
+				69F100C318D6B39900704B16 /* Main_iPad.storyboard */,
+				69F100C618D6B39900704B16 /* ViewController.h */,
+				69F100C718D6B39900704B16 /* ViewController.m */,
+				69F100C918D6B39900704B16 /* Images.xcassets */,
+				69F100B518D6B39900704B16 /* Supporting Files */,
+			);
+			path = "Text Recognition";
+			sourceTree = "<group>";
+		};
+		69F100B518D6B39900704B16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69F100B618D6B39900704B16 /* Text Recognition-Info.plist */,
+				69F100B718D6B39900704B16 /* InfoPlist.strings */,
+				69F100BA18D6B39900704B16 /* main.m */,
+				69F100BC18D6B39900704B16 /* Text Recognition-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69F100D618D6B39900704B16 /* Text RecognitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				69F100DC18D6B39900704B16 /* Text_RecognitionTests.m */,
+				69F100D718D6B39900704B16 /* Supporting Files */,
+			);
+			path = "Text RecognitionTests";
+			sourceTree = "<group>";
+		};
+		69F100D718D6B39900704B16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69F100D818D6B39900704B16 /* Text RecognitionTests-Info.plist */,
+				69F100D918D6B39900704B16 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69F100AA18D6B39900704B16 /* Text Recognition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69F100E018D6B39900704B16 /* Build configuration list for PBXNativeTarget "Text Recognition" */;
+			buildPhases = (
+				69F100A718D6B39900704B16 /* Sources */,
+				69F100A818D6B39900704B16 /* Frameworks */,
+				69F100A918D6B39900704B16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Text Recognition";
+			productName = "Text Recognition";
+			productReference = 69F100AB18D6B39900704B16 /* Text Recognition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69F100CE18D6B39900704B16 /* Text RecognitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69F100E318D6B39900704B16 /* Build configuration list for PBXNativeTarget "Text RecognitionTests" */;
+			buildPhases = (
+				69F100CB18D6B39900704B16 /* Sources */,
+				69F100CC18D6B39900704B16 /* Frameworks */,
+				69F100CD18D6B39900704B16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69F100D518D6B39900704B16 /* PBXTargetDependency */,
+			);
+			name = "Text RecognitionTests";
+			productName = "Text RecognitionTests";
+			productReference = 69F100CF18D6B39900704B16 /* Text RecognitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69F100A318D6B39900704B16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Paul Wilson";
+				TargetAttributes = {
+					69F100CE18D6B39900704B16 = {
+						TestTargetID = 69F100AA18D6B39900704B16;
+					};
+				};
+			};
+			buildConfigurationList = 69F100A618D6B39900704B16 /* Build configuration list for PBXProject "Text Recognition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69F100A218D6B39900704B16;
+			productRefGroup = 69F100AC18D6B39900704B16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69F100AA18D6B39900704B16 /* Text Recognition */,
+				69F100CE18D6B39900704B16 /* Text RecognitionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69F100A918D6B39900704B16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F100C518D6B39900704B16 /* Main_iPad.storyboard in Resources */,
+				69F100CA18D6B39900704B16 /* Images.xcassets in Resources */,
+				69F100C218D6B39900704B16 /* Main_iPhone.storyboard in Resources */,
+				69F100B918D6B39900704B16 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F100CD18D6B39900704B16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F100DB18D6B39900704B16 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69F100A718D6B39900704B16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F100C818D6B39900704B16 /* ViewController.m in Sources */,
+				69F100BF18D6B39900704B16 /* AppDelegate.m in Sources */,
+				69F100BB18D6B39900704B16 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F100CB18D6B39900704B16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F100DD18D6B39900704B16 /* Text_RecognitionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69F100D518D6B39900704B16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69F100AA18D6B39900704B16 /* Text Recognition */;
+			targetProxy = 69F100D418D6B39900704B16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69F100B718D6B39900704B16 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69F100B818D6B39900704B16 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		69F100C018D6B39900704B16 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69F100C118D6B39900704B16 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		69F100C318D6B39900704B16 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69F100C418D6B39900704B16 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		69F100D918D6B39900704B16 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69F100DA18D6B39900704B16 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69F100DE18D6B39900704B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69F100DF18D6B39900704B16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69F100E118D6B39900704B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Text Recognition/Text Recognition-Prefix.pch";
+				INFOPLIST_FILE = "Text Recognition/Text Recognition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		69F100E218D6B39900704B16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Text Recognition/Text Recognition-Prefix.pch";
+				INFOPLIST_FILE = "Text Recognition/Text Recognition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		69F100E418D6B39900704B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Text Recognition.app/Text Recognition";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Text Recognition/Text Recognition-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Text RecognitionTests/Text RecognitionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		69F100E518D6B39900704B16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Text Recognition.app/Text Recognition";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Text Recognition/Text Recognition-Prefix.pch";
+				INFOPLIST_FILE = "Text RecognitionTests/Text RecognitionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69F100A618D6B39900704B16 /* Build configuration list for PBXProject "Text Recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F100DE18D6B39900704B16 /* Debug */,
+				69F100DF18D6B39900704B16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69F100E018D6B39900704B16 /* Build configuration list for PBXNativeTarget "Text Recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F100E118D6B39900704B16 /* Debug */,
+				69F100E218D6B39900704B16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69F100E318D6B39900704B16 /* Build configuration list for PBXNativeTarget "Text RecognitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F100E418D6B39900704B16 /* Debug */,
+				69F100E518D6B39900704B16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69F100A318D6B39900704B16 /* Project object */;
+}
