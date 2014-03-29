@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69C8E27218E647D5003EB176 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8E27118E647D5003EB176 /* opencv2.framework */; };
 		69F1023A18D6BCA800704B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1023918D6BCA800704B16 /* Foundation.framework */; };
 		69F1023C18D6BCA800704B16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1023B18D6BCA800704B16 /* CoreGraphics.framework */; };
 		69F1023E18D6BCA800704B16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1023D18D6BCA800704B16 /* UIKit.framework */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69C8E27118E647D5003EB176 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv/opencv2.framework; sourceTree = "<group>"; };
 		69F1023618D6BCA800704B16 /* Tesseract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesseract.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F1023918D6BCA800704B16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		69F1023B18D6BCA800704B16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C8E27218E647D5003EB176 /* opencv2.framework in Frameworks */,
 				69F1027418D6BDBF00704B16 /* libstdc++.6.0.9.dylib in Frameworks */,
 				69F1027218D6BD7900704B16 /* TesseractOCR.framework in Frameworks */,
 				69F1023C18D6BCA800704B16 /* CoreGraphics.framework in Frameworks */,
@@ -123,6 +126,7 @@
 		69F1023818D6BCA800704B16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69C8E27118E647D5003EB176 /* opencv2.framework */,
 				69F1027318D6BDBF00704B16 /* libstdc++.6.0.9.dylib */,
 				69F1027118D6BD7900704B16 /* TesseractOCR.framework */,
 				69F1023918D6BCA800704B16 /* Foundation.framework */,
@@ -436,6 +440,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/karate_paul4/Documents/Programming/opencv,
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -456,6 +461,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/karate_paul4/Documents/Programming/opencv,
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -526,6 +532,7 @@
 				69F1026D18D6BCA800704B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69F1026E18D6BCA800704B16 /* Build configuration list for PBXNativeTarget "TesseractTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +541,7 @@
 				69F1027018D6BCA800704B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

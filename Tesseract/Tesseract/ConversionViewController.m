@@ -40,7 +40,7 @@
     
     [imageView setImage:inputImage];
     
-    Tesseract* tesseract = [[Tesseract alloc] initWithLanguage:@"eng+ita"];
+    Tesseract* tesseract = [[Tesseract alloc] initWithLanguage:@"eng"];
     tesseract.delegate = self;
     
     UIImage *processedImage = inputImage;
@@ -75,6 +75,7 @@
 }
 
 #pragma -
+#pragma Image Processing Tricks
 
 // this does the trick to have tesseract accept the UIImage.
 - (UIImage *) gs_convert_image: (UIImage *) src_img
