@@ -12,6 +12,9 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
+#import "ImageProcessingProtocol.h"
+
+
 
 
 @interface ConversionViewController : ViewController  <TesseractDelegate>
@@ -20,6 +23,10 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UITextView *outputText;
+
+@property (strong,nonatomic) UIImage *processedImage;
+@property (strong, nonatomic) id <ImageProcessingProtocol> imageProcessor;
+
 
 
 @end

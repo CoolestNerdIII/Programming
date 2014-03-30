@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		69C8E27218E647D5003EB176 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8E27118E647D5003EB176 /* opencv2.framework */; };
+		69C8E27C18E67518003EB176 /* ImageProcessingImplementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 69C8E27418E67518003EB176 /* ImageProcessingImplementation.mm */; };
+		69C8E27D18E67518003EB176 /* ImageProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69C8E27618E67518003EB176 /* ImageProcessor.cpp */; };
+		69C8E27E18E67518003EB176 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 69C8E27918E67518003EB176 /* UIImage+OpenCV.mm */; };
+		69C8E27F18E67518003EB176 /* UIImage+operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8E27B18E67518003EB176 /* UIImage+operation.m */; };
 		69F1023A18D6BCA800704B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1023918D6BCA800704B16 /* Foundation.framework */; };
 		69F1023C18D6BCA800704B16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1023B18D6BCA800704B16 /* CoreGraphics.framework */; };
 		69F1023E18D6BCA800704B16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1023D18D6BCA800704B16 /* UIKit.framework */; };
@@ -45,6 +49,15 @@
 
 /* Begin PBXFileReference section */
 		69C8E27118E647D5003EB176 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv/opencv2.framework; sourceTree = "<group>"; };
+		69C8E27318E67518003EB176 /* ImageProcessingImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingImplementation.h; sourceTree = "<group>"; };
+		69C8E27418E67518003EB176 /* ImageProcessingImplementation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessingImplementation.mm; sourceTree = "<group>"; };
+		69C8E27518E67518003EB176 /* ImageProcessingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingProtocol.h; sourceTree = "<group>"; };
+		69C8E27618E67518003EB176 /* ImageProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageProcessor.cpp; sourceTree = "<group>"; };
+		69C8E27718E67518003EB176 /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
+		69C8E27818E67518003EB176 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		69C8E27918E67518003EB176 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		69C8E27A18E67518003EB176 /* UIImage+operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+operation.h"; sourceTree = "<group>"; };
+		69C8E27B18E67518003EB176 /* UIImage+operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+operation.m"; sourceTree = "<group>"; };
 		69F1023618D6BCA800704B16 /* Tesseract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesseract.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F1023918D6BCA800704B16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		69F1023B18D6BCA800704B16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,6 +116,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69C8E28018E67527003EB176 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				69C8E27318E67518003EB176 /* ImageProcessingImplementation.h */,
+				69C8E27418E67518003EB176 /* ImageProcessingImplementation.mm */,
+				69C8E27518E67518003EB176 /* ImageProcessingProtocol.h */,
+				69C8E27618E67518003EB176 /* ImageProcessor.cpp */,
+				69C8E27718E67518003EB176 /* ImageProcessor.h */,
+				69C8E27818E67518003EB176 /* UIImage+OpenCV.h */,
+				69C8E27918E67518003EB176 /* UIImage+OpenCV.mm */,
+				69C8E27A18E67518003EB176 /* UIImage+operation.h */,
+				69C8E27B18E67518003EB176 /* UIImage+operation.m */,
+			);
+			name = OpenCV;
+			sourceTree = "<group>";
+		};
 		69F1022D18D6BCA800704B16 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +177,7 @@
 				69F1025218D6BCA800704B16 /* ViewController.m */,
 				69F1027A18D6C9C500704B16 /* ConversionViewController.h */,
 				69F1027B18D6C9C500704B16 /* ConversionViewController.m */,
+				69C8E28018E67527003EB176 /* OpenCV */,
 				69F1025418D6BCA800704B16 /* Images.xcassets */,
 				69F1028318D6D6ED00704B16 /* Images */,
 				69F1024018D6BCA800704B16 /* Supporting Files */,
@@ -298,10 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C8E27D18E67518003EB176 /* ImageProcessor.cpp in Sources */,
 				69F1025318D6BCA800704B16 /* ViewController.m in Sources */,
 				69F1024A18D6BCA800704B16 /* AppDelegate.m in Sources */,
+				69C8E27F18E67518003EB176 /* UIImage+operation.m in Sources */,
 				69F1027C18D6C9C500704B16 /* ConversionViewController.m in Sources */,
+				69C8E27E18E67518003EB176 /* UIImage+OpenCV.mm in Sources */,
 				69F1024618D6BCA800704B16 /* main.m in Sources */,
+				69C8E27C18E67518003EB176 /* ImageProcessingImplementation.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

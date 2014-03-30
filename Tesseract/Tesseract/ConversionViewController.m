@@ -7,6 +7,11 @@
 //
 
 #import "ConversionViewController.h"
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
+#import "ImageProcessingImplementation.h"
+#import "UIImage+operation.h"
 
 #define RADIANS(angle) ((angle) / 180.0 * M_PI)
 
@@ -16,6 +21,9 @@
 
 @implementation ConversionViewController
 @synthesize outputText, imageView, inputImage;
+@synthesize processedImage;
+@synthesize imageProcessor;
+
 
 
 - (void)viewDidLoad
@@ -39,17 +47,22 @@
     // to have an ability to recieve callback and interrupt Tesseract before it finishes
     
     [imageView setImage:inputImage];
+        
     
     Tesseract* tesseract = [[Tesseract alloc] initWithLanguage:@"eng"];
     tesseract.delegate = self;
     
-    UIImage *processedImage = inputImage;
+    
+    self.processedImage=[imageProcessor processImage:[self inputImage]];
+
+    
+    //UIImage *processedImage = inputImage;
     
     //processedImage = [self gs_convert_image:processedImage];
     //processedImage = [self resizeImage:processedImage];
-    processedImage = [self toGrayscale:processedImage];
+    //processedImage = [self toGrayscale:processedImage];
     
-    [tesseract setVariableValue:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\"," forKey:@"tessedit_char_whitelist"]; //limit search
+    //[tesseract setVariableValue:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\"," forKey:@"tessedit_char_whitelist"]; //limit search
     
     [tesseract setImage:inputImage]; //image to check
     [tesseract recognize];
@@ -233,6 +246,9 @@
     
     return resultUIImage;
 }
+
+
+
 
 
 @end
