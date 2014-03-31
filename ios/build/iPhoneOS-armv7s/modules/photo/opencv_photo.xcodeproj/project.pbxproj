@@ -1,0 +1,925 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              50CC2A8C5C694F5C875AD17F /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 4BCAA5AF5BD94B6887AB3E1C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            E4161129B8C24C8AAC7642B0 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            FE09B71DADB4447696DF8811 /* PBXTargetDependency */,
+                            EF6B6C162F5B4455AEFDAD5F /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              DC3584F32287414D92840299 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 941298C2EF884F05A5937072 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            61A6CF37BBF5445D9229BEA1 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              0D66B313803445FB8ECE1404 /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 10EC99DB15484B06B6BCF4FF /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            7E309CAA4F1B4C7F917C8752 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            FD75C2D7197A4955A4216EC0 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+              D01FE03CB7A84E78B406BC4C /* package */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = F220740565B04D319D418B25 /* Build configuration list for PBXAggregateTarget "package" */;
+                     buildPhases = (
+                            370F32F15AF841E18ECBAA93 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            D888C929D5634625AE4D5D3D /* PBXTargetDependency */,
+                     );
+                     name = package;
+                     productName = package;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+4227CA371CB042B7852C5215 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */ = {isa = PBXBuildFile; fileRef = 035A995E01224C9C8F73E37F /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */; settings = { COMPILER_FLAGS = ""; }; };
+3E3D464AD02C45EC80DDB11A /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp */ = {isa = PBXBuildFile; fileRef = F79D5E5A15C849079EA4345A /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+82220895A82F47CA83046B20 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp.rule */ = {isa = PBXBuildFile; fileRef = E0539541908F4B43B2C2458E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp.rule */; settings = { COMPILER_FLAGS = ""; }; };
+7513D8349ED34E5F812C1440 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.hpp */ = {isa = PBXBuildFile; fileRef = 84CC7C7F082047779D91A3AF /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+9C2DF7F00BD2467A9D79E1E3 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */ = {isa = PBXBuildFile; fileRef = 0BAB717A98D54D58BE352E06 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+D3E112BBEC6E4A45BDE5F5B1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 1EC13CF572B74C569888130A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+6ADB466D9A1F4F2EA79385EF /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo.hpp */ = {isa = PBXBuildFile; fileRef = 3BD933347C1246CBBF583E81 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+B9C9213EBB5043138AF4734A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/cuda.hpp */ = {isa = PBXBuildFile; fileRef = 05F9185CEFD14C3FB52EF14A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/cuda.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+68AFE60768434DAE8C3A3243 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo.hpp */ = {isa = PBXBuildFile; fileRef = 64C0355E69CE40DD830619AE /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+BF8A4715F57044C18E8429CC /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo_c.h */ = {isa = PBXBuildFile; fileRef = 9E74E854D8514F9C88AE72E2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo_c.h */; settings = { COMPILER_FLAGS = ""; }; };
+5C98EB097C6A44C38321E45E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/align.cpp */ = {isa = PBXBuildFile; fileRef = B61009FBEA4742E88EB578C8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/align.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A20331331DA24DB4A69CB5CF /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/arrays.hpp */ = {isa = PBXBuildFile; fileRef = 6E917135CC4C45DE9565262B /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/arrays.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+AAC7EBB84F64463C984D402B /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/calibrate.cpp */ = {isa = PBXBuildFile; fileRef = B9B6E2F3D9774BBCB7A85019 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/calibrate.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+74E957F59ABE40CD8E5FEBC1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.cpp */ = {isa = PBXBuildFile; fileRef = FEA82F11CBCA4AF098A663E4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+96DE35EC65654666B4C8E996 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.hpp */ = {isa = PBXBuildFile; fileRef = 981B69F48310411D821E8589 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+4C7D7DBB78124DA48BB8F705 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/cuda/nlm.cu */ = {isa = PBXBuildFile; fileRef = 8583BA1D07EC400E9512AC6E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/cuda/nlm.cu */; settings = { COMPILER_FLAGS = ""; }; };
+3B1C8601126A46DCBB8036DE /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cpp */ = {isa = PBXBuildFile; fileRef = B391729281C24C5DA4F7712E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+99217A0399864E64B6B9EF37 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cuda.cpp */ = {isa = PBXBuildFile; fileRef = 7D1E00F00F6F45A4A9E99A41 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cuda.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+7535968B54004CD5B18B6EFC /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker.hpp */ = {isa = PBXBuildFile; fileRef = F1E9CA16F18C43BBAE62B031 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+14D1DF17C8AA46428A6B40C3 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp */ = {isa = PBXBuildFile; fileRef = 05FCC9F009744B4BB846B2A7 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+79459E9D636B43419DA2CBEA /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_opencl.hpp */ = {isa = PBXBuildFile; fileRef = B08C0F3E9004494E801DD1B4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_opencl.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+8428028E15474B91A39B6BDA /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp */ = {isa = PBXBuildFile; fileRef = 2720D6B73A21416CA1AEDF6D /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+F808E49F26744649B0DEC294 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.cpp */ = {isa = PBXBuildFile; fileRef = 4BA0543BF0694557B3699278 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+6A66EDDF385C4F6BB69611B5 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.hpp */ = {isa = PBXBuildFile; fileRef = A65FD7C7A5FB4F27B0777ACC /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+A9989900554A4A46AF9984BF /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/inpaint.cpp */ = {isa = PBXBuildFile; fileRef = 1BE9A4E096854332B7B9290C /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/inpaint.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+19113410CCDD46E0B89F4E54 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/merge.cpp */ = {isa = PBXBuildFile; fileRef = 659AD9D5AC9A4B6A99171B75 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/merge.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A623344364B74A69893D9984 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.cpp */ = {isa = PBXBuildFile; fileRef = 0311BAB52A6C4FB6ABC872A9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+66967803ACC24681B49CF158 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.hpp */ = {isa = PBXBuildFile; fileRef = 3840D5DF3986404ABD29464E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+ACA355E87AB9486BB249211B /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/opencl/nlmeans.cl */ = {isa = PBXBuildFile; fileRef = 3969FA4E8A864448967CDD54 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/opencl/nlmeans.cl */; settings = { COMPILER_FLAGS = ""; }; };
+C1F0F6553A134FFB81F4C854 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/precomp.hpp */ = {isa = PBXBuildFile; fileRef = 1EC57F569A0648A38654E4DB /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/precomp.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+78C89F1E02524BD8A43A7095 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.cpp */ = {isa = PBXBuildFile; fileRef = 38CAB6C81F1A4A0C81A5ACFD /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+F70C25C707234F06851F369C /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.hpp */ = {isa = PBXBuildFile; fileRef = EC88C1A5203F44FB8FD99780 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+B4548B97A522437CB384F9D9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/tonemap.cpp */ = {isa = PBXBuildFile; fileRef = B8051BECF4804E78A7830065 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/tonemap.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              9DFEF35E64C545D18297FC80 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              9EABBC66078C439FBD4DD5CB /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              C8A67521BC8D4BAF97AC6820 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              E30412799D294940A0F23E26 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = EF7A00380DC245E0BFD66920 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7ACC85D7C1E74D4DA031D41C;
+                     remoteInfo = opencv_photo;
+              };
+              4AC2A14E6A2542DC951BC882 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = EF7A00380DC245E0BFD66920 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DC3584F32287414D92840299;
+                     remoteInfo = ZERO_CHECK;
+              };
+              279B6EB88E584261A622A933 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = EF7A00380DC245E0BFD66920 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 50CC2A8C5C694F5C875AD17F;
+                     remoteInfo = ALL_BUILD;
+              };
+              1FC2F85762B54456A96E2908 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = EF7A00380DC245E0BFD66920 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DC3584F32287414D92840299;
+                     remoteInfo = ZERO_CHECK;
+              };
+              9F66F2E97D164F35AE8D7CB5 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = EF7A00380DC245E0BFD66920 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 50CC2A8C5C694F5C875AD17F;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+1EC13CF572B74C569888130A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+035A995E01224C9C8F73E37F /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "cvconfig.h"; path = "../../../ios/build/iPhoneOS-armv7s/cvconfig.h"; sourceTree = SOURCE_ROOT; };
+F79D5E5A15C849079EA4345A /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "opencl_kernels.cpp"; path = "../../../ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp"; sourceTree = SOURCE_ROOT; };
+E0539541908F4B43B2C2458E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "opencl_kernels.cpp.rule"; path = "../../../ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp.rule"; sourceTree = SOURCE_ROOT; };
+84CC7C7F082047779D91A3AF /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "opencl_kernels.hpp"; path = "../../../ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.hpp"; sourceTree = SOURCE_ROOT; };
+0BAB717A98D54D58BE352E06 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "opencv_modules.hpp"; path = "../../../ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp"; sourceTree = SOURCE_ROOT; };
+3BD933347C1246CBBF583E81 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "photo.hpp"; path = "include/opencv2/photo.hpp"; sourceTree = SOURCE_ROOT; };
+05F9185CEFD14C3FB52EF14A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/cuda.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "cuda.hpp"; path = "include/opencv2/photo/cuda.hpp"; sourceTree = SOURCE_ROOT; };
+64C0355E69CE40DD830619AE /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "photo.hpp"; path = "include/opencv2/photo/photo.hpp"; sourceTree = SOURCE_ROOT; };
+9E74E854D8514F9C88AE72E2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo_c.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "photo_c.h"; path = "include/opencv2/photo/photo_c.h"; sourceTree = SOURCE_ROOT; };
+B61009FBEA4742E88EB578C8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/align.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "align.cpp"; path = "src/align.cpp"; sourceTree = SOURCE_ROOT; };
+6E917135CC4C45DE9565262B /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/arrays.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "arrays.hpp"; path = "src/arrays.hpp"; sourceTree = SOURCE_ROOT; };
+B9B6E2F3D9774BBCB7A85019 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/calibrate.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "calibrate.cpp"; path = "src/calibrate.cpp"; sourceTree = SOURCE_ROOT; };
+FEA82F11CBCA4AF098A663E4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "contrast_preserve.cpp"; path = "src/contrast_preserve.cpp"; sourceTree = SOURCE_ROOT; };
+981B69F48310411D821E8589 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "contrast_preserve.hpp"; path = "src/contrast_preserve.hpp"; sourceTree = SOURCE_ROOT; };
+8583BA1D07EC400E9512AC6E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/cuda/nlm.cu */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "nlm.cu"; path = "src/cuda/nlm.cu"; sourceTree = SOURCE_ROOT; };
+B391729281C24C5DA4F7712E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "denoising.cpp"; path = "src/denoising.cpp"; sourceTree = SOURCE_ROOT; };
+7D1E00F00F6F45A4A9E99A41 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cuda.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "denoising.cuda.cpp"; path = "src/denoising.cuda.cpp"; sourceTree = SOURCE_ROOT; };
+F1E9CA16F18C43BBAE62B031 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "fast_nlmeans_denoising_invoker.hpp"; path = "src/fast_nlmeans_denoising_invoker.hpp"; sourceTree = SOURCE_ROOT; };
+05FCC9F009744B4BB846B2A7 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "fast_nlmeans_denoising_invoker_commons.hpp"; path = "src/fast_nlmeans_denoising_invoker_commons.hpp"; sourceTree = SOURCE_ROOT; };
+B08C0F3E9004494E801DD1B4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_opencl.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "fast_nlmeans_denoising_opencl.hpp"; path = "src/fast_nlmeans_denoising_opencl.hpp"; sourceTree = SOURCE_ROOT; };
+2720D6B73A21416CA1AEDF6D /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "fast_nlmeans_multi_denoising_invoker.hpp"; path = "src/fast_nlmeans_multi_denoising_invoker.hpp"; sourceTree = SOURCE_ROOT; };
+4BA0543BF0694557B3699278 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "hdr_common.cpp"; path = "src/hdr_common.cpp"; sourceTree = SOURCE_ROOT; };
+A65FD7C7A5FB4F27B0777ACC /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "hdr_common.hpp"; path = "src/hdr_common.hpp"; sourceTree = SOURCE_ROOT; };
+1BE9A4E096854332B7B9290C /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/inpaint.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "inpaint.cpp"; path = "src/inpaint.cpp"; sourceTree = SOURCE_ROOT; };
+659AD9D5AC9A4B6A99171B75 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/merge.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "merge.cpp"; path = "src/merge.cpp"; sourceTree = SOURCE_ROOT; };
+0311BAB52A6C4FB6ABC872A9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "npr.cpp"; path = "src/npr.cpp"; sourceTree = SOURCE_ROOT; };
+3840D5DF3986404ABD29464E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "npr.hpp"; path = "src/npr.hpp"; sourceTree = SOURCE_ROOT; };
+3969FA4E8A864448967CDD54 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/opencl/nlmeans.cl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "nlmeans.cl"; path = "src/opencl/nlmeans.cl"; sourceTree = SOURCE_ROOT; };
+1EC57F569A0648A38654E4DB /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/precomp.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "precomp.hpp"; path = "src/precomp.hpp"; sourceTree = SOURCE_ROOT; };
+38CAB6C81F1A4A0C81A5ACFD /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "seamless_cloning.cpp"; path = "src/seamless_cloning.cpp"; sourceTree = SOURCE_ROOT; };
+EC88C1A5203F44FB8FD99780 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "seamless_cloning.hpp"; path = "src/seamless_cloning.hpp"; sourceTree = SOURCE_ROOT; };
+B8051BECF4804E78A7830065 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/tonemap.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "tonemap.cpp"; path = "src/tonemap.cpp"; sourceTree = SOURCE_ROOT; };
+A9038A23EF9342C098C21440 /* opencv_photo */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libopencv_photo.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              988C4FB8945549C5B65D05D2  = {
+                     isa = PBXGroup;
+                     children = (
+                            C072F6DE90844E43A83E4B08 /* Sources */,
+                            95909DCBB9324913A7D9A595 /* Resources */,
+                            2BB564D4C8444BD18E256A75 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              C072F6DE90844E43A83E4B08 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4E766BF885C447BDB2C652D3 /* ALL_BUILD */,
+                            E78A533A7E144DC587213B3F /* ZERO_CHECK */,
+                            9767750C2C214B87AFBA3EF3 /* modules */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              95909DCBB9324913A7D9A595 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              4E766BF885C447BDB2C652D3 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            DF9618B199AE4108B9DE737E /* CMake Rules */,
+                            1EC13CF572B74C569888130A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              DF9618B199AE4108B9DE737E /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              E78A533A7E144DC587213B3F /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            7F59729DD8874D3D802E2BAF /* CMake Rules */,
+                            1EC13CF572B74C569888130A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              7F59729DD8874D3D802E2BAF /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              9767750C2C214B87AFBA3EF3 /* modules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            CF52095A70B04C01AE6467B1 /* opencv_photo */,
+                     );
+                     name = modules;
+                     sourceTree = "<group>";
+              };
+              CF52095A70B04C01AE6467B1 /* opencv_photo */ = {
+                     isa = PBXGroup;
+                     children = (
+                            9B0FFBA3E0B94874BC782106 /* Include */,
+                            603018E75F9B48CC85F4FECC /* Src */,
+                            E8FA685C4A794BE6AD412DB8 /* Header Files */,
+                            FE049AD289CB4D819D9D369A /* CMake Rules */,
+                            1EC13CF572B74C569888130A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/CMakeLists.txt */,
+                            8583BA1D07EC400E9512AC6E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/cuda/nlm.cu */,
+                     );
+                     name = opencv_photo;
+                     sourceTree = "<group>";
+              };
+              9B0FFBA3E0B94874BC782106 /* Include */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C7CC35CD856D45D8A31F8684 /* opencv2 */,
+                     );
+                     name = Include;
+                     sourceTree = "<group>";
+              };
+              C7CC35CD856D45D8A31F8684 /* opencv2 */ = {
+                     isa = PBXGroup;
+                     children = (
+                            7B9B4BDFF08B451B8C3767B4 /* photo */,
+                            3BD933347C1246CBBF583E81 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo.hpp */,
+                     );
+                     name = opencv2;
+                     sourceTree = "<group>";
+              };
+              7B9B4BDFF08B451B8C3767B4 /* photo */ = {
+                     isa = PBXGroup;
+                     children = (
+                            05F9185CEFD14C3FB52EF14A /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/cuda.hpp */,
+                            64C0355E69CE40DD830619AE /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo.hpp */,
+                            9E74E854D8514F9C88AE72E2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include/opencv2/photo/photo_c.h */,
+                     );
+                     name = photo;
+                     sourceTree = "<group>";
+              };
+              603018E75F9B48CC85F4FECC /* Src */ = {
+                     isa = PBXGroup;
+                     children = (
+                            5CEE13F13D9F430E82520671 /* opencl */,
+                            B61009FBEA4742E88EB578C8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/align.cpp */,
+                            6E917135CC4C45DE9565262B /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/arrays.hpp */,
+                            B9B6E2F3D9774BBCB7A85019 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/calibrate.cpp */,
+                            FEA82F11CBCA4AF098A663E4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.cpp */,
+                            981B69F48310411D821E8589 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.hpp */,
+                            B391729281C24C5DA4F7712E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cpp */,
+                            7D1E00F00F6F45A4A9E99A41 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cuda.cpp */,
+                            F1E9CA16F18C43BBAE62B031 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker.hpp */,
+                            05FCC9F009744B4BB846B2A7 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp */,
+                            B08C0F3E9004494E801DD1B4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_denoising_opencl.hpp */,
+                            2720D6B73A21416CA1AEDF6D /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp */,
+                            4BA0543BF0694557B3699278 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.cpp */,
+                            A65FD7C7A5FB4F27B0777ACC /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.hpp */,
+                            1BE9A4E096854332B7B9290C /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/inpaint.cpp */,
+                            659AD9D5AC9A4B6A99171B75 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/merge.cpp */,
+                            0311BAB52A6C4FB6ABC872A9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.cpp */,
+                            3840D5DF3986404ABD29464E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.hpp */,
+                            1EC57F569A0648A38654E4DB /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/precomp.hpp */,
+                            38CAB6C81F1A4A0C81A5ACFD /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.cpp */,
+                            EC88C1A5203F44FB8FD99780 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.hpp */,
+                            B8051BECF4804E78A7830065 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/tonemap.cpp */,
+                     );
+                     name = Src;
+                     sourceTree = "<group>";
+              };
+              5CEE13F13D9F430E82520671 /* opencl */ = {
+                     isa = PBXGroup;
+                     children = (
+                            9C38418886514E169E0BA0E5 /* kernels */,
+                     );
+                     name = opencl;
+                     sourceTree = "<group>";
+              };
+              9C38418886514E169E0BA0E5 /* kernels */ = {
+                     isa = PBXGroup;
+                     children = (
+                            BF3570F3B1054A31A5B6323B /* autogenerated */,
+                            3969FA4E8A864448967CDD54 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/opencl/nlmeans.cl */,
+                     );
+                     name = kernels;
+                     sourceTree = "<group>";
+              };
+              BF3570F3B1054A31A5B6323B /* autogenerated */ = {
+                     isa = PBXGroup;
+                     children = (
+                            F79D5E5A15C849079EA4345A /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp */,
+                            84CC7C7F082047779D91A3AF /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.hpp */,
+                     );
+                     name = autogenerated;
+                     sourceTree = "<group>";
+              };
+              E8FA685C4A794BE6AD412DB8 /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            035A995E01224C9C8F73E37F /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */,
+                            0BAB717A98D54D58BE352E06 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              FE049AD289CB4D819D9D369A /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            E0539541908F4B43B2C2458E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp.rule */,
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              2BB564D4C8444BD18E256A75 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            A9038A23EF9342C098C21440 /* opencv_photo */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              7ACC85D7C1E74D4DA031D41C /* opencv_photo */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 87B70DB3DD9C424F9F741B91 /* Build configuration list for PBXNativeTarget "opencv_photo" */;
+                     buildPhases = (
+                            C7C22D74D9F64CDE8DB77624 /* CMake Rules */,
+                            EC0E6CFDF6F14663B4890027 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            FE791303BA404CE4805C7BAA /* PBXTargetDependency */,
+                     );
+                     name = opencv_photo;
+                     productName = opencv_photo;
+                     productReference = A9038A23EF9342C098C21440 /* opencv_photo */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              EF7A00380DC245E0BFD66920 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 82F5F01DD7794622A90AD7D4 /* Build configuration list for PBXProject  "opencv_photo" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            9EABBC66078C439FBD4DD5CB /* Debug */,
+                            C8A67521BC8D4BAF97AC6820 /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 988C4FB8945549C5B65D05D2;
+                     projectDirPath = /Users/karate_paul4/Documents/Programming/opencv/modules/photo;
+                     projectRoot = "";
+                     targets = (
+                            50CC2A8C5C694F5C875AD17F /* ALL_BUILD */,
+                            DC3584F32287414D92840299 /* ZERO_CHECK */,
+                            0D66B313803445FB8ECE1404 /* install */,
+                            7ACC85D7C1E74D4DA031D41C /* opencv_photo */,
+                            D01FE03CB7A84E78B406BC4C /* package */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              F3C12A70051D48FF96B8792C /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              E4161129B8C24C8AAC7642B0 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              71E500FCEC4442DC8DA6877F /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              61A6CF37BBF5445D9229BEA1 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              9672739DFAC24C259A5E5591 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              7E309CAA4F1B4C7F917C8752 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              C7C22D74D9F64CDE8DB77624 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/CMakeScripts/opencv_photo_cmakeRulesBuildPhase.make$CONFIGURATION cmake_check_multiple_outputs all";
+                     showEnvVarsInLog = 0;
+              };
+              16277C39804146BD8D06EDB7 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              370F32F15AF841E18ECBAA93 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              EC0E6CFDF6F14663B4890027 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            3E3D464AD02C45EC80DDB11A /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/opencl_kernels.cpp */,
+                            5C98EB097C6A44C38321E45E /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/align.cpp */,
+                            AAC7EBB84F64463C984D402B /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/calibrate.cpp */,
+                            74E957F59ABE40CD8E5FEBC1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/contrast_preserve.cpp */,
+                            3B1C8601126A46DCBB8036DE /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cpp */,
+                            99217A0399864E64B6B9EF37 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/denoising.cuda.cpp */,
+                            F808E49F26744649B0DEC294 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/hdr_common.cpp */,
+                            A9989900554A4A46AF9984BF /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/inpaint.cpp */,
+                            19113410CCDD46E0B89F4E54 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/merge.cpp */,
+                            A623344364B74A69893D9984 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/npr.cpp */,
+                            78C89F1E02524BD8A43A7095 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/seamless_cloning.cpp */,
+                            B4548B97A522437CB384F9D9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src/tonemap.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              FE09B71DADB4447696DF8811 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7ACC85D7C1E74D4DA031D41C /* opencv_photo */;
+                     targetProxy = E30412799D294940A0F23E26 /* PBXContainerItemProxy */;
+              };
+              EF6B6C162F5B4455AEFDAD5F /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DC3584F32287414D92840299 /* ZERO_CHECK */;
+                     targetProxy = 4AC2A14E6A2542DC951BC882 /* PBXContainerItemProxy */;
+              };
+              FD75C2D7197A4955A4216EC0 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 50CC2A8C5C694F5C875AD17F /* ALL_BUILD */;
+                     targetProxy = 279B6EB88E584261A622A933 /* PBXContainerItemProxy */;
+              };
+              FE791303BA404CE4805C7BAA /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DC3584F32287414D92840299 /* ZERO_CHECK */;
+                     targetProxy = 1FC2F85762B54456A96E2908 /* PBXContainerItemProxy */;
+              };
+              D888C929D5634625AE4D5D3D /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 50CC2A8C5C694F5C875AD17F /* ALL_BUILD */;
+                     targetProxy = 9F66F2E97D164F35AE8D7CB5 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              B903E2984E674AC9A84C6299 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/build";
+                     };
+                     name = Debug;
+              };
+              6F49428AA0B34B6AA574B5EC /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo/build";
+                     };
+                     name = Release;
+              };
+              9E75E9A5C04649719616E0F2 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              3412C506CD544D57A86C6169 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              5DAF36EB95124729B22AA5DF /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              525C10D64D15441AA840D084 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              44F27788FA67488B839B7500 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              F765B7751CA74C1083A47FBA /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              AD25F474C82C4DCBA6FA3CF8 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/lib/Debug";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_photo;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              6A4034DBC9C84E1A9B9A4965 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/lib/Release";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC       -DNDEBUG  -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC   -DNDEBUG     -fomit-frame-pointer -ffast-math  -DNDEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_photo;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              977A749C30AC4A1C8FBEDB9C /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              1205497285A84A9CA9BBEC5B /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo", /Users/karate_paul4/Documents/Programming/opencv/modules/photo/src, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/photo";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              82F5F01DD7794622A90AD7D4 /* Build configuration list for PBXProject  "opencv_photo" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            B903E2984E674AC9A84C6299 /* Debug */,
+                            6F49428AA0B34B6AA574B5EC /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              4BCAA5AF5BD94B6887AB3E1C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            9E75E9A5C04649719616E0F2 /* Debug */,
+                            3412C506CD544D57A86C6169 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              941298C2EF884F05A5937072 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            5DAF36EB95124729B22AA5DF /* Debug */,
+                            525C10D64D15441AA840D084 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              10EC99DB15484B06B6BCF4FF /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            44F27788FA67488B839B7500 /* Debug */,
+                            F765B7751CA74C1083A47FBA /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              87B70DB3DD9C424F9F741B91 /* Build configuration list for PBXNativeTarget "opencv_photo" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            AD25F474C82C4DCBA6FA3CF8 /* Debug */,
+                            6A4034DBC9C84E1A9B9A4965 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              F220740565B04D319D418B25 /* Build configuration list for PBXAggregateTarget "package" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            977A749C30AC4A1C8FBEDB9C /* Debug */,
+                            1205497285A84A9CA9BBEC5B /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = EF7A00380DC245E0BFD66920;
+}

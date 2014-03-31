@@ -1,0 +1,877 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              69FA14728AE74D7DB4D5EBAF /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 5D7ED4EE71C3480FBE5DA56E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            0B06D57A45A9470F860E59C6 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            13EE23654A9B4641A98D16CF /* PBXTargetDependency */,
+                            1F8A61CF1C8E46C79929F33A /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              248F83B674B5468D8B905759 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 0212B1100F9E490BB129F049 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            3C6DC77474E14A3D85EB5205 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              EC0F9215200A4D70B0D6429C /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 7E2DF4B7DC81401B8C3396B6 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            A7D91012ACB84F5B9EF58550 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            E0A340106B564127BF1D1433 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+              4F7C72E41A1247C68D3F53E2 /* package */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 3742E09FD43A422393384352 /* Build configuration list for PBXAggregateTarget "package" */;
+                     buildPhases = (
+                            5782C3D805B64446804A136F /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            8BECCD4DC17946F087A152FA /* PBXTargetDependency */,
+                     );
+                     name = package;
+                     productName = package;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+500E2184F4464DC69782679C /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/cvconfig.h */ = {isa = PBXBuildFile; fileRef = C10418E25B8A43B7B1E45A80 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/cvconfig.h */; settings = { COMPILER_FLAGS = ""; }; };
+61D07715A83E434DB8756431 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp */ = {isa = PBXBuildFile; fileRef = 137B07CE896A4A13B396A584 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+0719675A9240405B98B4EB66 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp.rule */ = {isa = PBXBuildFile; fileRef = 8B3CE1FD900A40B882736A3E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp.rule */; settings = { COMPILER_FLAGS = ""; }; };
+8D965D80FBC34F4DA61B02DB /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.hpp */ = {isa = PBXBuildFile; fileRef = F95057E5CA4B4611B024CB8E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+111682EA03034867BD633A55 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/opencv2/opencv_modules.hpp */ = {isa = PBXBuildFile; fileRef = BD37586638AE449BA4532514 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/opencv2/opencv_modules.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+5B6E056CA0A8448DBFB6972F /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 9FC5DE09A00643DC98F2C056 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+00DAE828FC8F42F997F3487E /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree.hpp */ = {isa = PBXBuildFile; fileRef = 5E9A1CC13399470198F10955 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+EFDF2CFFB27A417B859C9822 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/cuda.hpp */ = {isa = PBXBuildFile; fileRef = 13036608D778423E81675D68 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/cuda.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+F24B3D0E7817469289043F73 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/features2d.hpp */ = {isa = PBXBuildFile; fileRef = DD44AF3F674649A4A70EA9AA /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/features2d.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+0127CF3FE7724F81ADB4A044 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/nonfree.hpp */ = {isa = PBXBuildFile; fileRef = EF4E7DA8741249CAADC6F381 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/nonfree.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+41EF28631E7F4BAD85E8C363 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/cuda/surf.cu */ = {isa = PBXBuildFile; fileRef = 1319FC914E6E492CB3FCE98E /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/cuda/surf.cu */; settings = { COMPILER_FLAGS = ""; }; };
+C71B8540104142D3A6B136CB /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/nonfree_init.cpp */ = {isa = PBXBuildFile; fileRef = 35014F924E2A486D896CB904 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/nonfree_init.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+849DF6A4851C48F6906CC712 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/opencl/surf.cl */ = {isa = PBXBuildFile; fileRef = CB224E65BF3C42D5A080EC84 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/opencl/surf.cl */; settings = { COMPILER_FLAGS = ""; }; };
+7D6EA7A788C147F0BD9C8536 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/precomp.hpp */ = {isa = PBXBuildFile; fileRef = F0417152CB3E4EBABD34BB19 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/precomp.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+84AD7F8E8EA845C4A1179783 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/sift.cpp */ = {isa = PBXBuildFile; fileRef = 06FD13EAE95249FF93323019 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/sift.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+1A22F1140D714FEBA3291F6D /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cpp */ = {isa = PBXBuildFile; fileRef = DFEB9790EC1D4A49A91BBB67 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+B46BC5B48AC2450DAB334011 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cuda.cpp */ = {isa = PBXBuildFile; fileRef = E647C1C8E3F849799C88AD82 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cuda.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+4C085010F555488DA165F6FC /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.hpp */ = {isa = PBXBuildFile; fileRef = EAD5C06316ED481090BC3C89 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+7E66D11E01BF4E89990D2BA9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.ocl.cpp */ = {isa = PBXBuildFile; fileRef = 21FCD4BF9DF64E3E96B1F6EB /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.ocl.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              24902C435D174A29BCA2BDED /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              69782AD05BB24C59A530239D /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              0683AD11129048CC90E63A2A /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              04A8A39BE0084DFD8A638A22 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = AC74FA8A8AAF40059A2235A1 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 1DFC8F719BBA421EB9CD9AA8;
+                     remoteInfo = opencv_nonfree;
+              };
+              7505900F08AF4C579FDCC8E6 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = AC74FA8A8AAF40059A2235A1 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 248F83B674B5468D8B905759;
+                     remoteInfo = ZERO_CHECK;
+              };
+              48401A1362CC422AB9BFA517 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = AC74FA8A8AAF40059A2235A1 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 69FA14728AE74D7DB4D5EBAF;
+                     remoteInfo = ALL_BUILD;
+              };
+              09766D76AEC040DBA65C7563 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = AC74FA8A8AAF40059A2235A1 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 248F83B674B5468D8B905759;
+                     remoteInfo = ZERO_CHECK;
+              };
+              539F5AD10C5D4B779709EE24 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = AC74FA8A8AAF40059A2235A1 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 69FA14728AE74D7DB4D5EBAF;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+9FC5DE09A00643DC98F2C056 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+C10418E25B8A43B7B1E45A80 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/cvconfig.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "cvconfig.h"; path = "../../../ios/build/iPhoneSimulator-i386/cvconfig.h"; sourceTree = SOURCE_ROOT; };
+137B07CE896A4A13B396A584 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "opencl_kernels.cpp"; path = "../../../ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp"; sourceTree = SOURCE_ROOT; };
+8B3CE1FD900A40B882736A3E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "opencl_kernels.cpp.rule"; path = "../../../ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp.rule"; sourceTree = SOURCE_ROOT; };
+F95057E5CA4B4611B024CB8E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "opencl_kernels.hpp"; path = "../../../ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.hpp"; sourceTree = SOURCE_ROOT; };
+BD37586638AE449BA4532514 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/opencv2/opencv_modules.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "opencv_modules.hpp"; path = "../../../ios/build/iPhoneSimulator-i386/opencv2/opencv_modules.hpp"; sourceTree = SOURCE_ROOT; };
+5E9A1CC13399470198F10955 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "nonfree.hpp"; path = "include/opencv2/nonfree.hpp"; sourceTree = SOURCE_ROOT; };
+13036608D778423E81675D68 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/cuda.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "cuda.hpp"; path = "include/opencv2/nonfree/cuda.hpp"; sourceTree = SOURCE_ROOT; };
+DD44AF3F674649A4A70EA9AA /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/features2d.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "features2d.hpp"; path = "include/opencv2/nonfree/features2d.hpp"; sourceTree = SOURCE_ROOT; };
+EF4E7DA8741249CAADC6F381 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/nonfree.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "nonfree.hpp"; path = "include/opencv2/nonfree/nonfree.hpp"; sourceTree = SOURCE_ROOT; };
+1319FC914E6E492CB3FCE98E /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/cuda/surf.cu */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "surf.cu"; path = "src/cuda/surf.cu"; sourceTree = SOURCE_ROOT; };
+35014F924E2A486D896CB904 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/nonfree_init.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "nonfree_init.cpp"; path = "src/nonfree_init.cpp"; sourceTree = SOURCE_ROOT; };
+CB224E65BF3C42D5A080EC84 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/opencl/surf.cl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "surf.cl"; path = "src/opencl/surf.cl"; sourceTree = SOURCE_ROOT; };
+F0417152CB3E4EBABD34BB19 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/precomp.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "precomp.hpp"; path = "src/precomp.hpp"; sourceTree = SOURCE_ROOT; };
+06FD13EAE95249FF93323019 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/sift.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "sift.cpp"; path = "src/sift.cpp"; sourceTree = SOURCE_ROOT; };
+DFEB9790EC1D4A49A91BBB67 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "surf.cpp"; path = "src/surf.cpp"; sourceTree = SOURCE_ROOT; };
+E647C1C8E3F849799C88AD82 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cuda.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "surf.cuda.cpp"; path = "src/surf.cuda.cpp"; sourceTree = SOURCE_ROOT; };
+EAD5C06316ED481090BC3C89 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "surf.hpp"; path = "src/surf.hpp"; sourceTree = SOURCE_ROOT; };
+21FCD4BF9DF64E3E96B1F6EB /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.ocl.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "surf.ocl.cpp"; path = "src/surf.ocl.cpp"; sourceTree = SOURCE_ROOT; };
+2E1A602EA9AD41A089F0E58D /* opencv_nonfree */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libopencv_nonfree.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              8254CF419C9448F289CB32B2  = {
+                     isa = PBXGroup;
+                     children = (
+                            F7BEA95B734E49DCA773B246 /* Sources */,
+                            78BBCE18973F4E059805A1E3 /* Resources */,
+                            299EBF1FC8DB47C2B19BFBD2 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              F7BEA95B734E49DCA773B246 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            9448305F02184409A8021E51 /* ALL_BUILD */,
+                            0AEA9B9A83134938B77B238C /* ZERO_CHECK */,
+                            6A4F3234DB40419E8CE8935E /* modules */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              78BBCE18973F4E059805A1E3 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              9448305F02184409A8021E51 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            A84F9BFA581A46F8903834A9 /* CMake Rules */,
+                            9FC5DE09A00643DC98F2C056 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              A84F9BFA581A46F8903834A9 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              0AEA9B9A83134938B77B238C /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            30A09CAE998F46DE8B4E9748 /* CMake Rules */,
+                            9FC5DE09A00643DC98F2C056 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              30A09CAE998F46DE8B4E9748 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              6A4F3234DB40419E8CE8935E /* modules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            F2CF6753DE9B494082E1CB50 /* opencv_nonfree */,
+                     );
+                     name = modules;
+                     sourceTree = "<group>";
+              };
+              F2CF6753DE9B494082E1CB50 /* opencv_nonfree */ = {
+                     isa = PBXGroup;
+                     children = (
+                            75B15026FCBC4763853A56AE /* Include */,
+                            D3DE2D82A67845AA85BF9D8C /* Src */,
+                            263CB227C0B242D1B1D75ADC /* Header Files */,
+                            34EA87B4381B4756B69C1FE8 /* CMake Rules */,
+                            9FC5DE09A00643DC98F2C056 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/CMakeLists.txt */,
+                            1319FC914E6E492CB3FCE98E /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/cuda/surf.cu */,
+                     );
+                     name = opencv_nonfree;
+                     sourceTree = "<group>";
+              };
+              75B15026FCBC4763853A56AE /* Include */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AEE7E499A7D844A3851C3436 /* opencv2 */,
+                     );
+                     name = Include;
+                     sourceTree = "<group>";
+              };
+              AEE7E499A7D844A3851C3436 /* opencv2 */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C71BF66B7AF5411FB32442E3 /* nonfree */,
+                            5E9A1CC13399470198F10955 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree.hpp */,
+                     );
+                     name = opencv2;
+                     sourceTree = "<group>";
+              };
+              C71BF66B7AF5411FB32442E3 /* nonfree */ = {
+                     isa = PBXGroup;
+                     children = (
+                            13036608D778423E81675D68 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/cuda.hpp */,
+                            DD44AF3F674649A4A70EA9AA /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/features2d.hpp */,
+                            EF4E7DA8741249CAADC6F381 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include/opencv2/nonfree/nonfree.hpp */,
+                     );
+                     name = nonfree;
+                     sourceTree = "<group>";
+              };
+              D3DE2D82A67845AA85BF9D8C /* Src */ = {
+                     isa = PBXGroup;
+                     children = (
+                            9948E9EB1D8E4352B8D1DCD6 /* opencl */,
+                            35014F924E2A486D896CB904 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/nonfree_init.cpp */,
+                            F0417152CB3E4EBABD34BB19 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/precomp.hpp */,
+                            06FD13EAE95249FF93323019 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/sift.cpp */,
+                            DFEB9790EC1D4A49A91BBB67 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cpp */,
+                            E647C1C8E3F849799C88AD82 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cuda.cpp */,
+                            EAD5C06316ED481090BC3C89 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.hpp */,
+                            21FCD4BF9DF64E3E96B1F6EB /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.ocl.cpp */,
+                     );
+                     name = Src;
+                     sourceTree = "<group>";
+              };
+              9948E9EB1D8E4352B8D1DCD6 /* opencl */ = {
+                     isa = PBXGroup;
+                     children = (
+                            F536A8B97F964453AC7CE55E /* kernels */,
+                     );
+                     name = opencl;
+                     sourceTree = "<group>";
+              };
+              F536A8B97F964453AC7CE55E /* kernels */ = {
+                     isa = PBXGroup;
+                     children = (
+                            26CBF9C933A54C14B8A089D6 /* autogenerated */,
+                            CB224E65BF3C42D5A080EC84 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/opencl/surf.cl */,
+                     );
+                     name = kernels;
+                     sourceTree = "<group>";
+              };
+              26CBF9C933A54C14B8A089D6 /* autogenerated */ = {
+                     isa = PBXGroup;
+                     children = (
+                            137B07CE896A4A13B396A584 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp */,
+                            F95057E5CA4B4611B024CB8E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.hpp */,
+                     );
+                     name = autogenerated;
+                     sourceTree = "<group>";
+              };
+              263CB227C0B242D1B1D75ADC /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C10418E25B8A43B7B1E45A80 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/cvconfig.h */,
+                            BD37586638AE449BA4532514 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/opencv2/opencv_modules.hpp */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              34EA87B4381B4756B69C1FE8 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            8B3CE1FD900A40B882736A3E /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp.rule */,
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              299EBF1FC8DB47C2B19BFBD2 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            2E1A602EA9AD41A089F0E58D /* opencv_nonfree */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              1DFC8F719BBA421EB9CD9AA8 /* opencv_nonfree */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 0265108FD5C143D2A62E4A2C /* Build configuration list for PBXNativeTarget "opencv_nonfree" */;
+                     buildPhases = (
+                            46B8B9657CE247CCB8F9523D /* CMake Rules */,
+                            563FAA2BE0FF4ABE93994C0B /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            049321A77CF744149CF83789 /* PBXTargetDependency */,
+                     );
+                     name = opencv_nonfree;
+                     productName = opencv_nonfree;
+                     productReference = 2E1A602EA9AD41A089F0E58D /* opencv_nonfree */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              AC74FA8A8AAF40059A2235A1 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 18AD59BF44E2460DB29C9470 /* Build configuration list for PBXProject  "opencv_nonfree" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            69782AD05BB24C59A530239D /* Debug */,
+                            0683AD11129048CC90E63A2A /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 8254CF419C9448F289CB32B2;
+                     projectDirPath = /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree;
+                     projectRoot = "";
+                     targets = (
+                            69FA14728AE74D7DB4D5EBAF /* ALL_BUILD */,
+                            248F83B674B5468D8B905759 /* ZERO_CHECK */,
+                            EC0F9215200A4D70B0D6429C /* install */,
+                            1DFC8F719BBA421EB9CD9AA8 /* opencv_nonfree */,
+                            4F7C72E41A1247C68D3F53E2 /* package */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              368770AFE4AA4AF8A75A060C /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              0B06D57A45A9470F860E59C6 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              318160E7FAAF462BACE377FF /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              3C6DC77474E14A3D85EB5205 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              7AC6E2B473CC44F496EACD91 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              A7D91012ACB84F5B9EF58550 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              46B8B9657CE247CCB8F9523D /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/CMakeScripts/opencv_nonfree_cmakeRulesBuildPhase.make$CONFIGURATION cmake_check_multiple_outputs all";
+                     showEnvVarsInLog = 0;
+              };
+              DE295A0009CF4E378FB5D6AA /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              5782C3D805B64446804A136F /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              563FAA2BE0FF4ABE93994C0B /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            61D07715A83E434DB8756431 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/opencl_kernels.cpp */,
+                            C71B8540104142D3A6B136CB /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/nonfree_init.cpp */,
+                            84AD7F8E8EA845C4A1179783 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/sift.cpp */,
+                            1A22F1140D714FEBA3291F6D /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cpp */,
+                            B46BC5B48AC2450DAB334011 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.cuda.cpp */,
+                            7E66D11E01BF4E89990D2BA9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src/surf.ocl.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              13EE23654A9B4641A98D16CF /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 1DFC8F719BBA421EB9CD9AA8 /* opencv_nonfree */;
+                     targetProxy = 04A8A39BE0084DFD8A638A22 /* PBXContainerItemProxy */;
+              };
+              1F8A61CF1C8E46C79929F33A /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 248F83B674B5468D8B905759 /* ZERO_CHECK */;
+                     targetProxy = 7505900F08AF4C579FDCC8E6 /* PBXContainerItemProxy */;
+              };
+              E0A340106B564127BF1D1433 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 69FA14728AE74D7DB4D5EBAF /* ALL_BUILD */;
+                     targetProxy = 48401A1362CC422AB9BFA517 /* PBXContainerItemProxy */;
+              };
+              049321A77CF744149CF83789 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 248F83B674B5468D8B905759 /* ZERO_CHECK */;
+                     targetProxy = 09766D76AEC040DBA65C7563 /* PBXContainerItemProxy */;
+              };
+              8BECCD4DC17946F087A152FA /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 69FA14728AE74D7DB4D5EBAF /* ALL_BUILD */;
+                     targetProxy = 539F5AD10C5D4B779709EE24 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              2B374707ECA840448731796D /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/build";
+                     };
+                     name = Debug;
+              };
+              2C6F58FDB26E491C93680484 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree/build";
+                     };
+                     name = Release;
+              };
+              E38FFB0F379240F99C05473B /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              7B42EE9221F54479A8BB8210 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              CB5F8CE5A8A74DC5B22F0A50 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              E8C2DB3A708147088374FE73 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              D16DC9BA77644E8F8F58BFE4 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              91BD497F792D44498D879B5A /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              D5C932386D164E7BBE5AD66C /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/lib/Debug";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_nonfree;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              737E25F974F346068111AF8B /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/lib/Release";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC       -DNDEBUG  -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC   -DNDEBUG     -fomit-frame-pointer -ffast-math  -DNDEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_nonfree;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              E96324DFB75E4708A40ECB70 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              DA4083EDE3494275844767FD /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree", /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/src, /Users/karate_paul4/Documents/Programming/opencv/modules/nonfree/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-i386/modules/nonfree";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              18AD59BF44E2460DB29C9470 /* Build configuration list for PBXProject  "opencv_nonfree" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            2B374707ECA840448731796D /* Debug */,
+                            2C6F58FDB26E491C93680484 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              5D7ED4EE71C3480FBE5DA56E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            E38FFB0F379240F99C05473B /* Debug */,
+                            7B42EE9221F54479A8BB8210 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              0212B1100F9E490BB129F049 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            CB5F8CE5A8A74DC5B22F0A50 /* Debug */,
+                            E8C2DB3A708147088374FE73 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              7E2DF4B7DC81401B8C3396B6 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D16DC9BA77644E8F8F58BFE4 /* Debug */,
+                            91BD497F792D44498D879B5A /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              0265108FD5C143D2A62E4A2C /* Build configuration list for PBXNativeTarget "opencv_nonfree" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            D5C932386D164E7BBE5AD66C /* Debug */,
+                            737E25F974F346068111AF8B /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              3742E09FD43A422393384352 /* Build configuration list for PBXAggregateTarget "package" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            E96324DFB75E4708A40ECB70 /* Debug */,
+                            DA4083EDE3494275844767FD /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = AC74FA8A8AAF40059A2235A1;
+}

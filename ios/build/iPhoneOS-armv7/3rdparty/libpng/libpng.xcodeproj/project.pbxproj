@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              874618486E1F4B229A0E3F59 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = E9CA84ED17CB49B4A78CEBBB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            9757075D2E564C369FBAF3A0 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            05FE1A86E9A14D4892FC2A15 /* PBXTargetDependency */,
+                            03784D8583C14517BBEA59CB /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              542C5DE48B6F46ACA6222111 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = F1A9051F6E2D401DA7E7E69A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            0ECF7BB69BD740DBA55A2706 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              BDA1618157714AC69D440CB1 /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 783F2EBC36E74E7CBD78EF93 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            1B51539F0746457A89341826 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            65FD0CA8149B4BEB939B92D9 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+              0F75625AA3DD4F74BCA930AB /* package */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = F5C4893617544D288A33BC72 /* Build configuration list for PBXAggregateTarget "package" */;
+                     buildPhases = (
+                            87D8B081FC8F49AFBC5034BD /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            C6C57E1B437D4458B85D8742 /* PBXTargetDependency */,
+                     );
+                     name = package;
+                     productName = package;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+5BE0AB49C4A64D7AA3BFBC3E /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 965CB76079A14FCE9F64FE03 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+D6355AC79EE94445A766B208 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.c */ = {isa = PBXBuildFile; fileRef = 517C1C6E6F00496AB78F74EC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.c */; settings = { COMPILER_FLAGS = ""; }; };
+A0D38F7E9DE74325A1B8C19D /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.h */ = {isa = PBXBuildFile; fileRef = 875203AF9D784F54BFEBF722 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.h */; settings = { COMPILER_FLAGS = ""; }; };
+81A6798DF2AB45E782E5C731 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngconf.h */ = {isa = PBXBuildFile; fileRef = 7199168C1BF44FCE91139778 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngconf.h */; settings = { COMPILER_FLAGS = ""; }; };
+95A93B6610FD4BF08A1C9B3E /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngdebug.h */ = {isa = PBXBuildFile; fileRef = 5B794DB719BF4074A64B4835 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngdebug.h */; settings = { COMPILER_FLAGS = ""; }; };
+436CC9F147A6484F981186CF /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngerror.c */ = {isa = PBXBuildFile; fileRef = B430590B03C345F09B5FA092 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngerror.c */; settings = { COMPILER_FLAGS = ""; }; };
+51CAC2E41C764F7893321FEC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngget.c */ = {isa = PBXBuildFile; fileRef = BBA805DD2EAB45FCA98D9DFC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngget.c */; settings = { COMPILER_FLAGS = ""; }; };
+773665E618CC44EBBCDA26CB /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnginfo.h */ = {isa = PBXBuildFile; fileRef = 63BB9C6764E142A78E6994DF /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnginfo.h */; settings = { COMPILER_FLAGS = ""; }; };
+D5192825A89C45519F5E69D5 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnglibconf.h */ = {isa = PBXBuildFile; fileRef = 0205F4D0ECF541198F6DE0F0 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnglibconf.h */; settings = { COMPILER_FLAGS = ""; }; };
+A06EE52C79F7447197C12DDE /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngmem.c */ = {isa = PBXBuildFile; fileRef = 14DC7B20FA224F00846250E6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngmem.c */; settings = { COMPILER_FLAGS = ""; }; };
+1B6975567C524723948FB2AA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpread.c */ = {isa = PBXBuildFile; fileRef = 14A076F30C4D4CAEA4655EB3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpread.c */; settings = { COMPILER_FLAGS = ""; }; };
+90642A32C98A41BCADBDB83F /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpriv.h */ = {isa = PBXBuildFile; fileRef = 799CCFF5FD5F44CAB394D367 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpriv.h */; settings = { COMPILER_FLAGS = ""; }; };
+6D1F5912B96E4805AF6683B3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngread.c */ = {isa = PBXBuildFile; fileRef = 1E2DFFD72F5B4974AF9754BA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngread.c */; settings = { COMPILER_FLAGS = ""; }; };
+297F6940091545C2BEBDB8C8 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrio.c */ = {isa = PBXBuildFile; fileRef = 6CF7200A98894DB5B08925CC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrio.c */; settings = { COMPILER_FLAGS = ""; }; };
+FCEF9965D35E4DA693561E94 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrtran.c */ = {isa = PBXBuildFile; fileRef = ACAFF6C23B24434E801152D3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrtran.c */; settings = { COMPILER_FLAGS = ""; }; };
+5356EAD4C1CC45D2A5EE7956 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrutil.c */ = {isa = PBXBuildFile; fileRef = 3D67836652004ED8879A08FA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrutil.c */; settings = { COMPILER_FLAGS = ""; }; };
+BA795906375A46E2896D574E /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngset.c */ = {isa = PBXBuildFile; fileRef = E05DC752C07046E6A126B4B9 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngset.c */; settings = { COMPILER_FLAGS = ""; }; };
+292A6D5622624229A8D28A15 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngstruct.h */ = {isa = PBXBuildFile; fileRef = BF72188A519D4A8E8D63C17F /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngstruct.h */; settings = { COMPILER_FLAGS = ""; }; };
+8F6F908801A74F26920C94FD /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngtrans.c */ = {isa = PBXBuildFile; fileRef = BC90B8C708334104897C76E2 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngtrans.c */; settings = { COMPILER_FLAGS = ""; }; };
+AF1BE9D4FEF8442A85FDBF9B /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwio.c */ = {isa = PBXBuildFile; fileRef = 82ACC656B5FC46AEA9CF985B /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwio.c */; settings = { COMPILER_FLAGS = ""; }; };
+AFB1FACE35954F95ADC8AC2C /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwrite.c */ = {isa = PBXBuildFile; fileRef = 5FE5940736854F6FAEBB9388 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwrite.c */; settings = { COMPILER_FLAGS = ""; }; };
+33A13CC847174FB2A24004C6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwtran.c */ = {isa = PBXBuildFile; fileRef = 33DBBB5DE12B4C8096226FE6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwtran.c */; settings = { COMPILER_FLAGS = ""; }; };
+86CF551A00D44B578E592A0D /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwutil.c */ = {isa = PBXBuildFile; fileRef = BE1924C857A649C884361448 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwutil.c */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              DD4BD4B027A84743BDC97873 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              A100EBFBE41A4D58A2B151A9 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              2EC619941C404B7691E11DA2 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              A71DA4286488412496907C05 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = BDEDE09BCAB34FC9A4525B23 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 45FE507A59FA4F2D845BA8DC;
+                     remoteInfo = libpng;
+              };
+              DA45DCDC2ACB4B40A878124D /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = BDEDE09BCAB34FC9A4525B23 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 542C5DE48B6F46ACA6222111;
+                     remoteInfo = ZERO_CHECK;
+              };
+              E1443508D6614DA481EDB50F /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = BDEDE09BCAB34FC9A4525B23 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 874618486E1F4B229A0E3F59;
+                     remoteInfo = ALL_BUILD;
+              };
+              941181182D4F4983936620C7 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = BDEDE09BCAB34FC9A4525B23 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 542C5DE48B6F46ACA6222111;
+                     remoteInfo = ZERO_CHECK;
+              };
+              ABE91601FB164778B6BB02B5 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = BDEDE09BCAB34FC9A4525B23 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 874618486E1F4B229A0E3F59;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+965CB76079A14FCE9F64FE03 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+517C1C6E6F00496AB78F74EC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "png.c"; path = "png.c"; sourceTree = SOURCE_ROOT; };
+875203AF9D784F54BFEBF722 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "png.h"; path = "png.h"; sourceTree = SOURCE_ROOT; };
+7199168C1BF44FCE91139778 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngconf.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "pngconf.h"; path = "pngconf.h"; sourceTree = SOURCE_ROOT; };
+5B794DB719BF4074A64B4835 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngdebug.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "pngdebug.h"; path = "pngdebug.h"; sourceTree = SOURCE_ROOT; };
+B430590B03C345F09B5FA092 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngerror.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngerror.c"; path = "pngerror.c"; sourceTree = SOURCE_ROOT; };
+BBA805DD2EAB45FCA98D9DFC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngget.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngget.c"; path = "pngget.c"; sourceTree = SOURCE_ROOT; };
+63BB9C6764E142A78E6994DF /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnginfo.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "pnginfo.h"; path = "pnginfo.h"; sourceTree = SOURCE_ROOT; };
+0205F4D0ECF541198F6DE0F0 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnglibconf.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "pnglibconf.h"; path = "pnglibconf.h"; sourceTree = SOURCE_ROOT; };
+14DC7B20FA224F00846250E6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngmem.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngmem.c"; path = "pngmem.c"; sourceTree = SOURCE_ROOT; };
+14A076F30C4D4CAEA4655EB3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpread.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngpread.c"; path = "pngpread.c"; sourceTree = SOURCE_ROOT; };
+799CCFF5FD5F44CAB394D367 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpriv.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "pngpriv.h"; path = "pngpriv.h"; sourceTree = SOURCE_ROOT; };
+1E2DFFD72F5B4974AF9754BA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngread.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngread.c"; path = "pngread.c"; sourceTree = SOURCE_ROOT; };
+6CF7200A98894DB5B08925CC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrio.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngrio.c"; path = "pngrio.c"; sourceTree = SOURCE_ROOT; };
+ACAFF6C23B24434E801152D3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrtran.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngrtran.c"; path = "pngrtran.c"; sourceTree = SOURCE_ROOT; };
+3D67836652004ED8879A08FA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrutil.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngrutil.c"; path = "pngrutil.c"; sourceTree = SOURCE_ROOT; };
+E05DC752C07046E6A126B4B9 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngset.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngset.c"; path = "pngset.c"; sourceTree = SOURCE_ROOT; };
+BF72188A519D4A8E8D63C17F /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngstruct.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "pngstruct.h"; path = "pngstruct.h"; sourceTree = SOURCE_ROOT; };
+BC90B8C708334104897C76E2 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngtrans.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngtrans.c"; path = "pngtrans.c"; sourceTree = SOURCE_ROOT; };
+82ACC656B5FC46AEA9CF985B /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwio.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngwio.c"; path = "pngwio.c"; sourceTree = SOURCE_ROOT; };
+5FE5940736854F6FAEBB9388 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwrite.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngwrite.c"; path = "pngwrite.c"; sourceTree = SOURCE_ROOT; };
+33DBBB5DE12B4C8096226FE6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwtran.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngwtran.c"; path = "pngwtran.c"; sourceTree = SOURCE_ROOT; };
+BE1924C857A649C884361448 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwutil.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pngwutil.c"; path = "pngwutil.c"; sourceTree = SOURCE_ROOT; };
+43D2186D9CDC413EAFCB718B /* libpng */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "liblibpng.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              B9EFC8E5CC904DD6BD86870F  = {
+                     isa = PBXGroup;
+                     children = (
+                            CEC0C6B08D6840489B25B591 /* Sources */,
+                            720CF99806A5456886248FFC /* Resources */,
+                            D9FE2D0F3AFF4EA69EF819E5 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              CEC0C6B08D6840489B25B591 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            8E319F24CE744D5996207A11 /* ALL_BUILD */,
+                            679F1774301F4878B64C0E57 /* ZERO_CHECK */,
+                            41A24ABE6C8645AC87E4B0B9 /* 3rdparty */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              720CF99806A5456886248FFC /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              8E319F24CE744D5996207A11 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C788EF809C52418C84DACF5C /* CMake Rules */,
+                            965CB76079A14FCE9F64FE03 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              C788EF809C52418C84DACF5C /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              679F1774301F4878B64C0E57 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            8E020C411305424A8E455219 /* CMake Rules */,
+                            965CB76079A14FCE9F64FE03 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              8E020C411305424A8E455219 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              41A24ABE6C8645AC87E4B0B9 /* 3rdparty */ = {
+                     isa = PBXGroup;
+                     children = (
+                            8BC59AC920BC4AEB805B6A4E /* libpng */,
+                     );
+                     name = 3rdparty;
+                     sourceTree = "<group>";
+              };
+              8BC59AC920BC4AEB805B6A4E /* libpng */ = {
+                     isa = PBXGroup;
+                     children = (
+                            83E8FDDEDB1F4BAD97A2E69B /* Source Files */,
+                            BB20F2BBCC5A4AA08A0C634C /* Header Files */,
+                            965CB76079A14FCE9F64FE03 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/CMakeLists.txt */,
+                     );
+                     name = libpng;
+                     sourceTree = "<group>";
+              };
+              83E8FDDEDB1F4BAD97A2E69B /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            517C1C6E6F00496AB78F74EC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.c */,
+                            B430590B03C345F09B5FA092 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngerror.c */,
+                            BBA805DD2EAB45FCA98D9DFC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngget.c */,
+                            14DC7B20FA224F00846250E6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngmem.c */,
+                            14A076F30C4D4CAEA4655EB3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpread.c */,
+                            1E2DFFD72F5B4974AF9754BA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngread.c */,
+                            6CF7200A98894DB5B08925CC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrio.c */,
+                            ACAFF6C23B24434E801152D3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrtran.c */,
+                            3D67836652004ED8879A08FA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrutil.c */,
+                            E05DC752C07046E6A126B4B9 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngset.c */,
+                            BC90B8C708334104897C76E2 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngtrans.c */,
+                            82ACC656B5FC46AEA9CF985B /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwio.c */,
+                            5FE5940736854F6FAEBB9388 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwrite.c */,
+                            33DBBB5DE12B4C8096226FE6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwtran.c */,
+                            BE1924C857A649C884361448 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwutil.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              BB20F2BBCC5A4AA08A0C634C /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            875203AF9D784F54BFEBF722 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.h */,
+                            7199168C1BF44FCE91139778 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngconf.h */,
+                            5B794DB719BF4074A64B4835 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngdebug.h */,
+                            63BB9C6764E142A78E6994DF /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnginfo.h */,
+                            0205F4D0ECF541198F6DE0F0 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pnglibconf.h */,
+                            799CCFF5FD5F44CAB394D367 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpriv.h */,
+                            BF72188A519D4A8E8D63C17F /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngstruct.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              D9FE2D0F3AFF4EA69EF819E5 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            43D2186D9CDC413EAFCB718B /* libpng */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              45FE507A59FA4F2D845BA8DC /* libpng */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 49691BDE47B2426EB24BECF4 /* Build configuration list for PBXNativeTarget "libpng" */;
+                     buildPhases = (
+                            266D0717389F4249BF11A867 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            F33AD730BCC6417EA422C893 /* PBXTargetDependency */,
+                     );
+                     name = libpng;
+                     productName = libpng;
+                     productReference = 43D2186D9CDC413EAFCB718B /* libpng */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              BDEDE09BCAB34FC9A4525B23 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = B893832F52234BB890B79E90 /* Build configuration list for PBXProject  "libpng" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            A100EBFBE41A4D58A2B151A9 /* Debug */,
+                            2EC619941C404B7691E11DA2 /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = B9EFC8E5CC904DD6BD86870F;
+                     projectDirPath = /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng;
+                     projectRoot = "";
+                     targets = (
+                            874618486E1F4B229A0E3F59 /* ALL_BUILD */,
+                            542C5DE48B6F46ACA6222111 /* ZERO_CHECK */,
+                            BDA1618157714AC69D440CB1 /* install */,
+                            45FE507A59FA4F2D845BA8DC /* libpng */,
+                            0F75625AA3DD4F74BCA930AB /* package */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              922B1C258E4A40F0A7D45F86 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              9757075D2E564C369FBAF3A0 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              04A1DAAF535948B0B274AFE7 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              0ECF7BB69BD740DBA55A2706 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              1B6941C8A98F41E69E5EE240 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              1B51539F0746457A89341826 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              25420DD995084B6BAFD33FA1 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              87D8B081FC8F49AFBC5034BD /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              266D0717389F4249BF11A867 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            D6355AC79EE94445A766B208 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/png.c */,
+                            436CC9F147A6484F981186CF /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngerror.c */,
+                            51CAC2E41C764F7893321FEC /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngget.c */,
+                            A06EE52C79F7447197C12DDE /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngmem.c */,
+                            1B6975567C524723948FB2AA /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngpread.c */,
+                            6D1F5912B96E4805AF6683B3 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngread.c */,
+                            297F6940091545C2BEBDB8C8 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrio.c */,
+                            FCEF9965D35E4DA693561E94 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrtran.c */,
+                            5356EAD4C1CC45D2A5EE7956 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngrutil.c */,
+                            BA795906375A46E2896D574E /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngset.c */,
+                            8F6F908801A74F26920C94FD /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngtrans.c */,
+                            AF1BE9D4FEF8442A85FDBF9B /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwio.c */,
+                            AFB1FACE35954F95ADC8AC2C /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwrite.c */,
+                            33A13CC847174FB2A24004C6 /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwtran.c */,
+                            86CF551A00D44B578E592A0D /* /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng/pngwutil.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              05FE1A86E9A14D4892FC2A15 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 45FE507A59FA4F2D845BA8DC /* libpng */;
+                     targetProxy = A71DA4286488412496907C05 /* PBXContainerItemProxy */;
+              };
+              03784D8583C14517BBEA59CB /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 542C5DE48B6F46ACA6222111 /* ZERO_CHECK */;
+                     targetProxy = DA45DCDC2ACB4B40A878124D /* PBXContainerItemProxy */;
+              };
+              65FD0CA8149B4BEB939B92D9 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 874618486E1F4B229A0E3F59 /* ALL_BUILD */;
+                     targetProxy = E1443508D6614DA481EDB50F /* PBXContainerItemProxy */;
+              };
+              F33AD730BCC6417EA422C893 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 542C5DE48B6F46ACA6222111 /* ZERO_CHECK */;
+                     targetProxy = 941181182D4F4983936620C7 /* PBXContainerItemProxy */;
+              };
+              C6C57E1B437D4458B85D8742 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 874618486E1F4B229A0E3F59 /* ALL_BUILD */;
+                     targetProxy = ABE91601FB164778B6BB02B5 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              BD5B38776DC549E890661956 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng/build";
+                     };
+                     name = Debug;
+              };
+              1B13314226F0436181FE089A /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng/build";
+                     };
+                     name = Release;
+              };
+              ECA5E4DB0E0D4DA9B078E2E6 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              A61D970DFDFB46EB880BA2B6 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              017530A7E28440B8A05C2255 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              BCD96FFDD9E6485289AA8877 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              7F6E953385A7404B921D86AB /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              5B0B393F84F7429F81D7E7F6 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              F8D881A3D09743729BC39ED9 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/lib/Debug";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC   -fPIC         -DDEBUG -D_DEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = libpng;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              160BE9F112F042D0BAF49539 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/lib/Release";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC   -fPIC     -DNDEBUG  -DNDEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = libpng;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              A816A8B27EF04CF0804E6302 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              CBD9B0650BDE422B9FC215D7 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/karate_paul4/Documents/Programming/opencv/3rdparty/zlib, /Users/karate_paul4/Documents/Programming/opencv/3rdparty/libpng, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              B893832F52234BB890B79E90 /* Build configuration list for PBXProject  "libpng" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            BD5B38776DC549E890661956 /* Debug */,
+                            1B13314226F0436181FE089A /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              E9CA84ED17CB49B4A78CEBBB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            ECA5E4DB0E0D4DA9B078E2E6 /* Debug */,
+                            A61D970DFDFB46EB880BA2B6 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              F1A9051F6E2D401DA7E7E69A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            017530A7E28440B8A05C2255 /* Debug */,
+                            BCD96FFDD9E6485289AA8877 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              783F2EBC36E74E7CBD78EF93 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            7F6E953385A7404B921D86AB /* Debug */,
+                            5B0B393F84F7429F81D7E7F6 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              49691BDE47B2426EB24BECF4 /* Build configuration list for PBXNativeTarget "libpng" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            F8D881A3D09743729BC39ED9 /* Debug */,
+                            160BE9F112F042D0BAF49539 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              F5C4893617544D288A33BC72 /* Build configuration list for PBXAggregateTarget "package" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            A816A8B27EF04CF0804E6302 /* Debug */,
+                            CBD9B0650BDE422B9FC215D7 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = BDEDE09BCAB34FC9A4525B23;
+}

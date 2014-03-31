@@ -1,0 +1,874 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              50CC2A8C5C694F5C875AD17F /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 3ABC3D32A0AE4DCD9A7060BF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            1624375762E5412ABA322F0A /* CMake Rules */,
+                     );
+                     dependencies = (
+                            9A5BAD6C4AD74620A40EC902 /* PBXTargetDependency */,
+                            F865FB0FE3C84D4C8A4D4A74 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              DC3584F32287414D92840299 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = CE1710E4ACAC408CBD2B6CD0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            90BBA36E1C344BB5A4FD75BB /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              0D66B313803445FB8ECE1404 /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 3D5F8E7255FE4C7DB1907263 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            695123961A6E4430B3FC67B9 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            A7B0601511D345EA93FE6033 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+              D01FE03CB7A84E78B406BC4C /* package */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = E473B617A78D4225AC92C6D7 /* Build configuration list for PBXAggregateTarget "package" */;
+                     buildPhases = (
+                            0910936F0BB748089390E841 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            D34748E59A314A51A4193170 /* PBXTargetDependency */,
+                     );
+                     name = package;
+                     productName = package;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+F44ADB8046444AEC947AEAAC /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */ = {isa = PBXBuildFile; fileRef = 0939E4B3C5E14A2EBF56EE1B /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */; settings = { COMPILER_FLAGS = ""; }; };
+77DED466A81B41EE841CA0A2 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */ = {isa = PBXBuildFile; fileRef = CBF97F4370C34898AA5EE48D /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+974EE9ED18F24B89982EC65E /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 074EFB51928342E8AE655C6B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+B5244CDF465B41D496005D6F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab.hpp */ = {isa = PBXBuildFile; fileRef = BFA70FB3196D44B4ADA61600 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+2A278A5AD4E44FFAB59AC667 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/deblurring.hpp */ = {isa = PBXBuildFile; fileRef = 91C63F4F6C7045EBA8F5C0C2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/deblurring.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+D261DB48E93841C087455FEF /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching.hpp */ = {isa = PBXBuildFile; fileRef = 473E70BEBCA6443BBBA97C5A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+FBBBB9010DE94003BDF5E679 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching_inl.hpp */ = {isa = PBXBuildFile; fileRef = 7748C90BBA0C44B9BD0799E8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching_inl.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+6E3F94EE01354E26A8D8DC85 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/frame_source.hpp */ = {isa = PBXBuildFile; fileRef = 05500875D87A4382880BA456 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/frame_source.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+675577B1801B454690A3635B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/global_motion.hpp */ = {isa = PBXBuildFile; fileRef = E5036213295748E5BDA041E3 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/global_motion.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+DCB41DFB749F475D8A5517C7 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/inpainting.hpp */ = {isa = PBXBuildFile; fileRef = 68847B1A2FF240358E7A0A39 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/inpainting.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+B59E599936894DED844104F4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/log.hpp */ = {isa = PBXBuildFile; fileRef = 136E71FB442D4042ADC1B046 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/log.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+BB786031B0B1407B8636F419 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_core.hpp */ = {isa = PBXBuildFile; fileRef = 1FB1A7B3FECB43CC94CE9518 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_core.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+1FA8E1AB552A40CEAF17017A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_stabilizing.hpp */ = {isa = PBXBuildFile; fileRef = F75956C1AB4946059169AE8C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_stabilizing.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+26C335762CEE46B3AE1CD735 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/optical_flow.hpp */ = {isa = PBXBuildFile; fileRef = ABDF909E8617414680917FED /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/optical_flow.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+45A5F76CA48440E8862668B8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/outlier_rejection.hpp */ = {isa = PBXBuildFile; fileRef = C542559DD6974AEDB5E4829F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/outlier_rejection.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+BB94258216B44FAE9AD28A76 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/ring_buffer.hpp */ = {isa = PBXBuildFile; fileRef = 203D58D8D8DA41E99E8A24E6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/ring_buffer.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+FC93DA081F494CC89D78EC23 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/stabilizer.hpp */ = {isa = PBXBuildFile; fileRef = 8AFB612D361C46B99D34C86C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/stabilizer.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+4BDCB6A4B08A48CA932D4127 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/wobble_suppression.hpp */ = {isa = PBXBuildFile; fileRef = BFA65266AE9F4718B0A7119A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/wobble_suppression.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+DB6D7960FE15486C9611767A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/clp.hpp */ = {isa = PBXBuildFile; fileRef = D0407150D70947A68734F27E /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/clp.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+C38A6F87B62E4535A5261541 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/deblurring.cpp */ = {isa = PBXBuildFile; fileRef = 013246C314904112978524BB /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/deblurring.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+8FCD611B1FE44C8FB3100FA6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/fast_marching.cpp */ = {isa = PBXBuildFile; fileRef = 2C79B3F4C20640898A994D17 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/fast_marching.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+D75DEE801FF94397BB68EB3F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/frame_source.cpp */ = {isa = PBXBuildFile; fileRef = 2C792A8E9F6A4F7A9E5BE03A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/frame_source.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+52F493B54C12490097F3C9DF /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/global_motion.cpp */ = {isa = PBXBuildFile; fileRef = D0DEEDEF8935440ABD859697 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/global_motion.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+4C36DBDFAD8C410CB0E74ED8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/inpainting.cpp */ = {isa = PBXBuildFile; fileRef = D728D8D1C4C44E29A050D216 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/inpainting.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+1C2794B122004884BAC430DA /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/log.cpp */ = {isa = PBXBuildFile; fileRef = 3FE4033EC30642158D2F1899 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/log.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+7AAB8C2FFFC44CE890D8C0D0 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/motion_stabilizing.cpp */ = {isa = PBXBuildFile; fileRef = 4DF7880BD35945228F9CAA1C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/motion_stabilizing.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+41B569B4918F479FA24C620E /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/optical_flow.cpp */ = {isa = PBXBuildFile; fileRef = D80C5B119BBF4F348ED5508D /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/optical_flow.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+E2B3F5D706D8439A8AEE5E95 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/outlier_rejection.cpp */ = {isa = PBXBuildFile; fileRef = 8F292718CECC40068ADEF95C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/outlier_rejection.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+72C19BE8FCB84D8981345AC3 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/precomp.hpp */ = {isa = PBXBuildFile; fileRef = 393F6959491645E590BA9D8B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/precomp.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+FEC59C2F16B04D21BBDC92B1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/stabilizer.cpp */ = {isa = PBXBuildFile; fileRef = D7511E6B7839421682600F39 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/stabilizer.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+990EFCCC322F4511A45C3D5F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/wobble_suppression.cpp */ = {isa = PBXBuildFile; fileRef = 423CE28E73F04AAF98E03DE2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/wobble_suppression.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              41A05ACAEA0A4190BEAD2DAE /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              267F64DBB56E456EA7D88268 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              531536B46CC943258A6985C0 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              D2633C1CEFBD4DC8BBEBECBD /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 7C9D97AB65974A81A3A1349C /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 02C3D98B66574E0FB09D419B;
+                     remoteInfo = opencv_videostab;
+              };
+              19D20959121D41409E908BAE /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 7C9D97AB65974A81A3A1349C /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DC3584F32287414D92840299;
+                     remoteInfo = ZERO_CHECK;
+              };
+              17033B33BCD6460EA12EFF45 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 7C9D97AB65974A81A3A1349C /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 50CC2A8C5C694F5C875AD17F;
+                     remoteInfo = ALL_BUILD;
+              };
+              A2ADD7CDBB9A4E67BDB8712D /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 7C9D97AB65974A81A3A1349C /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = DC3584F32287414D92840299;
+                     remoteInfo = ZERO_CHECK;
+              };
+              9883C1CDDCD74B40928DA870 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 7C9D97AB65974A81A3A1349C /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 50CC2A8C5C694F5C875AD17F;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+074EFB51928342E8AE655C6B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+0939E4B3C5E14A2EBF56EE1B /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "cvconfig.h"; path = "../../../ios/build/iPhoneOS-armv7s/cvconfig.h"; sourceTree = SOURCE_ROOT; };
+CBF97F4370C34898AA5EE48D /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "opencv_modules.hpp"; path = "../../../ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp"; sourceTree = SOURCE_ROOT; };
+BFA70FB3196D44B4ADA61600 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "videostab.hpp"; path = "include/opencv2/videostab.hpp"; sourceTree = SOURCE_ROOT; };
+91C63F4F6C7045EBA8F5C0C2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/deblurring.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "deblurring.hpp"; path = "include/opencv2/videostab/deblurring.hpp"; sourceTree = SOURCE_ROOT; };
+473E70BEBCA6443BBBA97C5A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "fast_marching.hpp"; path = "include/opencv2/videostab/fast_marching.hpp"; sourceTree = SOURCE_ROOT; };
+7748C90BBA0C44B9BD0799E8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching_inl.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "fast_marching_inl.hpp"; path = "include/opencv2/videostab/fast_marching_inl.hpp"; sourceTree = SOURCE_ROOT; };
+05500875D87A4382880BA456 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/frame_source.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "frame_source.hpp"; path = "include/opencv2/videostab/frame_source.hpp"; sourceTree = SOURCE_ROOT; };
+E5036213295748E5BDA041E3 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/global_motion.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "global_motion.hpp"; path = "include/opencv2/videostab/global_motion.hpp"; sourceTree = SOURCE_ROOT; };
+68847B1A2FF240358E7A0A39 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/inpainting.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "inpainting.hpp"; path = "include/opencv2/videostab/inpainting.hpp"; sourceTree = SOURCE_ROOT; };
+136E71FB442D4042ADC1B046 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/log.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "log.hpp"; path = "include/opencv2/videostab/log.hpp"; sourceTree = SOURCE_ROOT; };
+1FB1A7B3FECB43CC94CE9518 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_core.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "motion_core.hpp"; path = "include/opencv2/videostab/motion_core.hpp"; sourceTree = SOURCE_ROOT; };
+F75956C1AB4946059169AE8C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_stabilizing.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "motion_stabilizing.hpp"; path = "include/opencv2/videostab/motion_stabilizing.hpp"; sourceTree = SOURCE_ROOT; };
+ABDF909E8617414680917FED /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/optical_flow.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "optical_flow.hpp"; path = "include/opencv2/videostab/optical_flow.hpp"; sourceTree = SOURCE_ROOT; };
+C542559DD6974AEDB5E4829F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/outlier_rejection.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "outlier_rejection.hpp"; path = "include/opencv2/videostab/outlier_rejection.hpp"; sourceTree = SOURCE_ROOT; };
+203D58D8D8DA41E99E8A24E6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/ring_buffer.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "ring_buffer.hpp"; path = "include/opencv2/videostab/ring_buffer.hpp"; sourceTree = SOURCE_ROOT; };
+8AFB612D361C46B99D34C86C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/stabilizer.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "stabilizer.hpp"; path = "include/opencv2/videostab/stabilizer.hpp"; sourceTree = SOURCE_ROOT; };
+BFA65266AE9F4718B0A7119A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/wobble_suppression.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "wobble_suppression.hpp"; path = "include/opencv2/videostab/wobble_suppression.hpp"; sourceTree = SOURCE_ROOT; };
+D0407150D70947A68734F27E /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/clp.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "clp.hpp"; path = "src/clp.hpp"; sourceTree = SOURCE_ROOT; };
+013246C314904112978524BB /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/deblurring.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "deblurring.cpp"; path = "src/deblurring.cpp"; sourceTree = SOURCE_ROOT; };
+2C79B3F4C20640898A994D17 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/fast_marching.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "fast_marching.cpp"; path = "src/fast_marching.cpp"; sourceTree = SOURCE_ROOT; };
+2C792A8E9F6A4F7A9E5BE03A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/frame_source.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "frame_source.cpp"; path = "src/frame_source.cpp"; sourceTree = SOURCE_ROOT; };
+D0DEEDEF8935440ABD859697 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/global_motion.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "global_motion.cpp"; path = "src/global_motion.cpp"; sourceTree = SOURCE_ROOT; };
+D728D8D1C4C44E29A050D216 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/inpainting.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "inpainting.cpp"; path = "src/inpainting.cpp"; sourceTree = SOURCE_ROOT; };
+3FE4033EC30642158D2F1899 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/log.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "log.cpp"; path = "src/log.cpp"; sourceTree = SOURCE_ROOT; };
+4DF7880BD35945228F9CAA1C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/motion_stabilizing.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "motion_stabilizing.cpp"; path = "src/motion_stabilizing.cpp"; sourceTree = SOURCE_ROOT; };
+D80C5B119BBF4F348ED5508D /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/optical_flow.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "optical_flow.cpp"; path = "src/optical_flow.cpp"; sourceTree = SOURCE_ROOT; };
+8F292718CECC40068ADEF95C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/outlier_rejection.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "outlier_rejection.cpp"; path = "src/outlier_rejection.cpp"; sourceTree = SOURCE_ROOT; };
+393F6959491645E590BA9D8B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/precomp.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "precomp.hpp"; path = "src/precomp.hpp"; sourceTree = SOURCE_ROOT; };
+D7511E6B7839421682600F39 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/stabilizer.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "stabilizer.cpp"; path = "src/stabilizer.cpp"; sourceTree = SOURCE_ROOT; };
+423CE28E73F04AAF98E03DE2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/wobble_suppression.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "wobble_suppression.cpp"; path = "src/wobble_suppression.cpp"; sourceTree = SOURCE_ROOT; };
+FE649965CCAE435E87850C5A /* opencv_videostab */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libopencv_videostab.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              A8D4F5CB66AC4D939EC48973  = {
+                     isa = PBXGroup;
+                     children = (
+                            A2AF90E8C81A4AC4B44D5764 /* Sources */,
+                            C3A46BFBA2DF41B688088A49 /* Resources */,
+                            FE99CA89F362436284EA1954 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              A2AF90E8C81A4AC4B44D5764 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AB7EC2CC90B14744AD223878 /* ALL_BUILD */,
+                            24D0B1A84B01450AAAADFA2F /* ZERO_CHECK */,
+                            90E2FC1B70A14C13851A8D4B /* modules */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              C3A46BFBA2DF41B688088A49 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              AB7EC2CC90B14744AD223878 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            51A5B444FE7B4A7BA035009C /* CMake Rules */,
+                            074EFB51928342E8AE655C6B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              51A5B444FE7B4A7BA035009C /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              24D0B1A84B01450AAAADFA2F /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C1592EB8CA994F6FB645AB2A /* CMake Rules */,
+                            074EFB51928342E8AE655C6B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              C1592EB8CA994F6FB645AB2A /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              90E2FC1B70A14C13851A8D4B /* modules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4B94434A7BD14A6F91003859 /* opencv_videostab */,
+                     );
+                     name = modules;
+                     sourceTree = "<group>";
+              };
+              4B94434A7BD14A6F91003859 /* opencv_videostab */ = {
+                     isa = PBXGroup;
+                     children = (
+                            B539B65EA5564771A4AE214E /* Include */,
+                            F9EEB1C2190C4187B3D30A17 /* Src */,
+                            EFDC9C12ACD140D09749C05B /* Header Files */,
+                            074EFB51928342E8AE655C6B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/CMakeLists.txt */,
+                     );
+                     name = opencv_videostab;
+                     sourceTree = "<group>";
+              };
+              B539B65EA5564771A4AE214E /* Include */ = {
+                     isa = PBXGroup;
+                     children = (
+                            18FC47EAFDF64AE4960C73AA /* opencv2 */,
+                     );
+                     name = Include;
+                     sourceTree = "<group>";
+              };
+              18FC47EAFDF64AE4960C73AA /* opencv2 */ = {
+                     isa = PBXGroup;
+                     children = (
+                            8ADF28FEBF954DD9835920E8 /* videostab */,
+                            BFA70FB3196D44B4ADA61600 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab.hpp */,
+                     );
+                     name = opencv2;
+                     sourceTree = "<group>";
+              };
+              8ADF28FEBF954DD9835920E8 /* videostab */ = {
+                     isa = PBXGroup;
+                     children = (
+                            91C63F4F6C7045EBA8F5C0C2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/deblurring.hpp */,
+                            473E70BEBCA6443BBBA97C5A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching.hpp */,
+                            7748C90BBA0C44B9BD0799E8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/fast_marching_inl.hpp */,
+                            05500875D87A4382880BA456 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/frame_source.hpp */,
+                            E5036213295748E5BDA041E3 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/global_motion.hpp */,
+                            68847B1A2FF240358E7A0A39 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/inpainting.hpp */,
+                            136E71FB442D4042ADC1B046 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/log.hpp */,
+                            1FB1A7B3FECB43CC94CE9518 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_core.hpp */,
+                            F75956C1AB4946059169AE8C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/motion_stabilizing.hpp */,
+                            ABDF909E8617414680917FED /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/optical_flow.hpp */,
+                            C542559DD6974AEDB5E4829F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/outlier_rejection.hpp */,
+                            203D58D8D8DA41E99E8A24E6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/ring_buffer.hpp */,
+                            8AFB612D361C46B99D34C86C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/stabilizer.hpp */,
+                            BFA65266AE9F4718B0A7119A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include/opencv2/videostab/wobble_suppression.hpp */,
+                     );
+                     name = videostab;
+                     sourceTree = "<group>";
+              };
+              F9EEB1C2190C4187B3D30A17 /* Src */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D0407150D70947A68734F27E /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/clp.hpp */,
+                            013246C314904112978524BB /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/deblurring.cpp */,
+                            2C79B3F4C20640898A994D17 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/fast_marching.cpp */,
+                            2C792A8E9F6A4F7A9E5BE03A /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/frame_source.cpp */,
+                            D0DEEDEF8935440ABD859697 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/global_motion.cpp */,
+                            D728D8D1C4C44E29A050D216 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/inpainting.cpp */,
+                            3FE4033EC30642158D2F1899 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/log.cpp */,
+                            4DF7880BD35945228F9CAA1C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/motion_stabilizing.cpp */,
+                            D80C5B119BBF4F348ED5508D /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/optical_flow.cpp */,
+                            8F292718CECC40068ADEF95C /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/outlier_rejection.cpp */,
+                            393F6959491645E590BA9D8B /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/precomp.hpp */,
+                            D7511E6B7839421682600F39 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/stabilizer.cpp */,
+                            423CE28E73F04AAF98E03DE2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/wobble_suppression.cpp */,
+                     );
+                     name = Src;
+                     sourceTree = "<group>";
+              };
+              EFDC9C12ACD140D09749C05B /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            0939E4B3C5E14A2EBF56EE1B /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/cvconfig.h */,
+                            CBF97F4370C34898AA5EE48D /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/opencv2/opencv_modules.hpp */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              FE99CA89F362436284EA1954 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            FE649965CCAE435E87850C5A /* opencv_videostab */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              02C3D98B66574E0FB09D419B /* opencv_videostab */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = CB59E4B4DB7B4B54815F6D9B /* Build configuration list for PBXNativeTarget "opencv_videostab" */;
+                     buildPhases = (
+                            C01ADF8608E440C0BC72AF88 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            AF2AC46844B64C1991626F16 /* PBXTargetDependency */,
+                     );
+                     name = opencv_videostab;
+                     productName = opencv_videostab;
+                     productReference = FE649965CCAE435E87850C5A /* opencv_videostab */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              7C9D97AB65974A81A3A1349C /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 2A406E6DFEB043238A6E9619 /* Build configuration list for PBXProject  "opencv_videostab" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            267F64DBB56E456EA7D88268 /* Debug */,
+                            531536B46CC943258A6985C0 /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = A8D4F5CB66AC4D939EC48973;
+                     projectDirPath = /Users/karate_paul4/Documents/Programming/opencv/modules/videostab;
+                     projectRoot = "";
+                     targets = (
+                            50CC2A8C5C694F5C875AD17F /* ALL_BUILD */,
+                            DC3584F32287414D92840299 /* ZERO_CHECK */,
+                            0D66B313803445FB8ECE1404 /* install */,
+                            02C3D98B66574E0FB09D419B /* opencv_videostab */,
+                            D01FE03CB7A84E78B406BC4C /* package */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              3F8A031A4D43437DA26A07D4 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              1624375762E5412ABA322F0A /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              E2CD249F14A6415E9BA9AC28 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              90BBA36E1C344BB5A4FD75BB /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              212CE071962948EA89C5A092 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              695123961A6E4430B3FC67B9 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              6810485CFE3E42CAB4E03C99 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              0910936F0BB748089390E841 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              C01ADF8608E440C0BC72AF88 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            C38A6F87B62E4535A5261541 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/deblurring.cpp */,
+                            8FCD611B1FE44C8FB3100FA6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/fast_marching.cpp */,
+                            D75DEE801FF94397BB68EB3F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/frame_source.cpp */,
+                            52F493B54C12490097F3C9DF /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/global_motion.cpp */,
+                            4C36DBDFAD8C410CB0E74ED8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/inpainting.cpp */,
+                            1C2794B122004884BAC430DA /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/log.cpp */,
+                            7AAB8C2FFFC44CE890D8C0D0 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/motion_stabilizing.cpp */,
+                            41B569B4918F479FA24C620E /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/optical_flow.cpp */,
+                            E2B3F5D706D8439A8AEE5E95 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/outlier_rejection.cpp */,
+                            FEC59C2F16B04D21BBDC92B1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/stabilizer.cpp */,
+                            990EFCCC322F4511A45C3D5F /* /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src/wobble_suppression.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              9A5BAD6C4AD74620A40EC902 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 02C3D98B66574E0FB09D419B /* opencv_videostab */;
+                     targetProxy = D2633C1CEFBD4DC8BBEBECBD /* PBXContainerItemProxy */;
+              };
+              F865FB0FE3C84D4C8A4D4A74 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DC3584F32287414D92840299 /* ZERO_CHECK */;
+                     targetProxy = 19D20959121D41409E908BAE /* PBXContainerItemProxy */;
+              };
+              A7B0601511D345EA93FE6033 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 50CC2A8C5C694F5C875AD17F /* ALL_BUILD */;
+                     targetProxy = 17033B33BCD6460EA12EFF45 /* PBXContainerItemProxy */;
+              };
+              AF2AC46844B64C1991626F16 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = DC3584F32287414D92840299 /* ZERO_CHECK */;
+                     targetProxy = A2ADD7CDBB9A4E67BDB8712D /* PBXContainerItemProxy */;
+              };
+              D34748E59A314A51A4193170 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 50CC2A8C5C694F5C875AD17F /* ALL_BUILD */;
+                     targetProxy = 9883C1CDDCD74B40928DA870 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              9CB95F3D09D646CF9B501F04 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab/build";
+                     };
+                     name = Debug;
+              };
+              0E3A77B47C3A4F62B3E7E8D6 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab/build";
+                     };
+                     name = Release;
+              };
+              3A3A83CAFF3349D8BE36FED3 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              BA7CF79AD5F44753B05DC055 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              6FE9AD7C6A5B4233854BCAC9 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              1FD5F4394DDC44A6B7B85614 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              5BED1517259A4A4196C834ED /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              959F2C72113F4CB698231603 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              287142C9F35C439780E4E9C9 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/lib/Debug";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_videostab;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              A550145DB0674CD9AEEDC7B3 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/lib/Release";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC       -DNDEBUG  -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC   -DNDEBUG     -fomit-frame-pointer -ffast-math  -DNDEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_videostab;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              6AF229884EE14EF68D562E9A /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              34894A0F5D1046DBA572356D /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/video/include, /Users/karate_paul4/Documents/Programming/opencv/modules/photo/include, /Users/karate_paul4/Documents/Programming/opencv/modules/calib3d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/features2d/include, /Users/karate_paul4/Documents/Programming/opencv/modules/highgui/include, /Users/karate_paul4/Documents/Programming/opencv/modules/imgproc/include, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, /Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab", /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/src, /Users/karate_paul4/Documents/Programming/opencv/modules/videostab/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneOS-armv7s/modules/videostab";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              2A406E6DFEB043238A6E9619 /* Build configuration list for PBXProject  "opencv_videostab" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            9CB95F3D09D646CF9B501F04 /* Debug */,
+                            0E3A77B47C3A4F62B3E7E8D6 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              3ABC3D32A0AE4DCD9A7060BF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            3A3A83CAFF3349D8BE36FED3 /* Debug */,
+                            BA7CF79AD5F44753B05DC055 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              CE1710E4ACAC408CBD2B6CD0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            6FE9AD7C6A5B4233854BCAC9 /* Debug */,
+                            1FD5F4394DDC44A6B7B85614 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              3D5F8E7255FE4C7DB1907263 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            5BED1517259A4A4196C834ED /* Debug */,
+                            959F2C72113F4CB698231603 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              CB59E4B4DB7B4B54815F6D9B /* Build configuration list for PBXNativeTarget "opencv_videostab" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            287142C9F35C439780E4E9C9 /* Debug */,
+                            A550145DB0674CD9AEEDC7B3 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              E473B617A78D4225AC92C6D7 /* Build configuration list for PBXAggregateTarget "package" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            6AF229884EE14EF68D562E9A /* Debug */,
+                            34894A0F5D1046DBA572356D /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 7C9D97AB65974A81A3A1349C;
+}

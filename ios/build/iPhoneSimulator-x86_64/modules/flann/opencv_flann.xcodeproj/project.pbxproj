@@ -1,0 +1,901 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              953D5EC2581B41A686C3670C /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = E59F24CA496B4DFD93674AE0 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            175486F59EC04AF8866B537B /* CMake Rules */,
+                     );
+                     dependencies = (
+                            8DD1272C8EAC422F8F25F693 /* PBXTargetDependency */,
+                            73B22C7E73AA4564ABB79C5B /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              CCDD89C1558C4E77AEB21EE6 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 118801F137B34D5A8206102B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            D5776286D1624303A4CCF1A0 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              5D87DE91407B4F7491B29367 /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = D1B47B22147D4F68879B0688 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            C2AF44F355C94CEE9531E1AA /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            25E7F295732A4413BF8FC72A /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+              6D551BFA0FC44B1894BFF95C /* package */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 0EA4EB56C06446E393734635 /* Build configuration list for PBXAggregateTarget "package" */;
+                     buildPhases = (
+                            71A07B63397D4AFBBE644F08 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            C7932A337A194CDD8784361D /* PBXTargetDependency */,
+                     );
+                     name = package;
+                     productName = package;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+8878ED0A32B14A9FAA249A57 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/cvconfig.h */ = {isa = PBXBuildFile; fileRef = 215C2FC7F98749C6ABB7A766 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/cvconfig.h */; settings = { COMPILER_FLAGS = ""; }; };
+77CFA9EB148C4E31B99E85EF /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/opencv2/opencv_modules.hpp */ = {isa = PBXBuildFile; fileRef = 98AD45E566E3416C8A609F94 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/opencv2/opencv_modules.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+72436732924A4F5CA4396DF2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 604CE9E59AD94B0686CDFAA1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+468E672E4C0B4114ACD49F00 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann.hpp */ = {isa = PBXBuildFile; fileRef = EFD170A486EE4EFDB862C8E6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+9CEFC94DB41D4A4DAD6C92AD /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/all_indices.h */ = {isa = PBXBuildFile; fileRef = FA792D8F9FB248D48D8A1AED /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/all_indices.h */; settings = { COMPILER_FLAGS = ""; }; };
+B8C3F44836244D64A106B126 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/allocator.h */ = {isa = PBXBuildFile; fileRef = 15E09147E254497CBF657830 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/allocator.h */; settings = { COMPILER_FLAGS = ""; }; };
+4869D3F757FC495DBA730897 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/any.h */ = {isa = PBXBuildFile; fileRef = 9B685937C44747C1878AD718 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/any.h */; settings = { COMPILER_FLAGS = ""; }; };
+7EACDD3AC6CB4120B9120FC9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/autotuned_index.h */ = {isa = PBXBuildFile; fileRef = D80B2CB2E1D64E0A84E3D5A2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/autotuned_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+3F964CE7027C4A87982C1DC9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/composite_index.h */ = {isa = PBXBuildFile; fileRef = 1737021733AD4D9C81F170EE /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/composite_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+6E7A095E77B840F794A16916 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/config.h */ = {isa = PBXBuildFile; fileRef = 6012C6F63451436CA88372A8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/config.h */; settings = { COMPILER_FLAGS = ""; }; };
+C9187E7E88C14887AC29E2C6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/defines.h */ = {isa = PBXBuildFile; fileRef = EB94A604C42F4D57B485325B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/defines.h */; settings = { COMPILER_FLAGS = ""; }; };
+735DFA251AAD42D8AA0413C0 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dist.h */ = {isa = PBXBuildFile; fileRef = F2A3AEF8B9DE4A82B5C5FD34 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dist.h */; settings = { COMPILER_FLAGS = ""; }; };
+D585332C377E4360AE7CCDCC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dummy.h */ = {isa = PBXBuildFile; fileRef = B331CAA51B8A4BB48403BD28 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dummy.h */; settings = { COMPILER_FLAGS = ""; }; };
+317DB0A573F14F2A8931D1BF /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dynamic_bitset.h */ = {isa = PBXBuildFile; fileRef = 93190327E99B4CFF9DD79F75 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dynamic_bitset.h */; settings = { COMPILER_FLAGS = ""; }; };
+50E928F34A1546B9A36E39DC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann.hpp */ = {isa = PBXBuildFile; fileRef = 62B7BEDD423544189015805F /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+AE239C086FF546B9A144DAC6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann_base.hpp */ = {isa = PBXBuildFile; fileRef = 030871E3D14344919F3A0A49 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann_base.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+2BAC411BCFF14DB29E0E1200 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/general.h */ = {isa = PBXBuildFile; fileRef = C62F1AAA0CD74467A1B12D83 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/general.h */; settings = { COMPILER_FLAGS = ""; }; };
+514FD214BA6844978E912FF9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/ground_truth.h */ = {isa = PBXBuildFile; fileRef = 814B84C396F14C8098C30F6A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/ground_truth.h */; settings = { COMPILER_FLAGS = ""; }; };
+3BDB1DB15B2643AEA641B45B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hdf5.h */ = {isa = PBXBuildFile; fileRef = CFA33369795342B6BADBBE25 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hdf5.h */; settings = { COMPILER_FLAGS = ""; }; };
+305E87CDF8A34BF98A97D026 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/heap.h */ = {isa = PBXBuildFile; fileRef = 9AA383A08F0C45489D2345A5 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/heap.h */; settings = { COMPILER_FLAGS = ""; }; };
+8AC75090BCDF41698F7BF9EF /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hierarchical_clustering_index.h */ = {isa = PBXBuildFile; fileRef = 1B28501D7E254D60A1688384 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hierarchical_clustering_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+92470D04FC2F4625B73FAF3C /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/index_testing.h */ = {isa = PBXBuildFile; fileRef = EDD97E83356D46B4A0B29481 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/index_testing.h */; settings = { COMPILER_FLAGS = ""; }; };
+CDB3E09EF4A24B4397A3B25A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_index.h */ = {isa = PBXBuildFile; fileRef = 72AF099E93E447D38375FD4D /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+6B67BA24F7C14640874D0DFF /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_single_index.h */ = {isa = PBXBuildFile; fileRef = E0C89C65622B49D19AF205CC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_single_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+9F05213704C64CC0BCC37C26 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kmeans_index.h */ = {isa = PBXBuildFile; fileRef = 6177D7F8DDA141D88B54195D /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kmeans_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+7D4E5780116E44D19743BC4A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/linear_index.h */ = {isa = PBXBuildFile; fileRef = 6812733415E24BE3938A3412 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/linear_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+B5701D118089493397A88842 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/logger.h */ = {isa = PBXBuildFile; fileRef = 87677D8668374B4BB95C8094 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/logger.h */; settings = { COMPILER_FLAGS = ""; }; };
+71441EE5ABDD424288C80AA1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_index.h */ = {isa = PBXBuildFile; fileRef = 49397AE0732F4B2A92043DAD /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+E93D28D201344DAC8A6A9859 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_table.h */ = {isa = PBXBuildFile; fileRef = A04CFE56E53E493490AE8539 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_table.h */; settings = { COMPILER_FLAGS = ""; }; };
+83C88BC28AE74D5EA30C0456 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/matrix.h */ = {isa = PBXBuildFile; fileRef = 23C6A981EE574B0F9E716BA9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/matrix.h */; settings = { COMPILER_FLAGS = ""; }; };
+0A0380978C5141A097F803E2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/miniflann.hpp */ = {isa = PBXBuildFile; fileRef = 437FD09803484B7A973777B7 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/miniflann.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+ACC4760448694377999CF872 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/nn_index.h */ = {isa = PBXBuildFile; fileRef = F4ACDE31A7424BD7B1979515 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/nn_index.h */; settings = { COMPILER_FLAGS = ""; }; };
+FC0F21D514A843C6B448D757 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/object_factory.h */ = {isa = PBXBuildFile; fileRef = 9A469DAF3DA843A8B0011C32 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/object_factory.h */; settings = { COMPILER_FLAGS = ""; }; };
+CB70965625424856948DB16A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/params.h */ = {isa = PBXBuildFile; fileRef = 598B0764A9A647499BCD640B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/params.h */; settings = { COMPILER_FLAGS = ""; }; };
+2B80A24890AA4C08A3A077EE /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/random.h */ = {isa = PBXBuildFile; fileRef = 2849350261B14AA281E6CAE9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/random.h */; settings = { COMPILER_FLAGS = ""; }; };
+62A5C2DB7F38495090180DF9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/result_set.h */ = {isa = PBXBuildFile; fileRef = 9BDE565272104CC0B9E5F9BF /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/result_set.h */; settings = { COMPILER_FLAGS = ""; }; };
+46FD74DCAAB7499FA9703B1C /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/sampling.h */ = {isa = PBXBuildFile; fileRef = 851624C4857B44B6B9C213E2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/sampling.h */; settings = { COMPILER_FLAGS = ""; }; };
+7978A405558848458EF29C4C /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/saving.h */ = {isa = PBXBuildFile; fileRef = 29DF5851B5D24C9A83CC07B6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/saving.h */; settings = { COMPILER_FLAGS = ""; }; };
+F0237DC0219440C885648DBC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/simplex_downhill.h */ = {isa = PBXBuildFile; fileRef = 363D87DCC5FD4AA08772910A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/simplex_downhill.h */; settings = { COMPILER_FLAGS = ""; }; };
+F3E82B8303B94B93A7E6A42E /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/timer.h */ = {isa = PBXBuildFile; fileRef = 097EABA6EC114F57BC0CD67E /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/timer.h */; settings = { COMPILER_FLAGS = ""; }; };
+D6C8C3BBA7904AA8BFFC7D28 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/flann.cpp */ = {isa = PBXBuildFile; fileRef = 28E54381125242679C736BC4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/flann.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+38FA76485C38419385CB4CD2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/miniflann.cpp */ = {isa = PBXBuildFile; fileRef = 376D520756DF41DB96D362DC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/miniflann.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+EC3075E6B8724F109CA17DFF /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/precomp.hpp */ = {isa = PBXBuildFile; fileRef = 91B96951DCC04AEB9098311B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/precomp.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              037351EC4FE346BE988A241E /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              BAB8D53A51F04689A4FAB814 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              F61E1610E6484A02A6FDDDDF /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              D878AFC84F94414984689D57 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 78EDC048DAE04A688E88910E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = C96638566A9E4BBB8C394F84;
+                     remoteInfo = opencv_flann;
+              };
+              F85CFA0798F142158DA84AAF /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 78EDC048DAE04A688E88910E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = CCDD89C1558C4E77AEB21EE6;
+                     remoteInfo = ZERO_CHECK;
+              };
+              0252F1D89F7B41B2AC9912C4 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 78EDC048DAE04A688E88910E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 953D5EC2581B41A686C3670C;
+                     remoteInfo = ALL_BUILD;
+              };
+              5A92F840D52E4E62B4DB3C06 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 78EDC048DAE04A688E88910E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = CCDD89C1558C4E77AEB21EE6;
+                     remoteInfo = ZERO_CHECK;
+              };
+              AF50093AD6774C9E8BB056DE /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 78EDC048DAE04A688E88910E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 953D5EC2581B41A686C3670C;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+604CE9E59AD94B0686CDFAA1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+215C2FC7F98749C6ABB7A766 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/cvconfig.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "cvconfig.h"; path = "../../../ios/build/iPhoneSimulator-x86_64/cvconfig.h"; sourceTree = SOURCE_ROOT; };
+98AD45E566E3416C8A609F94 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/opencv2/opencv_modules.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "opencv_modules.hpp"; path = "../../../ios/build/iPhoneSimulator-x86_64/opencv2/opencv_modules.hpp"; sourceTree = SOURCE_ROOT; };
+EFD170A486EE4EFDB862C8E6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "flann.hpp"; path = "include/opencv2/flann.hpp"; sourceTree = SOURCE_ROOT; };
+FA792D8F9FB248D48D8A1AED /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/all_indices.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "all_indices.h"; path = "include/opencv2/flann/all_indices.h"; sourceTree = SOURCE_ROOT; };
+15E09147E254497CBF657830 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/allocator.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "allocator.h"; path = "include/opencv2/flann/allocator.h"; sourceTree = SOURCE_ROOT; };
+9B685937C44747C1878AD718 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/any.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "any.h"; path = "include/opencv2/flann/any.h"; sourceTree = SOURCE_ROOT; };
+D80B2CB2E1D64E0A84E3D5A2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/autotuned_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "autotuned_index.h"; path = "include/opencv2/flann/autotuned_index.h"; sourceTree = SOURCE_ROOT; };
+1737021733AD4D9C81F170EE /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/composite_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "composite_index.h"; path = "include/opencv2/flann/composite_index.h"; sourceTree = SOURCE_ROOT; };
+6012C6F63451436CA88372A8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/config.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "config.h"; path = "include/opencv2/flann/config.h"; sourceTree = SOURCE_ROOT; };
+EB94A604C42F4D57B485325B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/defines.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "defines.h"; path = "include/opencv2/flann/defines.h"; sourceTree = SOURCE_ROOT; };
+F2A3AEF8B9DE4A82B5C5FD34 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dist.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "dist.h"; path = "include/opencv2/flann/dist.h"; sourceTree = SOURCE_ROOT; };
+B331CAA51B8A4BB48403BD28 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dummy.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "dummy.h"; path = "include/opencv2/flann/dummy.h"; sourceTree = SOURCE_ROOT; };
+93190327E99B4CFF9DD79F75 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dynamic_bitset.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "dynamic_bitset.h"; path = "include/opencv2/flann/dynamic_bitset.h"; sourceTree = SOURCE_ROOT; };
+62B7BEDD423544189015805F /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "flann.hpp"; path = "include/opencv2/flann/flann.hpp"; sourceTree = SOURCE_ROOT; };
+030871E3D14344919F3A0A49 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann_base.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "flann_base.hpp"; path = "include/opencv2/flann/flann_base.hpp"; sourceTree = SOURCE_ROOT; };
+C62F1AAA0CD74467A1B12D83 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/general.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "general.h"; path = "include/opencv2/flann/general.h"; sourceTree = SOURCE_ROOT; };
+814B84C396F14C8098C30F6A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/ground_truth.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "ground_truth.h"; path = "include/opencv2/flann/ground_truth.h"; sourceTree = SOURCE_ROOT; };
+CFA33369795342B6BADBBE25 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hdf5.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "hdf5.h"; path = "include/opencv2/flann/hdf5.h"; sourceTree = SOURCE_ROOT; };
+9AA383A08F0C45489D2345A5 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/heap.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "heap.h"; path = "include/opencv2/flann/heap.h"; sourceTree = SOURCE_ROOT; };
+1B28501D7E254D60A1688384 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hierarchical_clustering_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "hierarchical_clustering_index.h"; path = "include/opencv2/flann/hierarchical_clustering_index.h"; sourceTree = SOURCE_ROOT; };
+EDD97E83356D46B4A0B29481 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/index_testing.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "index_testing.h"; path = "include/opencv2/flann/index_testing.h"; sourceTree = SOURCE_ROOT; };
+72AF099E93E447D38375FD4D /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "kdtree_index.h"; path = "include/opencv2/flann/kdtree_index.h"; sourceTree = SOURCE_ROOT; };
+E0C89C65622B49D19AF205CC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_single_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "kdtree_single_index.h"; path = "include/opencv2/flann/kdtree_single_index.h"; sourceTree = SOURCE_ROOT; };
+6177D7F8DDA141D88B54195D /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kmeans_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "kmeans_index.h"; path = "include/opencv2/flann/kmeans_index.h"; sourceTree = SOURCE_ROOT; };
+6812733415E24BE3938A3412 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/linear_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "linear_index.h"; path = "include/opencv2/flann/linear_index.h"; sourceTree = SOURCE_ROOT; };
+87677D8668374B4BB95C8094 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/logger.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "logger.h"; path = "include/opencv2/flann/logger.h"; sourceTree = SOURCE_ROOT; };
+49397AE0732F4B2A92043DAD /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "lsh_index.h"; path = "include/opencv2/flann/lsh_index.h"; sourceTree = SOURCE_ROOT; };
+A04CFE56E53E493490AE8539 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_table.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "lsh_table.h"; path = "include/opencv2/flann/lsh_table.h"; sourceTree = SOURCE_ROOT; };
+23C6A981EE574B0F9E716BA9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/matrix.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "matrix.h"; path = "include/opencv2/flann/matrix.h"; sourceTree = SOURCE_ROOT; };
+437FD09803484B7A973777B7 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/miniflann.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "miniflann.hpp"; path = "include/opencv2/flann/miniflann.hpp"; sourceTree = SOURCE_ROOT; };
+F4ACDE31A7424BD7B1979515 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/nn_index.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "nn_index.h"; path = "include/opencv2/flann/nn_index.h"; sourceTree = SOURCE_ROOT; };
+9A469DAF3DA843A8B0011C32 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/object_factory.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "object_factory.h"; path = "include/opencv2/flann/object_factory.h"; sourceTree = SOURCE_ROOT; };
+598B0764A9A647499BCD640B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/params.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "params.h"; path = "include/opencv2/flann/params.h"; sourceTree = SOURCE_ROOT; };
+2849350261B14AA281E6CAE9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/random.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "random.h"; path = "include/opencv2/flann/random.h"; sourceTree = SOURCE_ROOT; };
+9BDE565272104CC0B9E5F9BF /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/result_set.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "result_set.h"; path = "include/opencv2/flann/result_set.h"; sourceTree = SOURCE_ROOT; };
+851624C4857B44B6B9C213E2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/sampling.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "sampling.h"; path = "include/opencv2/flann/sampling.h"; sourceTree = SOURCE_ROOT; };
+29DF5851B5D24C9A83CC07B6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/saving.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "saving.h"; path = "include/opencv2/flann/saving.h"; sourceTree = SOURCE_ROOT; };
+363D87DCC5FD4AA08772910A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/simplex_downhill.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "simplex_downhill.h"; path = "include/opencv2/flann/simplex_downhill.h"; sourceTree = SOURCE_ROOT; };
+097EABA6EC114F57BC0CD67E /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/timer.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "timer.h"; path = "include/opencv2/flann/timer.h"; sourceTree = SOURCE_ROOT; };
+28E54381125242679C736BC4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/flann.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "flann.cpp"; path = "src/flann.cpp"; sourceTree = SOURCE_ROOT; };
+376D520756DF41DB96D362DC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/miniflann.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "miniflann.cpp"; path = "src/miniflann.cpp"; sourceTree = SOURCE_ROOT; };
+91B96951DCC04AEB9098311B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/precomp.hpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.h"; fileEncoding = 4; name = "precomp.hpp"; path = "src/precomp.hpp"; sourceTree = SOURCE_ROOT; };
+9E3D947CEBF84C30B46B6583 /* opencv_flann */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libopencv_flann.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              3CA00D5844314DCCA39FF8E6  = {
+                     isa = PBXGroup;
+                     children = (
+                            E69D7D41A63D4F639818A4BB /* Sources */,
+                            A2685571CA274861B7BACE35 /* Resources */,
+                            3959D26F99194EDA839CD86F /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              E69D7D41A63D4F639818A4BB /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            1206FDC2A4064174AFBEF453 /* ALL_BUILD */,
+                            E8C42B10D9EC48CDB36B9770 /* ZERO_CHECK */,
+                            6B16638F279540A5AD4997FE /* modules */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              A2685571CA274861B7BACE35 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              1206FDC2A4064174AFBEF453 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4C25BDC7F20E43AAA082E6A3 /* CMake Rules */,
+                            604CE9E59AD94B0686CDFAA1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              4C25BDC7F20E43AAA082E6A3 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              E8C42B10D9EC48CDB36B9770 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            3F7657E0EE8843C5998A8E6B /* CMake Rules */,
+                            604CE9E59AD94B0686CDFAA1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              3F7657E0EE8843C5998A8E6B /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              6B16638F279540A5AD4997FE /* modules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            A8D1B99C19584E6A8FA63DBF /* opencv_flann */,
+                     );
+                     name = modules;
+                     sourceTree = "<group>";
+              };
+              A8D1B99C19584E6A8FA63DBF /* opencv_flann */ = {
+                     isa = PBXGroup;
+                     children = (
+                            FBBC5608181F4199A7952A23 /* Include */,
+                            F940B39EF3DB4C378154C86F /* Src */,
+                            05B48E40D44C4DD6AFAF6896 /* Header Files */,
+                            604CE9E59AD94B0686CDFAA1 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/CMakeLists.txt */,
+                     );
+                     name = opencv_flann;
+                     sourceTree = "<group>";
+              };
+              FBBC5608181F4199A7952A23 /* Include */ = {
+                     isa = PBXGroup;
+                     children = (
+                            A2758D51227F4229AC22D8FB /* opencv2 */,
+                     );
+                     name = Include;
+                     sourceTree = "<group>";
+              };
+              A2758D51227F4229AC22D8FB /* opencv2 */ = {
+                     isa = PBXGroup;
+                     children = (
+                            9EEE2D12C91F4859A21FB39A /* flann */,
+                            EFD170A486EE4EFDB862C8E6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann.hpp */,
+                     );
+                     name = opencv2;
+                     sourceTree = "<group>";
+              };
+              9EEE2D12C91F4859A21FB39A /* flann */ = {
+                     isa = PBXGroup;
+                     children = (
+                            FA792D8F9FB248D48D8A1AED /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/all_indices.h */,
+                            15E09147E254497CBF657830 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/allocator.h */,
+                            9B685937C44747C1878AD718 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/any.h */,
+                            D80B2CB2E1D64E0A84E3D5A2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/autotuned_index.h */,
+                            1737021733AD4D9C81F170EE /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/composite_index.h */,
+                            6012C6F63451436CA88372A8 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/config.h */,
+                            EB94A604C42F4D57B485325B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/defines.h */,
+                            F2A3AEF8B9DE4A82B5C5FD34 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dist.h */,
+                            B331CAA51B8A4BB48403BD28 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dummy.h */,
+                            93190327E99B4CFF9DD79F75 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/dynamic_bitset.h */,
+                            62B7BEDD423544189015805F /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann.hpp */,
+                            030871E3D14344919F3A0A49 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/flann_base.hpp */,
+                            C62F1AAA0CD74467A1B12D83 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/general.h */,
+                            814B84C396F14C8098C30F6A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/ground_truth.h */,
+                            CFA33369795342B6BADBBE25 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hdf5.h */,
+                            9AA383A08F0C45489D2345A5 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/heap.h */,
+                            1B28501D7E254D60A1688384 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/hierarchical_clustering_index.h */,
+                            EDD97E83356D46B4A0B29481 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/index_testing.h */,
+                            72AF099E93E447D38375FD4D /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_index.h */,
+                            E0C89C65622B49D19AF205CC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kdtree_single_index.h */,
+                            6177D7F8DDA141D88B54195D /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/kmeans_index.h */,
+                            6812733415E24BE3938A3412 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/linear_index.h */,
+                            87677D8668374B4BB95C8094 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/logger.h */,
+                            49397AE0732F4B2A92043DAD /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_index.h */,
+                            A04CFE56E53E493490AE8539 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/lsh_table.h */,
+                            23C6A981EE574B0F9E716BA9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/matrix.h */,
+                            437FD09803484B7A973777B7 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/miniflann.hpp */,
+                            F4ACDE31A7424BD7B1979515 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/nn_index.h */,
+                            9A469DAF3DA843A8B0011C32 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/object_factory.h */,
+                            598B0764A9A647499BCD640B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/params.h */,
+                            2849350261B14AA281E6CAE9 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/random.h */,
+                            9BDE565272104CC0B9E5F9BF /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/result_set.h */,
+                            851624C4857B44B6B9C213E2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/sampling.h */,
+                            29DF5851B5D24C9A83CC07B6 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/saving.h */,
+                            363D87DCC5FD4AA08772910A /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/simplex_downhill.h */,
+                            097EABA6EC114F57BC0CD67E /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include/opencv2/flann/timer.h */,
+                     );
+                     name = flann;
+                     sourceTree = "<group>";
+              };
+              F940B39EF3DB4C378154C86F /* Src */ = {
+                     isa = PBXGroup;
+                     children = (
+                            28E54381125242679C736BC4 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/flann.cpp */,
+                            376D520756DF41DB96D362DC /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/miniflann.cpp */,
+                            91B96951DCC04AEB9098311B /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/precomp.hpp */,
+                     );
+                     name = Src;
+                     sourceTree = "<group>";
+              };
+              05B48E40D44C4DD6AFAF6896 /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            215C2FC7F98749C6ABB7A766 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/cvconfig.h */,
+                            98AD45E566E3416C8A609F94 /* /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/opencv2/opencv_modules.hpp */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              3959D26F99194EDA839CD86F /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            9E3D947CEBF84C30B46B6583 /* opencv_flann */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              C96638566A9E4BBB8C394F84 /* opencv_flann */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 6190F8DCF26F4BFDAF408C3F /* Build configuration list for PBXNativeTarget "opencv_flann" */;
+                     buildPhases = (
+                            E2F894EE3F674569B797F94B /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            F4979526016643459E40A16C /* PBXTargetDependency */,
+                     );
+                     name = opencv_flann;
+                     productName = opencv_flann;
+                     productReference = 9E3D947CEBF84C30B46B6583 /* opencv_flann */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              78EDC048DAE04A688E88910E /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 3B6D9F8099A4492AB22CEFE4 /* Build configuration list for PBXProject  "opencv_flann" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            BAB8D53A51F04689A4FAB814 /* Debug */,
+                            F61E1610E6484A02A6FDDDDF /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 3CA00D5844314DCCA39FF8E6;
+                     projectDirPath = /Users/karate_paul4/Documents/Programming/opencv/modules/flann;
+                     projectRoot = "";
+                     targets = (
+                            953D5EC2581B41A686C3670C /* ALL_BUILD */,
+                            CCDD89C1558C4E77AEB21EE6 /* ZERO_CHECK */,
+                            5D87DE91407B4F7491B29367 /* install */,
+                            C96638566A9E4BBB8C394F84 /* opencv_flann */,
+                            6D551BFA0FC44B1894BFF95C /* package */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              D50AD20180164D1DB3860685 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              175486F59EC04AF8866B537B /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              3241A3E37DFA445484FC57AA /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              D5776286D1624303A4CCF1A0 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              54B6FEC4BB5E4D41A26572AF /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              C2AF44F355C94CEE9531E1AA /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              22CC17DFBAA649E393DAB2E4 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              71A07B63397D4AFBBE644F08 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann -f /Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              E2F894EE3F674569B797F94B /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            D6C8C3BBA7904AA8BFFC7D28 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/flann.cpp */,
+                            38FA76485C38419385CB4CD2 /* /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src/miniflann.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              8DD1272C8EAC422F8F25F693 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = C96638566A9E4BBB8C394F84 /* opencv_flann */;
+                     targetProxy = D878AFC84F94414984689D57 /* PBXContainerItemProxy */;
+              };
+              73B22C7E73AA4564ABB79C5B /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = CCDD89C1558C4E77AEB21EE6 /* ZERO_CHECK */;
+                     targetProxy = F85CFA0798F142158DA84AAF /* PBXContainerItemProxy */;
+              };
+              25E7F295732A4413BF8FC72A /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 953D5EC2581B41A686C3670C /* ALL_BUILD */;
+                     targetProxy = 0252F1D89F7B41B2AC9912C4 /* PBXContainerItemProxy */;
+              };
+              F4979526016643459E40A16C /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = CCDD89C1558C4E77AEB21EE6 /* ZERO_CHECK */;
+                     targetProxy = 5A92F840D52E4E62B4DB3C06 /* PBXContainerItemProxy */;
+              };
+              C7932A337A194CDD8784361D /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 953D5EC2581B41A686C3670C /* ALL_BUILD */;
+                     targetProxy = AF50093AD6774C9E8BB056DE /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              231CE82E9DD440E7A33EE377 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann/build";
+                     };
+                     name = Debug;
+              };
+              E313CF067B9B48E6826C8103 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann/build";
+                     };
+                     name = Release;
+              };
+              22A8DE529A534F1E9049F596 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              90B96436500C416BBBC2CF04 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              317E11F631E84E64A1DCAC21 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              7B8AAE24B0F84F008FCC0C74 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              4DED9A55A519426A9BB2786C /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              8DBEF3F6BE5541D2B2168472 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              5EE07D1133B14CD483CD2E01 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/lib/Debug";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC           -DDEBUG -D_DEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_flann;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              A7089278B59B44D096871A76 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/lib/Release";
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", OPENCV_NOSTL, "'__OPENCV_BUILD=1'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = " -fPIC       -DNDEBUG  -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = "-stdlib=libc++ -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -fPIC   -DNDEBUG     -fomit-frame-pointer -ffast-math  -DNDEBUG  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_flann;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              E7DE896F010745E493583603 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              AADBA401C3AB4F6CB372D0B0 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/karate_paul4/Documents/Programming/opencv/modules/core/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann", /Users/karate_paul4/Documents/Programming/opencv/modules/flann/src, /Users/karate_paul4/Documents/Programming/opencv/modules/flann/include, "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64", );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/karate_paul4/Documents/Programming/ios/build/iPhoneSimulator-x86_64/modules/flann";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              3B6D9F8099A4492AB22CEFE4 /* Build configuration list for PBXProject  "opencv_flann" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            231CE82E9DD440E7A33EE377 /* Debug */,
+                            E313CF067B9B48E6826C8103 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              E59F24CA496B4DFD93674AE0 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            22A8DE529A534F1E9049F596 /* Debug */,
+                            90B96436500C416BBBC2CF04 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              118801F137B34D5A8206102B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            317E11F631E84E64A1DCAC21 /* Debug */,
+                            7B8AAE24B0F84F008FCC0C74 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              D1B47B22147D4F68879B0688 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            4DED9A55A519426A9BB2786C /* Debug */,
+                            8DBEF3F6BE5541D2B2168472 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              6190F8DCF26F4BFDAF408C3F /* Build configuration list for PBXNativeTarget "opencv_flann" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            5EE07D1133B14CD483CD2E01 /* Debug */,
+                            A7089278B59B44D096871A76 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              0EA4EB56C06446E393734635 /* Build configuration list for PBXAggregateTarget "package" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            E7DE896F010745E493583603 /* Debug */,
+                            AADBA401C3AB4F6CB372D0B0 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 78EDC048DAE04A688E88910E;
+}
